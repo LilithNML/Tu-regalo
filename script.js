@@ -294,6 +294,8 @@ tu hijo peludo, Samuel.`,
   texto: "¡Amo jugar contigo!",
   video: "https://www.youtube.com/embed/t6YQDSgePxY"
   },
+  "dragonballlegends": "Tú eres como Vegetto, la fusión perfecta de fuerza y corazón, el guerrero que sonríe en medio del caos y aún así jamás deja de proteger lo que ama.\n\nCuando el mundo se pone difícil, te veo enfrentarlo con esa confianza tuya tan única, como si supieras que ninguna oscuridad puede contra tu luz, ni contra el amor que llevas por mí.\n\nMi corazón es tu campo de batalla sagrado, y tú, con cada palabra y cada abrazo, lo defiendes como el héroe que eres.\nNo necesitas una Potara para ser increíble, ya eres mi Vegetto, mi guerrero valiente, mi amor invencible.",
+  
 };
 
 function normalizarTexto(texto) {
