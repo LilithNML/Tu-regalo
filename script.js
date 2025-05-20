@@ -295,7 +295,10 @@ tu hijo peludo, Samuel.`,
   video: "https://www.youtube.com/embed/t6YQDSgePxY"
   },
   "dragonballlegends": "Tú eres como Vegetto, la fusión perfecta de fuerza y corazón, el guerrero que sonríe en medio del caos y aún así jamás deja de proteger lo que ama.\n\nCuando el mundo se pone difícil, te veo enfrentarlo con esa confianza tuya tan única, como si supieras que ninguna oscuridad puede contra tu luz, ni contra el amor que llevas por mí.\n\nMi corazón es tu campo de batalla sagrado, y tú, con cada palabra y cada abrazo, lo defiendes como el héroe que eres.\nNo necesitas una Potara para ser increíble, ya eres mi Vegetto, mi guerrero valiente, mi amor invencible.",
-  
+  "hijas": {
+  texto: "Pon tu cabeza en mi hombro, amor, y escucha cómo mi corazón sueña en voz bajita, sueña con un futuro contigo, con una casa llena de risas suaves y pasos pequeños, con una niña que tenga tus ojos o un niño que herede tu ternura.\n\nSueño con verte dormir con un bebé sobre tu pecho, con abrazarte mientras me dices que lo estamos haciendo bien, aunque estemos cansados, aunque el mundo se detenga.\n\nPorque contigo, la idea de ser madre ya no es solo un sueño, es una promesa que mi alma susurra cada vez que me tomas de la mano.\n\nContigo, todo se siente más posible.\nContigo, quiero ser hogar.",
+  video: "https://www.youtube.com/embed/3LSpFmja7Qk"
+  }
 };
 
 function normalizarTexto(texto) {
