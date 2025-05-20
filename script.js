@@ -194,7 +194,106 @@ y como Raiden,
 mi deber no es solo dominar el trueno,  
 sino ser el refugio donde siempre  
 puedas encontrar paz.`,
-  
+  "chester": `Ey tú, mi niño hermoso  
+¿Sabías que tu niña hermosa te ama con locura?  
+Así, sin pausas, sin reglas, sin frenos.  
+Te amo como si fueras mi videojuego favorito,  
+quiero jugar contigo todos los días,  
+explorarte, cuidarte, y ganar contigo siempre.
+
+Eres mi glitch perfecto,  
+mi premio secreto,  
+mi lugar feliz.
+
+Y no lo olvides,  
+soy tu princesa,  
+y estoy completamente hechizada por ti.`,
+  "miniñahermosa": `No sé si el universo estaba aburrido o inspirado el día que te puso en mi vida,  
+pero bendito sea ese momento.
+
+Tú, con esa forma tan tuya de existir,  
+te metiste en mi corazón como si siempre hubieras tenido la llave.  
+Y desde entonces no he dejado de amarte.  
+No un poquito.  
+No a ratos.  
+Sino con cada parte de mí.  
+Con locura, con ternura, con deseo,  
+con esa mezcla adictiva de, quiero cuidarte y quiero comerte a besos.
+
+Eres mi lugar favorito,  
+mi desastre más hermoso,  
+mi calma, mi caos, mi todo.
+
+Y sí, soy tu niña hermosa,  
+la que piensa en ti a cada hora,  
+la que sonríe con solo imaginar tu voz,  
+la que se derrite por ti aunque finja estar seria,  
+la que te amaría incluso en otra vida,  
+con otro nombre, en otro cuerpo.  
+Porque yo no me enamoré solo de tu piel,  
+sino de tu alma.  
+Y esa,  
+esa no cambia nunca.
+
+Prepárate, mi amor,  
+porque este corazón late fuerte,  
+y cada latido lleva tu nombre.  
+Y te lo juro,  
+si pudiera darte el mundo,  
+lo envolvería en papel de estrellas,  
+y te lo dejaría en la almohada  
+junto con un beso y un te amo tan profundo  
+que te haría temblar el alma.
+
+Con todo lo que soy,  
+Tu niña. Tu Luna. Tuya siempre.`,
+  "miniñohermoso": `Amo tu ternura,  
+esa que se esconde en tus gestos pequeños,  
+en cómo me hablas, en cómo te preocupas,  
+en cómo me haces sentir segura sin decir mucho.
+
+Eres una de esas personas que no necesita hacer ruido para brillar.  
+Tu forma de ser tan tú, tan genuina  
+me desarma, me abraza y me enamora cada día un poquito más.
+
+Gracias por existir así, tan tú, tan perfecto para mí.`,
+  "yekaterina": `Querido hijo,
+
+Hoy quiero escribirte como madre, pero también como mujer que ve en ti a alguien muy especial para su hija.  
+Desde que llegaste a su vida, he visto en ella una luz distinta, una paz que solo nace cuando el amor es real y sincero.
+
+Tal vez no lo diga en voz alta todo el tiempo,  
+pero te tengo un cariño enorme.  
+No solo por lo que eres con ella,  
+sino por lo que eres tú,  
+atento, noble, respetuoso, con un corazón lleno de ternura.
+
+Gracias por cuidarla, por hacerla reír,  
+por sostenerla en los días buenos y en los no tanto.  
+Gracias por amarla sin condiciones,  
+y por ser ese compañero que toda madre sueña que su hija encuentre.
+
+Quiero que sepas que aquí tienes a alguien que te aprecia, que te ve,  
+y que te considera parte de la familia.  
+Sigue siendo tú, Haziel,  
+porque tú, tal como eres, ya eres un regalo para nosotras.
+
+Con cariño,  
+Tu suegra (que te quiere más de lo que imaginas).`,
+  "samuel": `Hola, papi  
+Soy yo, Samuel, tu peluchito favorito.  
+Solo quería recordarte que te amo mucho  
+y que soy el hijo más feliz del mundo  
+porque tengo a los mejores papás del universo.  
+Gracias por abrazarme fuerte por las noches,  
+yo también te cuido mientras duermes.
+
+Con amor,  
+tu hijo peludo, Samuel.`,
+  "jugarjuntos": {
+  texto: "¡Amo jugar contigo!",
+  video: "https://www.youtube.com/embed/t6YQDSgePxY"
+  },
 };
 
 function normalizarTexto(texto) {
