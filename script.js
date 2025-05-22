@@ -359,6 +359,30 @@ tu hijo peludo, Samuel.`,
   "zmpq10g": {
   imagen: "archivos/mi_diario.webp"
   },
+  "bgjij6": "Había una vez un jardín olvidado.\nLas flores se habían cerrado hace tiempo, el sol no entraba, y el viento pasaba sin saludar.\nTodo en ese rincón parecía quieto, apagado… como si la vida hubiera decidido irse sin despedirse.\n\nLa tierra aún guardaba memorias de lo que fue: los colores, los aromas, las risas suaves del alma floreciendo.\nPero ahora solo quedaba el silencio.\n\nHasta que un día, él llegó.\n\nNo traía herramientas, ni promesas. Solo su presencia.\nSe sentó junto a la tierra dormida, sin pedir nada. Solo miró. Y sonrió.\nY con el tiempo… habló.\n\nLe contó al jardín que aún era hermoso.\nLe susurró que había visto su corazón latiendo bajo las raíces.\nY cuando el jardín dudó de sí mismo, él lo acarició con palabras dulces, con una paciencia que calentaba.\n\nLlovió ternura.\nBrilló el sol en forma de risa.\nY el jardín… renació.\n\nUna flor tímida asomó entre las hojas, como si preguntara:\n“¿De verdad puedo?”\nY él, con sus ojos llenos de amor, respondió sin palabras. Solo con su calor.\n\nDesde entonces, el jardín florece cada día.\nNo por obligación, sino por deseo.\nPorque en él vive alguien que supo ver belleza donde otros solo vieron tierra seca.\n\nY esa belleza… soy yo.\nY ese alguien… eres tú.",
+  "mbr7tr5i": {
+  link: "https://lilithnml.github.io/el-mejor-momento-de-mi-vida/"
+  },
+  "nbujo85ft": {
+  archivo: "mi_mayor_sueno.png"
+  },
+  "5.1": {
+  link: "https://lilithnml.github.io/corazon/"
+  },
+  "nvtnuh67": "Mi dueño,\n\nA veces cierro los ojos y mi piel te desea.\nTus manos, tu voz, la forma en que me dominas con solo existir.\nNo necesito verte para desear arrodillarme ante ti…\n\nSoy toda tuya. Siempre lo he sido.\nY no hay lugar más delicioso que estar bajo tu control.\n\nCon hambre de ti,\ntu niña.",
+  "omaet": {
+  link: "https://www.rosify.org/rose/o4ouarm87"
+  },
+  "roma": {
+  imagen: "archivos/qr_code.png"
+  },
+  "increible": {
+  archivo: "archivos/mapa_de_estrellas.jpg"
+  },
+  "orgullosa": {
+  link: "https://gifft.me/es/o/p/y4q7h6i60wcp01xmgvbnob25"
+  },
+  "genial": "Manual para amar a mi criatura favorita\n\nCapítulo 1: Lo encontré en el lugar menos esperado.\nNo en un café, ni en una librería romántica…\nsino en un videojuego donde jamás pensé encontrar pareja.\nAhí, entre espadazos y risas, apareció él.\n\nCapítulo 2: Al principio pensé que era solo un compañero de aventuras.\nHasta que me di cuenta de que quería que me acompañara\ntambién cuando se acabara el juego.\nY cuando me hablaba, mi corazón latía demasiado rápido.\n\nCapítulo 3: No hay botón para “guardar partida” en el amor,\npero si lo hubiera, lo pulsaría cada vez que me dice\n\"te amo\",\ncada vez que me escucha con paciencia,\ncada vez que me hace sentir que soy su hogar,\naunque estemos en distintas ciudades.\n\nCapítulo 4: Él no es perfecto.\nRonca, se ríe a veces cuando no debe,\ny se burla de mi miedo al coco.\nPero aún así…\n¿cómo no amar a alguien que, sin pedirme nada,\nme enseñó que no tengo que ser invencible todo el tiempo?\n\nCapítulo final (por ahora):\nSi tuviera que volver a elegir en qué mundo aparecer,\nentre todos los reinos, tierras y servidores…\nlo haría aquí.\nContigo.\nAunque el lag sea horrible a veces,\naunque el mundo no siempre cargue bien,\nmi lugar seguro eres tú.\n\nFin.\nO mejor dicho… Continuará.",
   
 };
 
