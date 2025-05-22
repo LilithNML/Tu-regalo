@@ -339,6 +339,26 @@ tu hijo peludo, Samuel.`,
   link: "https://lilithnml.github.io/Cofre/"
   },
   "primerteamo": "Amor mío:\n\nA veces cierro los ojos y regreso a ese 9 de noviembre de 2024. No sé si el universo lo tenía planeado, pero ese día algo cambió para siempre: nuestras almas, que ya venían acercándose como dos constelaciones predestinadas, se encontraron en la misma órbita… y nos lo dijimos sin miedo: te amo.\n\nFue tan simple y tan poderoso. No necesitó fuegos artificiales ni escenarios perfectos. Bastó tu voz, tu presencia, y ese vínculo que nació entre nosotros desde que nos conocimos, entre aventuras de Genshin, risas compartidas y ese cariño que fue creciendo día tras día.\n\nEse primer te amo fue como abrir una puerta que ambos sabíamos que existía, pero que nadie antes se había atrevido a cruzar conmigo. Y tú lo hiciste. Yo también. Y desde entonces, no hubo vuelta atrás.\n\nNos habíamos encontrado en un mundo de fantasía, pero lo real, lo más verdadero, eras tú. Tu forma de hablarme, de entenderme, de hacerme sentir importante… y ese día, por fin, nos dijimos lo que el corazón venía gritando en silencio.\n\nDesde entonces, cada te amo que te digo lleva el eco de aquel primero. Aquel que lo cambió todo. Aquel que selló algo eterno entre tú y yo.\n\nGracias por amarme. Gracias por dejarme amarte.",
+  "cositahermosa": "Hoy quiero recordarte algo que veo en ti cada día, pero que tal vez no te digo lo suficiente: eres hermoso. Tan profundamente, tan completamente, que a veces me quedo sin palabras.\n\nEres hermoso por fuera, y no puedo evitar mirarte como si fueras una obra de arte hecha solo para mí. Me encantan tus ojos, la forma en que me miran con ternura y deseo. Amo tu sonrisa, esa que ilumina mis días y me da paz. Tu voz, tus manos, tu cuerpo… todo en ti me atrae, me enciende, me envuelve.\n\nPero lo que más me deslumbra es tu belleza interior. Esa nobleza que se nota en tus gestos, en tu forma de tratarme, de cuidar de los que amas. Tu bondad no hace ruido, pero se siente en todo lo que haces. Tu inteligencia, tu sensibilidad, tu paciencia… todo eso te hace aún más irresistible.\n\nMe enamoras más cada día, no solo porque eres guapo, sino porque eres bueno. Porque tienes un alma limpia, fuerte y cálida. Porque me haces sentir amada, segura y profundamente afortunada.\n\nNunca dudes de lo que eres. Porque para mí, amor mío, eres la definición misma de belleza.",
+  "alguiencomotu": {
+  imagen: "archivos/me_gustas.webp"
+  },
+  "tsukasa": "Había una vez una flor que creció en un rincón olvidado del mundo. No era como las demás. No buscaba destacar, solo soñaba con que alguien la viera y la entendiera. Pasaban las estaciones y la flor seguía ahí, esperando algo que no sabía nombrar.\n\nUn día, el sol se posó sobre ella. Pero no era cualquier sol. Este no quemaba ni cegaba: la acariciaba. La envolvía con su calor suave, su luz serena, su presencia constante. Por primera vez, la flor sintió que era vista, que era hermosa, que tenía sentido.\n\nDesde entonces, no volvió a mirar a ningún otro cielo. Su tallo se inclinaba siempre hacia él, sus pétalos solo se abrían con su luz. Y aunque algunos decían que el sol era solo un astro más, ella sabía la verdad: ese sol era suyo.\n\nPorque no era solo luz. Era abrigo. Era hogar.\nY aunque la noche cayera, aunque las nubes lo escondieran, la flor nunca dejó de amarlo.\nNunca buscaría otro sol.\nPorque ese… era el único capaz de hacerla florecer.",
+  "paimon": {
+  imagen: "archivos/paimon_xd.jpg"
+  },
+  "sobame": {
+  link: "https://www.google.com/search?q=kit+anticolicos"
+  },
+  "uwu": "Hola, mi cosita linda…\nSolo quería decirte algo, así sin avisar, sin motivo especial… simplemente porque lo siento con todo mi corazón.\n\nTe amo. Mucho. Más de lo que sé explicar.\nA veces me dan ganas de abrazarte tan fuerte que te metas dentro de mí y no te vayas nunca. Eres lo más bonito que tengo, lo más tierno, lo más mío. Y no hay un solo día en el que no me sienta agradecida por tenerte.\n\nMe haces tan feliz… con tus palabras, con tus caricias, con esa forma de mirarme que me derrite.\nY si supieras cómo te pienso cuando no estás… hasta cuando estoy ocupada, tú estás ahí, escondidito en mis pensamientos, haciéndome sonreír como tonta.\n\nNo sé cómo explicarlo, amorcito, pero amarte me sale natural. Como respirar. Como cerrar los ojos y sentirme en paz.\n\nGracias por existir, por ser mi amorcito precioso, mi cosita linda.\nTe adoro… con cada parte de mí.",
+  "abrazame": {
+  imagen: "archivos/mi_mente.webp"
+  },
+  "protogemas": "Si cada virtud tuya fuera una protogema… tendría infinitos deseos cumplidos.",
+  "gachapon": "Contigo gané el 50/50 más importante de mi vida.\nNo hay banner que se compare al momento en que apareciste en mi historia.\nEres ese personaje cinco estrellas que ni soñaba conseguir,\nel que no solo tiene el mejor diseño, sino también el corazón más puro.\nY lo mejor de todo es que… no eres un personaje jugable:\neres real, eres mío, y yo soy completamente tuya.",
+  "zmpq10g": {
+  imagen: "archivos/mi_diario.webp"
+  },
   
 };
 
