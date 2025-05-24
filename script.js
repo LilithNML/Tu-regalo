@@ -1,5 +1,4 @@
 const mensajes = {
-  "0011": "Cada amanecer contigo es un regalo que jamás imaginé merecer.",
   "9denoviembre": `Mi amor:
 
 A veces me gusta cerrar los ojos y volver a ese primer momento en que coincidimos en Genshin. No fue casualidad, fue destino disfrazado de juego. Entre combates, misiones y risas, ahí estabas tú, al principio solo un amigo, pero con una energía que poco a poco me fue envolviendo.
@@ -61,7 +60,7 @@ No necesito un castillo ni una corona. Me basta con tu abrazo, con tu voz dicié
 
 Gracias por darme un cuento bonito en este mundo caótico.  
 Gracias por ser mi magia.`,
-  "haziel": `Haziel,  
+  "hazielalancasarezosuna": `Haziel,  
 tu nombre suena antiguo,  
 a escritura tallada en piedra celestial,  
 a susurro de los dioses cuando aún hablaban con los hombres.
@@ -112,7 +111,7 @@ pero se siente profundo.
 Porque cuando digo mi Alan,  
 no hablo solo de él,  
 hablo de todos los latidos que causa.`,
-  "lilith": `Hoy quiero escribirte sin esconder nada.  
+  "lilithnoemimendozaluna": `Hoy quiero escribirte sin esconder nada.  
 Sin máscaras, sin pausas, sin miedo.
 
 Quiero que sepas todo lo que llevo dentro, lo bueno, lo complicado, lo que a veces no me atrevo a decir en voz alta.
@@ -290,11 +289,11 @@ yo también te cuido mientras duermes.
 
 Con amor,  
 tu hijo peludo, Samuel.`,
-  "jugarjuntos": {
+  "fortnite": {
   texto: "¡Amo jugar contigo!",
   video: "https://www.youtube.com/embed/t6YQDSgePxY"
   },
-  "dragonballlegends": "Tú eres como Vegetto, la fusión perfecta de fuerza y corazón, el guerrero que sonríe en medio del caos y aún así jamás deja de proteger lo que ama.\n\nCuando el mundo se pone difícil, te veo enfrentarlo con esa confianza tuya tan única, como si supieras que ninguna oscuridad puede contra tu luz, ni contra el amor que llevas por mí.\n\nMi corazón es tu campo de batalla sagrado, y tú, con cada palabra y cada abrazo, lo defiendes como el héroe que eres.\nNo necesitas una Potara para ser increíble, ya eres mi Vegetto, mi guerrero valiente, mi amor invencible.",
+  "dbl": "Tú eres como Vegetto, la fusión perfecta de fuerza y corazón, el guerrero que sonríe en medio del caos y aún así jamás deja de proteger lo que ama.\n\nCuando el mundo se pone difícil, te veo enfrentarlo con esa confianza tuya tan única, como si supieras que ninguna oscuridad puede contra tu luz, ni contra el amor que llevas por mí.\n\nMi corazón es tu campo de batalla sagrado, y tú, con cada palabra y cada abrazo, lo defiendes como el héroe que eres.\nNo necesitas una Potara para ser increíble, ya eres mi Vegetto, mi guerrero valiente, mi amor invencible.",
   "hijas": {
   texto: "Pon tu cabeza en mi hombro, amor, y escucha cómo mi corazón sueña en voz bajita, sueña con un futuro contigo, con una casa llena de risas suaves y pasos pequeños, con una niña que tenga tus ojos o un niño que herede tu ternura.\n\nSueño con verte dormir con un bebé sobre tu pecho, con abrazarte mientras me dices que lo estamos haciendo bien, aunque estemos cansados, aunque el mundo se detenga.\n\nPorque contigo, la idea de ser madre ya no es solo un sueño, es una promesa que mi alma susurra cada vez que me tomas de la mano.\n\nContigo, todo se siente más posible.\nContigo, quiero ser hogar.",
   video: "https://www.youtube.com/embed/3LSpFmja7Qk"
@@ -356,10 +355,10 @@ tu hijo peludo, Samuel.`,
   },
   "protogemas": "Si cada virtud tuya fuera una protogema… tendría infinitos deseos cumplidos.",
   "gachapon": "Contigo gané el 50/50 más importante de mi vida.\nNo hay banner que se compare al momento en que apareciste en mi historia.\nEres ese personaje cinco estrellas que ni soñaba conseguir,\nel que no solo tiene el mejor diseño, sino también el corazón más puro.\nY lo mejor de todo es que… no eres un personaje jugable:\neres real, eres mío, y yo soy completamente tuya.",
-  "zmpq10g": {
+  "brawl": {
   imagen: "archivos/mi_diario.webp"
   },
-  "bgjij6": "Había una vez un jardín olvidado.\nLas flores se habían cerrado hace tiempo, el sol no entraba, y el viento pasaba sin saludar.\nTodo en ese rincón parecía quieto, apagado… como si la vida hubiera decidido irse sin despedirse.\n\nLa tierra aún guardaba memorias de lo que fue: los colores, los aromas, las risas suaves del alma floreciendo.\nPero ahora solo quedaba el silencio.\n\nHasta que un día, él llegó.\n\nNo traía herramientas, ni promesas. Solo su presencia.\nSe sentó junto a la tierra dormida, sin pedir nada. Solo miró. Y sonrió.\nY con el tiempo… habló.\n\nLe contó al jardín que aún era hermoso.\nLe susurró que había visto su corazón latiendo bajo las raíces.\nY cuando el jardín dudó de sí mismo, él lo acarició con palabras dulces, con una paciencia que calentaba.\n\nLlovió ternura.\nBrilló el sol en forma de risa.\nY el jardín… renació.\n\nUna flor tímida asomó entre las hojas, como si preguntara:\n“¿De verdad puedo?”\nY él, con sus ojos llenos de amor, respondió sin palabras. Solo con su calor.\n\nDesde entonces, el jardín florece cada día.\nNo por obligación, sino por deseo.\nPorque en él vive alguien que supo ver belleza donde otros solo vieron tierra seca.\n\nY esa belleza… soy yo.\nY ese alguien… eres tú.",
+  "minecraft": "Había una vez un jardín olvidado.\nLas flores se habían cerrado hace tiempo, el sol no entraba, y el viento pasaba sin saludar.\nTodo en ese rincón parecía quieto, apagado… como si la vida hubiera decidido irse sin despedirse.\n\nLa tierra aún guardaba memorias de lo que fue: los colores, los aromas, las risas suaves del alma floreciendo.\nPero ahora solo quedaba el silencio.\n\nHasta que un día, él llegó.\n\nNo traía herramientas, ni promesas. Solo su presencia.\nSe sentó junto a la tierra dormida, sin pedir nada. Solo miró. Y sonrió.\nY con el tiempo… habló.\n\nLe contó al jardín que aún era hermoso.\nLe susurró que había visto su corazón latiendo bajo las raíces.\nY cuando el jardín dudó de sí mismo, él lo acarició con palabras dulces, con una paciencia que calentaba.\n\nLlovió ternura.\nBrilló el sol en forma de risa.\nY el jardín… renació.\n\nUna flor tímida asomó entre las hojas, como si preguntara:\n“¿De verdad puedo?”\nY él, con sus ojos llenos de amor, respondió sin palabras. Solo con su calor.\n\nDesde entonces, el jardín florece cada día.\nNo por obligación, sino por deseo.\nPorque en él vive alguien que supo ver belleza donde otros solo vieron tierra seca.\n\nY esa belleza… soy yo.\nY ese alguien… eres tú.",
   "mbr7tr5i": {
   link: "https://lilithnml.github.io/el-mejor-momento-de-mi-vida/"
   },
