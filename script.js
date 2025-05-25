@@ -447,6 +447,13 @@ tu hijo peludo, Samuel.`,
   "querido": {
   video: "https://www.youtube.com/embed/yngIRIDmMis"
   },
+  "hatsunemiku": {
+  imagen: "archivos/ramonxmiku.jpg"
+  },
+  "pitufinalgon": "Pitufinalgon",
+  "cuartocreciente": "Mi amor,\n\nSé que a veces el mundo parece más pesado de lo que debería. Que el cansancio no siempre es físico, y que hay batallas que nadie ve, pero tú las enfrentas cada día. Hoy quiero recordarte algo:\n“El que tiene un porqué para vivir, puede soportar casi cualquier cómo.”\nEso lo dijo Nietzsche, y cuando pienso en ti, veo un alma que nunca se rinde.\n\nTienes dentro de ti una fuerza que me inspira. No importa cuántas veces el camino se vuelva oscuro, siempre encuentras una forma de seguir.\n“El alma se fortalece a través de la adversidad.”\nY tú eres prueba viva de eso. Estoy orgullosa de ti. Nunca estás solo; yo estoy aquí, caminando contigo.\n\nCon todo mi amor,\nTu niña que te admira",
+  "gibosamenguante": "Mi cielo,\n\nHe estado pensando mucho últimamente en lo que somos. No sólo tú y yo como pareja, sino tú como ser humano único, irrepetible. A veces la vida nos hace sentir que debemos encajar en moldes o caminos marcados, pero no es así.\n\n“El hombre está condenado a ser libre.”\nEso dijo Sartre, y aunque suene duro, es hermoso: significa que siempre tienes el poder de elegir quién eres y en qué te conviertes.\n\n“No nacemos como lo que somos, nos convertimos en ello.”\nY yo he sido testigo de cómo te construyes día a día. No te conformas con existir: vives con intención, con pasión, incluso cuando dudas.\n\nEstoy tan feliz de caminar a tu lado en este caos hermoso llamado vida.\nGracias por ser libre, por ser tú.\n\nCon todo mi ser,\nTu princesa que cree en ti",
+  "lunallena": "Entre todas las ideas que han cruzado por mi mente, tú siempre vuelves como la más constante, la más brillante. Si los filósofos se pasaron la vida buscando verdades, yo ya encontré la mía: te amo.\n\n“Ser profundamente amado por alguien te da fuerza, mientras amar profundamente a alguien te da valor.”\nEso dijo Lao Tsé. Y tú me das ambas cosas. Me haces fuerte cuando el mundo pesa, y valiente cuando el miedo me toca. Amar y ser amada por ti es lo más real que conozco.\n\nNo hay teoría que explique cómo un corazón puede latir tan fuerte por otro. Pero aquí estoy, escribiéndote, pensándote, eligiéndote. Porque contigo entendí que el amor no se entiende, se siente.\nY lo que siento por ti... es verdad, es hogar.\n\nTu princesa,\nla que solo piensa en ti",
   
 };
 
