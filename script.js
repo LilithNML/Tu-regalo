@@ -432,6 +432,21 @@ tu hijo peludo, Samuel.`,
   "elsolylaluna": {
   "video": "https://www.youtube.com/embed/Qw7G_ug_y7w"
   },
+  "primerhola": {
+  archivo: "te_amo_06.jpg.enc"
+  },
+  "louie": {
+  video: "https://www.youtube.com/embed/npW4Ej8k8sM"
+  },
+  "round": {
+  video: "https://www.youtube.com/embed/kIrLaccydww"
+  },
+  "...": {
+  video: "https://www.youtube.com/embed/uDIM6RHhAz4"
+  },
+  "querido": {
+  video: "https://www.youtube.com/embed/yngIRIDmMis"
+  },
   
 };
 
