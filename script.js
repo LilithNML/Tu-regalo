@@ -396,6 +396,42 @@ tu hijo peludo, Samuel.`,
   "texto": "Un regalo especial para ti, mi amor.",
   "archivo": "te_amo_01.jpg.enc"
   },
+  "vegetto": {
+  "texto": "Otra sorpresa guardada solo para ti, con todo mi amor.",
+  "archivo": "te_amo_02.jpg.enc"
+  },
+  "ellenjoe": {
+  "texto": "Una muestra más de cuánto te amo, guardada solo para ti.",
+  "archivo": "te_amo_03.jpg.enc"
+  },
+  "himikotoga": {
+  "texto": "Un pedacito de mi amor, cifrado solo para tus ojos.",
+  "archivo": "te_amo_04.jpg.enc"
+  },
+  "elmejorpadredelmundo": {
+  "texto": "Todo lo que soy, te lo debo a ti.",
+  "archivo": "te_amo_05.jpg.enc"
+  },
+  "amoreterno": {
+  "video": "https://www.youtube.com/embed/BzLFsD0Wi6I"
+  },
+  "nadanosvaaseparar": {
+  "video": "https://www.youtube.com/embed/7V-yIwSnVyc"
+  },
+  "megustasmucho": {
+  "texto": "Cada vez que escucho esta canción, no puedo evitar pensar en ti… me gustas muchísimo.",
+  "video": "https://www.youtube.com/embed/miZbcXBk_xQ"
+  },
+  "esperaunpoco": {
+  "texto": "Solo un poco más… y estaremos juntos como tanto soñamos.",
+  "video": "https://www.youtube.com/embed/M_Dk9demut0"
+  },
+  "enamorada": {
+  "video": "https://www.youtube.com/embed/tWsQvv5Mysc"
+  },
+  "elsolylaluna": {
+  "video": "https://www.youtube.com/embed/Qw7G_ug_y7w"
+  },
   
 };
 
