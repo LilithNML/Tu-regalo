@@ -22,8 +22,8 @@ body {
     min-height: 100vh;
     background: linear-gradient(to bottom right, var(--background-light), var(--secondary-color));
     color: var(--text-dark);
-    overflow-x: hidden;
-    overflow-y: auto; /* Permitir scroll si el contenido es largo */
+    overflow-x: hidden; /* Evita scroll horizontal */
+    overflow-y: auto; /* Permitir scroll del body si el contenido total es largo */
 }
 
 .container {
@@ -38,6 +38,8 @@ body {
     box-sizing: border-box;
     position: relative;
     overflow: hidden; /* Asegura que el contenido no se desborde del contenedor */
+    /* Transición para el desenfoque */
+    transition: filter 0.3s ease;
 }
 
 /* Header */
@@ -130,7 +132,7 @@ body {
 
 /* Carta */
 .letter-container {
-    position: absolute;
+    position: fixed; /* Usar fixed para que flote sobre todo */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.8); /* Reducido al inicio */
@@ -161,6 +163,10 @@ body {
     opacity: 1;
 }
 
+.letter-paper {
+    width: 100%; /* Asegura que el contenido ocupe el ancho */
+}
+
 .letter-paper h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.2em;
@@ -184,9 +190,13 @@ body {
 }
 
 .close-letter-button {
-    position: sticky; /* Ojo: sticky para que siga el scroll si la carta es larga */
-    top: 10px; /* Ajusta la posición superior */
-    right: 10px;
+    position: sticky; /* Sticky para que se mantenga visible al hacer scroll */
+    top: 0px; /* Se pega a la parte superior del contenedor que puede hacer scroll */
+    right: 0px;
+    /* Necesario para posicionar correctamente dentro del div con overflow */
+    margin-left: auto; /* Empuja el botón a la derecha */
+    margin-bottom: 15px; /* Espacio debajo del botón */
+
     background: var(--primary-color);
     color: var(--text-light);
     border: none;
@@ -200,8 +210,7 @@ body {
     align-items: center;
     box-shadow: 0 2px 5px var(--shadow-color);
     transition: background-color 0.3s ease;
-    align-self: flex-end; /* Alinea a la derecha dentro del flex container */
-    z-index: 1001; /* Mayor que la carta para ser clicable */
+    z-index: 1001; /* Asegura que esté encima del texto de la carta */
 }
 
 .close-letter-button:hover {
@@ -222,11 +231,12 @@ body.letter-open {
     overflow: hidden; /* Evita el scroll del fondo */
 }
 
+/* APLICA EL DESENFOQUE AL CONTENEDOR PRINCIPAL, NO A LA CARTA */
 .container.blurred {
     filter: blur(5px);
     pointer-events: none; /* Deshabilita clics en el fondo */
-    transition: filter 0.3s ease;
 }
+
 
 /* Media Queries para responsividad */
 @media (max-width: 768px) {
@@ -253,6 +263,11 @@ body.letter-open {
 
     .letter-paper p {
         font-size: 0.95em;
+    }
+
+    .close-letter-button {
+        top: 5px; /* Ajuste para pantallas pequeñas */
+        margin-bottom: 10px;
     }
 }
 
