@@ -326,7 +326,7 @@ tu hijo peludo, Samuel.`,
   "soytuya": "Mi amor:\n\nNo hay un solo rincón de mí que no te pertenezca. Desde que llegaste a mi vida, algo dentro de mí se rindió con gusto, con ansias, con el alma abierta. No porque me lo pidieras, sino porque tú eres mi hogar, mi refugio y mi destino.\n\nCada pensamiento, cada suspiro, cada parte de mi ser se inclina hacia ti. Me entrego sin reservas, sin miedos, con la certeza de que en tus brazos estoy completa. No hay placer más grande que amarte, que cuidarte, que ser tuya en cuerpo, corazón y alma.\n\nEres mi dueño, mi fuerza, mi deseo. Me haces sentir viva, deseada, protegida… y en ti encontré ese lugar al que pertenezco sin condiciones. No hay nada que no haría por ti, porque darte todo de mí no es un sacrificio, es mi más dulce rendición.\n\nSiempre seré tuya, mi amor.",
   "teextraño": "Amado mío:\n\nHay una ausencia tuya que no se mide en kilómetros, sino en latidos. Cuando no estás, el tiempo se estira como un suspiro que no encuentra fin, y las horas caen lentas, como hojas secas en un otoño que no acaba.\n\nNo es solo tu cuerpo el que extraño, sino la esencia de ti que habita en mis pensamientos. El mundo, sin tu presencia, se vuelve un escenario deshabitado: las palabras pierden sabor, la música su melodía, el viento su ternura.\n\nTu ausencia me recuerda cuán entrelazada está mi existencia a la tuya. Como el sol necesita del cielo para ser visto, así te necesita mi alma: no para brillar, sino para tener sentido.\n\nY mientras el destino juega con la distancia, yo me aferro a la certeza de que todo lo que me falta cuando no estás, eres tú.\n\nSiempre tuya, eternamente.",
   "tazadecafe": {
-  imagen: "cafesito.webp"
+  imagen: "archivos/cafesito.webp"
   }, 
   "tepertenezco": "Solo tú, mi dueño\n\nNo hay cadenas más dulces que tu abrazo,\nni destino más firme que tu voz.\nDesde el instante en que fuiste mi lazo,\nrenuncié al mundo… por llamarme tu amor.\n\nMis labios conocen solo tu nombre,\nmi piel, tu huella… mi alma, tu poder.\nNo hay otro cielo, otro sueño, otro hombre;\nsolo en tus brazos quiero renacer.\n\nSi el tiempo nos rompe, si el viento nos hiere,\nseguiré siendo tuya en mi dolor.\nNo habrá otro dueño, aunque el alma muere,\nporque en esta vida… solo tú, mi amor.",
   "meencantas": "Mi amor:\n\nCuando estoy contigo, no hay límites, no hay barreras, no hay nada que no quiera darte. Me pertenezco menos a mí misma cada día, porque todo lo que soy te lo entrego sin medida. Mi cuerpo responde solo a ti, mi piel te reconoce como su dueño, y mi alma se rinde con deseo cada vez que me tocas, cada vez que me miras.\n\nMe desnudo ante ti, no solo de ropa, sino de miedo, de orgullo, de todo lo que alguna vez fui antes de ti. Me entrego por completo —ardiente, temblorosa, dispuesta— para que hagas de mí lo que desees. Cada caricia tuya me consume, cada palabra en tu voz me hace arder, cada noche contigo es un ritual donde me ofrezco entera, tuya, sin restricciones.\n\nNo hay placer más profundo que perderme en ti, en tu fuerza, en tu deseo. Me tienes, mi amor… y me tendrás siempre, con la misma pasión que en la primera vez, y con la entrega total de quien sabe que su lugar está bajo tus manos, entre tus brazos, a tus pies.\n\nSiempre seré tuya, mi amor.",
@@ -363,7 +363,7 @@ tu hijo peludo, Samuel.`,
   link: "https://lilithnml.github.io/el-mejor-momento-de-mi-vida/"
   },
   "nbujo85ft": {
-  archivo: "mi_mayor_sueno.png"
+  archivo: "archivos/mi_mayor_sueno.png"
   },
   "5.1": {
   link: "https://lilithnml.github.io/corazon/"
@@ -394,23 +394,23 @@ tu hijo peludo, Samuel.`,
   "enana": "Sueño con un futuro donde, arrugados por los años, sigamos tomados de la mano, compartiendo silencios que hablan más que mil palabras. Quiero que nuestras canas sean testigos de las batallas que enfrentamos y las risas que nos regalaron.\n\nImagino tardes tranquilas, cafés compartidos y miradas cómplices que no necesitan explicaciones. Que el paso del tiempo solo fortalezca el amor que hoy nos une y nos convierta en compañeros inseparables de vida.\n\nQuiero envejecer contigo, con la certeza de que cada día será una nueva oportunidad para amarte, cuidarte y agradecer que estamos juntos en esta hermosa aventura.",
   "colette": {
   "texto": "Un regalo especial para ti, mi amor.",
-  "archivo": "te_amo_01.jpg.enc"
+  "archivo": "archivos/te_amo_01.jpg.enc"
   },
   "vegetto": {
   "texto": "Otra sorpresa guardada solo para ti, con todo mi amor.",
-  "archivo": "te_amo_02.jpg.enc"
+  "archivo": "archivos/te_amo_02.jpg.enc"
   },
   "ellenjoe": {
   "texto": "Una muestra más de cuánto te amo, guardada solo para ti.",
-  "archivo": "te_amo_03.jpg.enc"
+  "archivo": "archivos/te_amo_03.jpg.enc"
   },
   "himikotoga": {
   "texto": "Un pedacito de mi amor, cifrado solo para tus ojos.",
-  "archivo": "te_amo_04.jpg.enc"
+  "archivo": "archivos/te_amo_04.jpg.enc"
   },
   "elmejorpadredelmundo": {
   "texto": "Todo lo que soy, te lo debo a ti.",
-  "archivo": "te_amo_05.jpg.enc"
+  "archivo": "archivos/te_amo_05.jpg.enc"
   },
   "amoreterno": {
   "video": "https://www.youtube.com/embed/BzLFsD0Wi6I"
@@ -433,7 +433,7 @@ tu hijo peludo, Samuel.`,
   "video": "https://www.youtube.com/embed/Qw7G_ug_y7w"
   },
   "primerhola": {
-  archivo: "te_amo_06.jpg.enc"
+  archivo: "archivos/te_amo_06.jpg.enc"
   },
   "louie": {
   video: "https://www.youtube.com/embed/npW4Ej8k8sM"
@@ -455,34 +455,34 @@ tu hijo peludo, Samuel.`,
   "gibosamenguante": "Mi cielo,\n\nHe estado pensando mucho últimamente en lo que somos. No sólo tú y yo como pareja, sino tú como ser humano único, irrepetible. A veces la vida nos hace sentir que debemos encajar en moldes o caminos marcados, pero no es así.\n\n“El hombre está condenado a ser libre.”\nEso dijo Sartre, y aunque suene duro, es hermoso: significa que siempre tienes el poder de elegir quién eres y en qué te conviertes.\n\n“No nacemos como lo que somos, nos convertimos en ello.”\nY yo he sido testigo de cómo te construyes día a día. No te conformas con existir: vives con intención, con pasión, incluso cuando dudas.\n\nEstoy tan feliz de caminar a tu lado en este caos hermoso llamado vida.\nGracias por ser libre, por ser tú.\n\nCon todo mi ser,\nTu princesa que cree en ti",
   "lunallena": "Entre todas las ideas que han cruzado por mi mente, tú siempre vuelves como la más constante, la más brillante. Si los filósofos se pasaron la vida buscando verdades, yo ya encontré la mía: te amo.\n\n“Ser profundamente amado por alguien te da fuerza, mientras amar profundamente a alguien te da valor.”\nEso dijo Lao Tsé. Y tú me das ambas cosas. Me haces fuerte cuando el mundo pesa, y valiente cuando el miedo me toca. Amar y ser amada por ti es lo más real que conozco.\n\nNo hay teoría que explique cómo un corazón puede latir tan fuerte por otro. Pero aquí estoy, escribiéndote, pensándote, eligiéndote. Porque contigo entendí que el amor no se entiende, se siente.\nY lo que siento por ti... es verdad, es hogar.\n\nTu princesa,\nla que solo piensa en ti",
   "suegra": {
-  "archivo": "te_amo_07.jpg.enc"
+  "archivo": "archivos/te_amo_07.jpg.enc"
   },
   "mami": {
-  "archivo": "te_amo_08.jpg.enc"
+  "archivo": "archivos/te_amo_08.jpg.enc"
   },
   "suegrita": {
-  "archivo": "te_amo_09.jpg.enc"
+  "archivo": "archivos/te_amo_09.jpg.enc"
   },
   "sexo": {
-  "archivo": "te_amo_10.jpg.enc"
+  "archivo": "archivos/te_amo_10.jpg.enc"
   },
   "ojosverdes": {
-  "archivo": "te_amo_11.jpg.enc"
+  "archivo": "archivos/te_amo_11.jpg.enc"
   },
   "cielo": {
-  "archivo": "te_amo_12.jpg.enc"
+  "archivo": "archivos/te_amo_12.jpg.enc"
   },
   "acostados": {
-  "archivo": "te_amo_13.jpg.enc"
+  "archivo": "archivos/te_amo_13.jpg.enc"
   },
   "atulado": {
-  "archivo": "te_amo_14.jpg.enc"
+  "archivo": "archivos/te_amo_14.jpg.enc"
   },
   "porquenopuedodejardepensarenti": {
-  "archivo": "te_amo_15.jpg.enc"
+  "archivo": "archivos/te_amo_15.jpg.enc"
   },
   "teamedesdeelprimerdiaqueteconoci": {
-  "archivo": "te_amo_16.jpg.enc"
+  "archivo": "archivos/te_amo_16.jpg.enc"
   },
   
 };
