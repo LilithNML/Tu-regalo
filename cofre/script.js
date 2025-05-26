@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const openChestSound = document.getElementById('openChestSound');
     const readLetterSound = document.getElementById('readLetterSound');
     const body = document.body;
-    const mainContainer = document.querySelector('.container');
+    const mainContainer = document.querySelector('.container'); // Contenedor principal que se desenfoca
     const clickText = chestContainer.querySelector('.click-text');
 
     let isChestOpen = false;
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 letterContainer.classList.add('show');
                 body.classList.add('letter-open'); // Añadir clase al body para evitar scroll
-                mainContainer.classList.add('blurred'); // Desenfoque del fondo
+                mainContainer.classList.add('blurred'); // APLICA EL DESENFOQUE AL CONTENEDOR PRINCIPAL
                 readLetterSound.currentTime = 0; // Reiniciar sonido de lectura
                 readLetterSound.play(); // Reproducir sonido de leer carta
             }, 600); // Un poco más de tiempo para que la animación del cofre se aprecie
@@ -38,6 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     closeLetterButton.addEventListener('click', () => {
+        // Detener el sonido de lectura si está sonando
+        readLetterSound.pause();
+        readLetterSound.currentTime = 0;
+
         // Animación de cierre de la carta (opcional, con keyframes en CSS)
         letterContainer.style.animation = 'fadeOutZoom 0.5s forwards';
 
@@ -51,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isChestOpen = false;
 
             body.classList.remove('letter-open'); // Remover clase para permitir scroll
-            mainContainer.classList.remove('blurred'); // Remover desenfoque del fondo
+            mainContainer.classList.remove('blurred'); // REMOVER DESENFOQUE DEL CONTENEDOR PRINCIPAL
         }, 500); // Coincide con la duración de fadeOutZoom
     });
 });
