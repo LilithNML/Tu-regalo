@@ -27,18 +27,19 @@ body::before {
     background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente para el contenedor */
     backdrop-filter: blur(10px); /* Efecto de desenfoque detrás del contenedor */
     border-radius: 20px;
-    padding: 40px 60px;
+    padding: 30px; /* Reducido el padding general */
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil */
     animation: fadeIn 1.5s ease-out;
-    max-width: 90%;
+    max-width: 95%; /* Permitir que el contenedor se expanda un poco más */
+    margin: 20px; /* Añadido margen para separarlo de los bordes en pantallas pequeñas */
 }
 
 h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.8em;
-    margin-bottom: 30px;
+    font-size: 2.5em; /* Reducido el tamaño de la fuente inicial */
+    margin-bottom: 25px; /* Reducido el margen inferior */
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     letter-spacing: 1px;
@@ -47,19 +48,21 @@ h1 {
 .countdown-timer {
     display: flex;
     justify-content: center;
-    gap: 25px; /* Espacio entre los bloques de tiempo */
+    gap: 15px; /* Reducido el espacio entre los bloques */
     flex-wrap: wrap; /* Permite que los bloques se envuelvan en pantallas pequeñas */
-    margin-bottom: 40px;
+    margin-bottom: 30px; /* Reducido el margen inferior */
 }
 
 .time-block {
     background: rgba(255, 255, 255, 0.15);
     border-radius: 15px;
-    padding: 20px 25px;
-    min-width: 120px;
+    padding: 15px 20px; /* Reducido el padding de los bloques */
+    min-width: 100px; /* Reducido el ancho mínimo */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, background 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.4);
+    flex-grow: 1; /* Permite que los bloques se expandan para llenar el espacio disponible */
+    text-align: center; /* Centrar el texto dentro de los bloques */
 }
 
 .time-block:hover {
@@ -69,7 +72,7 @@ h1 {
 
 .time-block .number {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3.5em;
+    font-size: 2.8em; /* Reducido el tamaño de la fuente del número */
     font-weight: 700;
     color: #fff;
     display: block;
@@ -78,7 +81,7 @@ h1 {
 }
 
 .time-block .label {
-    font-size: 1.1em;
+    font-size: 0.9em; /* Reducido el tamaño de la fuente de la etiqueta */
     font-weight: 400;
     color: rgba(255, 255, 255, 0.9);
     margin-top: 5px;
@@ -87,13 +90,13 @@ h1 {
 
 .message {
     font-family: 'Playfair Display', serif;
-    font-size: 1.6em;
+    font-size: 1.4em; /* Reducido el tamaño de la fuente del mensaje */
     color: #fff;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     animation: slideInUp 1.2s ease-out 0.5s backwards;
 }
 
-/* Animaciones */
+/* Animaciones (sin cambios) */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -116,66 +119,89 @@ h1 {
     }
 }
 
-/* Responsive design */
+/* Media Queries para diferentes tamaños de pantalla */
 @media (max-width: 768px) {
     .container {
-        padding: 30px 40px;
+        padding: 25px;
     }
 
     h1 {
-        font-size: 2.2em;
-        margin-bottom: 25px;
-    }
-
-    .countdown-timer {
-        gap: 15px;
-        margin-bottom: 30px;
-    }
-
-    .time-block {
-        padding: 15px 20px;
-        min-width: 100px;
-    }
-
-    .time-block .number {
-        font-size: 2.8em;
-    }
-
-    .time-block .label {
-        font-size: 1em;
-    }
-
-    .message {
-        font-size: 1.4em;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 25px 30px;
-    }
-
-    h1 {
-        font-size: 1.8em;
+        font-size: 2em;
+        margin-bottom: 20px;
     }
 
     .countdown-timer {
         gap: 10px;
-        flex-direction: column; /* Apila los bloques en pantallas muy pequeñas */
-        align-items: center;
+        margin-bottom: 25px;
     }
 
     .time-block {
-        width: 80%; /* Ocupa más ancho cuando están apilados */
-        max-width: 200px;
-        padding: 15px;
+        padding: 10px 15px;
+        min-width: 80px;
+    }
+
+    .time-block .number {
+        font-size: 2.2em;
+    }
+
+    .time-block .label {
+        font-size: 0.85em;
+    }
+
+    .message {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.7em;
+        margin-bottom: 15px;
+    }
+
+    .countdown-timer {
+        flex-direction: column; /* Apilar los bloques en pantallas más pequeñas */
+        align-items: center;
+        gap: 15px;
+    }
+
+    .time-block {
+        width: 80%; /* Los bloques ocupan más ancho al apilarse */
+        min-width: auto;
     }
 
     .time-block .number {
         font-size: 2.5em;
     }
 
+    .time-block .label {
+        font-size: 0.9em;
+    }
+
     .message {
-        font-size: 1.2em;
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .time-block .number {
+        font-size: 2em;
+    }
+
+    .message {
+        font-size: 1em;
     }
 }
