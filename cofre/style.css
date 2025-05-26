@@ -1,0 +1,302 @@
+/* Importación de fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+/* Estilos generales */
+:root {
+    --primary-color: #7a492f; /* Un tono cálido de marrón para el cofre/madera */
+    --secondary-color: #e0b080; /* Un tono dorado o beige suave */
+    --accent-color: #a87f5a; /* Un tono intermedio */
+    --text-dark: #333;
+    --text-light: #f9f9f9;
+    --background-light: #f5f0e1; /* Fondo muy claro, casi blanco */
+    --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, var(--background-light), var(--secondary-color));
+    color: var(--text-dark);
+    overflow-x: hidden;
+    overflow-y: auto; /* Permitir scroll si el contenido es largo */
+}
+
+.container {
+    background-color: var(--text-light);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    padding: 30px;
+    text-align: center;
+    max-width: 900px;
+    width: 95%;
+    margin: 20px; /* Margen para asegurar que no toque los bordes en móviles */
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden; /* Asegura que el contenido no se desborde del contenedor */
+}
+
+/* Header */
+.header {
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    color: var(--primary-color);
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.header h1::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* Contenido principal - Cofre (SVG) */
+.main-content {
+    min-height: 400px; /* Altura mínima para centrar el cofre y la carta */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chest-container {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; /* Animación de elevación al pasar el mouse */
+}
+
+.chest-container:hover {
+    transform: translateY(-5px);
+}
+
+.chest-svg {
+    max-width: 300px; /* Ajusta el tamaño máximo del SVG */
+    width: 100%;
+    height: auto;
+    display: block;
+    user-select: none;
+    -webkit-user-drag: none;
+    margin-bottom: 20px; /* Espacio entre el cofre y el texto de clic */
+}
+
+/* Estilos específicos para la tapa del cofre SVG */
+.chest-lid {
+    transform-origin: 125px 90px; /* Punto de pivote para la rotación (centro de la bisagra) */
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Animación elástica al abrir */
+}
+
+.chest-container.open .chest-lid {
+    transform: rotateX(80deg); /* Abre la tapa del cofre */
+}
+
+
+.click-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    color: var(--primary-color);
+    margin-top: 0; /* Ya hay margen en el SVG */
+    font-weight: 600;
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    from { opacity: 1; }
+    to { opacity: 0.6; }
+}
+
+/* Carta */
+.letter-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8); /* Reducido al inicio */
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff8dc; /* Papel de carta antiguo */
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px var(--shadow-color);
+    padding: 30px;
+    box-sizing: border-box;
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    opacity: 0; /* Oculto por opacidad */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    font-family: 'Playfair Display', serif; /* Para un toque más elegante en la carta */
+    color: var(--text-dark);
+    max-height: 80vh; /* Máxima altura para la carta */
+    overflow-y: auto; /* Permite scroll si la carta es muy larga */
+}
+
+.letter-container.show {
+    display: flex;
+    transform: translate(-50%, -50%) scale(1); /* Escala normal al mostrar */
+    opacity: 1;
+}
+
+.letter-paper h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.letter-paper p {
+    font-family: 'Open Sans', sans-serif; /* Texto de la carta con una fuente legible */
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.letter-paper p:last-of-type {
+    margin-top: 30px;
+    text-align: right;
+    font-weight: 600;
+}
+
+.close-letter-button {
+    position: sticky; /* Ojo: sticky para que siga el scroll si la carta es larga */
+    top: 10px; /* Ajusta la posición superior */
+    right: 10px;
+    background: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    transition: background-color 0.3s ease;
+    align-self: flex-end; /* Alinea a la derecha dentro del flex container */
+    z-index: 1001; /* Mayor que la carta para ser clicable */
+}
+
+.close-letter-button:hover {
+    background-color: #5c361e; /* Un tono más oscuro al pasar el mouse */
+}
+
+/* Footer */
+.footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: var(--accent-color);
+    font-size: 0.9em;
+}
+
+/* Efectos visuales de desenfoque y bloqueo del scroll */
+body.letter-open {
+    overflow: hidden; /* Evita el scroll del fondo */
+}
+
+.container.blurred {
+    filter: blur(5px);
+    pointer-events: none; /* Deshabilita clics en el fondo */
+    transition: filter 0.3s ease;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .chest-svg {
+        max-width: 250px;
+    }
+
+    .click-text {
+        font-size: 1em;
+    }
+
+    .letter-container {
+        padding: 20px;
+        max-height: 90vh; /* Más altura en móviles */
+    }
+
+    .letter-paper h2 {
+        font-size: 1.8em;
+    }
+
+    .letter-paper p {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 15px;
+        margin: 10px;
+    }
+
+    .header h1 {
+        font-size: 1.5em;
+    }
+
+    .chest-svg {
+        max-width: 200px;
+    }
+
+    .click-text {
+        font-size: 0.9em;
+    }
+
+    .letter-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .letter-paper h2 {
+        font-size: 1.5em;
+    }
+
+    .letter-paper p {
+        font-size: 0.9em;
+        line-height: 1.6;
+    }
+
+    .close-letter-button {
+        width: 30px;
+        height: 30px;
+        font-size: 1.2em;
+    }
+}
+
+/* Keyframes para la transición de cierre de la carta (opcional, para un efecto más suave al cerrar) */
+@keyframes fadeOutZoom {
+    from { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    to { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+}
