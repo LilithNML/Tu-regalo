@@ -1,16 +1,15 @@
  body {
      margin: 0;
      font-family: 'Montserrat', sans-serif;
-     background: linear-gradient(135deg, #FF6B6B 0%, #FFB6C1 100%); /* Degradado suave de rojo a rosa */
+     background: linear-gradient(135deg, #6A11CB 0%, #2575FC 100%); /* Degradado de morado a azul vibrante */
      color: #fff;
      display: flex;
      justify-content: center;
      align-items: center;
-     min-height: 100vh; /* Permite que el body se expanda si el contenido es mayor */
-     /* overflow: hidden; /* ¡Quitamos esto para permitir scroll! */
+     min-height: 100vh;
      position: relative;
-     padding: 20px 0; /* Añadimos padding vertical para que el contenido no pegue en los bordes */
-     box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
+     padding: 20px 0;
+     box-sizing: border-box;
  }
 
  body::before {
@@ -29,21 +28,21 @@
      background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente para el contenedor */
      backdrop-filter: blur(10px); /* Efecto de desenfoque detrás del contenedor */
      border-radius: 20px;
-     padding: 30px; /* Reducido el padding general */
+     padding: 30px;
      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
      text-align: center;
-     border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil */
+     border: 1px solid rgba(255, 255, 255, 0.3);
      animation: fadeIn 1.5s ease-out;
-     max-width: 95%; /* Permitir que el contenedor se expanda un poco más */
-     margin: auto; /* Centrar horizontalmente y permitir margen automático vertical */
-     box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
-     flex-shrink: 0; /* Evita que el contenedor se encoja si el viewport es muy pequeño */
+     max-width: 95%;
+     margin: auto;
+     box-sizing: border-box;
+     flex-shrink: 0;
  }
 
  h1 {
      font-family: 'Playfair Display', serif;
-     font-size: 2.5em; /* Reducido el tamaño de la fuente inicial */
-     margin-bottom: 25px; /* Reducido el margen inferior */
+     font-size: 2.5em;
+     margin-bottom: 25px;
      color: #fff;
      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
      letter-spacing: 1px;
@@ -52,21 +51,21 @@
  .countdown-timer {
      display: flex;
      justify-content: center;
-     gap: 15px; /* Reducido el espacio entre los bloques */
-     flex-wrap: wrap; /* Permite que los bloques se envuelvan en pantallas pequeñas */
-     margin-bottom: 30px; /* Reducido el margen inferior */
+     gap: 15px;
+     flex-wrap: wrap;
+     margin-bottom: 30px;
  }
 
  .time-block {
      background: rgba(255, 255, 255, 0.15);
      border-radius: 15px;
-     padding: 15px 20px; /* Reducido el padding de los bloques */
-     min-width: 100px; /* Reducido el ancho mínimo */
+     padding: 15px 20px;
+     min-width: 100px;
      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
      transition: transform 0.3s ease-in-out, background 0.3s ease;
      border: 1px solid rgba(255, 255, 255, 0.4);
-     flex-grow: 1; /* Permite que los bloques se expandan para llenar el espacio disponible */
-     text-align: center; /* Centrar el texto dentro de los bloques */
+     flex-grow: 1;
+     text-align: center;
  }
 
  .time-block:hover {
@@ -76,7 +75,7 @@
 
  .time-block .number {
      font-family: 'Montserrat', sans-serif;
-     font-size: 2.8em; /* Reducido el tamaño de la fuente del número */
+     font-size: 2.8em;
      font-weight: 700;
      color: #fff;
      display: block;
@@ -85,7 +84,7 @@
  }
 
  .time-block .label {
-     font-size: 0.9em; /* Reducido el tamaño de la fuente de la etiqueta */
+     font-size: 0.9em;
      font-weight: 400;
      color: rgba(255, 255, 255, 0.9);
      margin-top: 5px;
@@ -94,12 +93,12 @@
 
  .message {
      font-family: 'Playfair Display', serif;
-     font-size: 1.4em; /* Reducido el tamaño de la fuente del mensaje */
+     font-size: 1.4em;
      color: #fff;
      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
      animation: slideInUp 1.2s ease-out 0.5s backwards;
-     padding: 0 10px; /* Añadir un pequeño padding horizontal para el texto */
-     box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
+     padding: 0 10px;
+     box-sizing: border-box;
  }
 
  /* Animaciones (sin cambios) */
@@ -125,7 +124,7 @@
      }
  }
 
- /* Media Queries para diferentes tamaños de pantalla */
+ /* Media Queries (sin cambios significativos en responsividad) */
  @media (max-width: 768px) {
      .container {
          padding: 25px;
@@ -170,13 +169,13 @@
      }
 
      .countdown-timer {
-         flex-direction: column; /* Apilar los bloques en pantallas más pequeñas */
+         flex-direction: column;
          align-items: center;
          gap: 15px;
      }
 
      .time-block {
-         width: 80%; /* Los bloques ocupan más ancho al apilarse */
+         width: 80%;
          min-width: auto;
      }
 
