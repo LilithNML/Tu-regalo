@@ -25,7 +25,7 @@ body {
   font-family: var(--primary-font);
   margin: 0;
   padding: 0;
-  background: url('fondo-romantico.jpg') no-repeat center center fixed;
+  background: url('assets/images/fondo-romantico.jpg') no-repeat center center fixed;
   background-size: cover; /* Asegura que la imagen de fondo cubra toda la pantalla */
   min-height: 100vh; /* Mínimo de altura para asegurar que el fondo sea visible */
   overflow-x: hidden; /* Evita el scroll horizontal innecesario */
