@@ -1,195 +1,178 @@
+const mensajes = {
+"chester": `Ey tú, mi niño hermoso <br><br>
+¿Sabías que tu niña hermosa te ama con locura? <br>
+Así, sin pausas, sin reglas, sin frenos. <br>
+Te amo como si fueras mi videojuego favorito, <br>
+quiero jugar contigo todos los días, <br>
+explorarte, cuidarte, y ganar contigo siempre.<br><br>
+Eres mi glitch perfecto, <br>
+mi premio secreto, <br>
+mi lugar feliz.<br><br>
+
+
+Y no lo olvides, <br>
+soy tu princesa, <br>
+y estoy completamente hechizada por ti.`,
+"primernovio": {
+    texto: "Hoy quiero dedicarte unas palabras que quizás no siempre te digo, pero que siento profundamente en cada rincón de mi corazón. Tú eres mi primer amor real, el primero con el que entendí lo que significa amar de verdad, lo que es confiar, compartir, y construir algo hermoso juntos.<br><br>Antes de ti, amaba con sueños, con esperanza, con ilusión, pero tú llegaste y me enseñaste que el amor no es solo un sentimiento, es un acto diario, una decisión constante, una forma de ser que solo se vive en la realidad. Y eso, mi amor, es lo que más valoro de ti. Tú me has mostrado lo que es un amor real, con sus altos, sus bajos, pero siempre lleno de honestidad, paciencia y ternura.<br><br>Gracias por ser mi primer amor que nunca se desvanece, por ser quien me enseña, quien me cuida, quien me ama con una intensidad que no sabía que podía existir. Gracias por ser tú, por darme lo mejor de ti, por regalarme tu corazón y hacerme sentir tan especial. Eres mi primer amor real, y no puedo evitar sentirme afortunada por tenerte a mi lado.<br><br>Con todo mi amor,<br>Tu niña.",
+    video: "[https://www.youtube.com/embed/NwIdD8PI-_c](https://www.youtube.com/embed/NwIdD8PI-_c)"
+},
+"tazadecafe": {
+    imagen: "archivos/cafesito.webp"
+},
+"cofrevalioso": {
+    link: "[https://lilithnml.github.io/Cofre/](https://lilithnml.github.io/Cofre/)"
+},
+"increible": {
+    archivo: "archivos/mapa_de_estrellas.jpg"
+},
+
+};
 function normalizarTexto(texto) {
-    return texto
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .replace(/\s+/g, "")
-        .toLowerCase();
+return texto
+.normalize("NFD")
+.replace(/[\u0300-\u036f]/g, "")
+.replace(/\s+/g, "")
+.toLowerCase();
 }
-
 function checkCode() {
-    const input = document.getElementById("codeInput");
-    const code = normalizarTexto(input.value);
-    const contenido = document.getElementById("contenido");
-    const correctSound = document.getElementById("correctSound");
-    const incorrectSound = document.getElementById("incorrectSound");
-    const bgMusic = document.getElementById("bgMusic");
-    const codeAudio = document.getElementById("codeAudio");
+const input = document.getElementById("codeInput");
+const code = normalizarTexto(input.value);
+const contenido = document.getElementById("contenido");
+const correctSound = document.getElementById("correctSound");
+const incorrectSound = document.getElementById("incorrectSound");
+const bgMusic = document.getElementById("bgMusic");
+const codeAudio = document.getElementById("codeAudio");
+// Pausar audio de código si está sonando
+if (codeAudio && !codeAudio.paused) {
+    codeAudio.pause();
+    codeAudio.currentTime = 0;
+    if (bgMusic && bgMusic.paused) bgMusic.play().catch(() => {});
+}
 
-    // Pausar audio de código si está sonando
-    if (codeAudio && !codeAudio.paused) {
-        codeAudio.pause();
-        codeAudio.currentTime = 0;
-        if (bgMusic && bgMusic.paused) bgMusic.play().catch(() => {});
+
+if (mensajes.hasOwnProperty(code)) {
+    const data = mensajes [code];
+    let desbloqueados = JSON.parse(localStorage.getItem("desbloqueados") || "[]");
+
+
+    if (!desbloqueados.includes(code)) {
+        desbloqueados.push(code);
+        localStorage.setItem("desbloqueados", JSON.stringify(desbloqueados));
     }
 
-    // Aquí deberías tener tu objeto 'mensajes' definido con tus códigos y contenidos
-    // Por ejemplo:
-    const mensajes = {
-    "micodesecreto": "Este es un mensaje secreto.",
-    "otrocodigo": {
-    texto: "Este es un mensaje con video.",
-    video: "https://m.youtube.com/watch?v=aM0gNgbNKYY&pp=ygUlaSBsaWtlIHRoZSB3YXkgeW91IGtpc3MgbWUgaW52aW5jaWJsZQ%3D%3D"
-       }
-     };
 
-    /* ... TUS MENSAJES Y CÓDIGOS AQUÍ ... */
-    const mensajes = {
-        // Tu objeto de mensajes completo iría aquí.
-        // Por ejemplo, para que esto funcione, podrías pegar la sección
-        // 'const mensajes = { ... }' de tu script.js original aquí.
-        // Si lo dejas vacío, ningún código funcionará.
-        "micodesecreto": "Este es un mensaje secreto.",
-    "otrocodigo": {
-    texto: "Este es un mensaje con video.",
-    video: "https://m.youtube.com/watch?v=aM0gNgbNKYY&pp=ygUlaSBsaWtlIHRoZSB3YXkgeW91IGtpc3MgbWUgaW52aW5jaWJsZQ%3D%3D"
-       }
-    };
+    let html = '';
 
 
-    if (mensajes.hasOwnProperty(code)) {
-        const data = mensajes[code];
-        let desbloqueados = JSON.parse(localStorage.getItem("desbloqueados") || "[]");
+    if (typeof data === 'string') {
+        html = `<p>${data}</p>`;
+    } else if (typeof data === 'object') {
+        html = `<p>${data.texto || ''}</p>`;
 
-        if (!desbloqueados.includes(code)) {
-            desbloqueados.push(code);
-            localStorage.setItem("desbloqueados", JSON.stringify(desbloqueados));
+
+        if (data.video) {
+            window.open(data.video, "_blank");
         }
 
-        let html = '';
 
-        if (typeof data === 'string') {
-            html = `<p>${data}</p>`;
-        } else if (typeof data === 'object') {
-            html = `<p>${data.texto || ''}</p>`;
+        if (data.link) {
+            window.open(data.link, "_blank");
+        }
 
-            if (data.video) {
-                // Aquí podrías incrustar el video directamente si lo prefieres,
-                // por ejemplo, con un iframe de YouTube.
-                // html += `<iframe src="${data.video.replace("youtube.com/", "youtube.com/embed/")}" frameborder="0" allowfullscreen></iframe>`;
-                window.open(data.video, "_blank"); // Abre el video en una nueva pestaña
+
+        if (data.archivo) {
+            const a = document.createElement("a");
+            a.href = data.archivo;
+            a.download = data.archivo.split('/').pop(); // Obtener el nombre del archivo
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+
+        if (data.imagen) {
+            mostrarImagenModal(data.imagen);
+        }
+
+
+        if (data.audio) {
+            if (bgMusic && !bgMusic.paused) {
+                bgMusic.pause();
             }
 
-            if (data.link) {
-                window.open(data.link, "_blank");
-            }
 
-            if (data.archivo) {
-                const a = document.createElement("a");
-                a.href = data.archivo;
-                // Puedes cambiar el nombre de descarga si lo deseas
-                a.download = data.archivo.split('/').pop(); 
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-            }
-
-            if (data.imagen) {
-                mostrarImagenModal(data.imagen);
-            }
-
-            if (data.audio) {
-                if (bgMusic && !bgMusic.paused) {
-                    bgMusic.pause();
+            if (codeAudio) {
+                if (!codeAudio.src.includes(data.audio)) {
+                    codeAudio.src = data.audio;
                 }
-
-                if (codeAudio) {
-                    // Verificamos que no sea el mismo audio ya cargado
-                    if (!codeAudio.src.includes(data.audio)) {
-                        codeAudio.src = data.audio;
+                codeAudio.play().catch(() => {});
+                codeAudio.onended = () => {
+                    if (bgMusic && bgMusic.paused) {
+                        bgMusic.play().catch(() => {});
                     }
-                    codeAudio.play().catch(() => {});
-                    codeAudio.onended = () => {
-                        if (bgMusic && bgMusic.paused) {
-                            bgMusic.play().catch(() => {});
-                        }
-                    };
-                }
+                };
             }
         }
-
-        contenido.innerHTML = html;
-        contenido.classList.add("show");
-        correctSound.play();
-    } else {
-        contenido.innerHTML = "<p class='error-message'>Código no válido. Intenta con otro.</p>";
-        contenido.classList.add("show");
-        incorrectSound.play();
     }
 
-    input.value = "";
-    actualizarProgreso(Object.keys(mensajes).length); // Pasa la cantidad total de mensajes
+
+    contenido.innerHTML = html;
+    contenido.classList.add("show", "animate__fadeIn");
+    correctSound.play();
+} else {
+    contenido.innerHTML = "<p style='color: #ffdddd;'>Código no válido. Intenta con otro.</p>";
+    contenido.classList.add("show", "animate__shakeX");
+    incorrectSound.play();
+    setTimeout(() => {
+        contenido.classList.remove("animate__shakeX");
+    }, 1000);
 }
 
-function actualizarProgreso(totalMensajes) {
-    const progreso = document.getElementById("progreso");
-    const desbloqueados = JSON.parse(localStorage.getItem("desbloqueados") || "[]");
-    if (progreso) {
-        progreso.textContent = `Has desbloqueado ${desbloqueados.length} de ${totalMensajes} mensajes secretos.`;
-    }
-}
 
-// Escuchar el clic inicial para permitir la reproducción de audio
+input.value = "";
+actualizarProgreso();
+
+}
+function actualizarProgreso() {
+const progreso = document.getElementById("progreso");
+const total = Object.keys(mensajes).length;
+const desbloqueados = JSON.parse(localStorage.getItem("desbloqueados") || "[]");
+if (progreso) {
+progreso.textContent = Has desbloqueado ${desbloqueados.length} de ${total} mensajes secretos.;
+}
+}
 window.addEventListener("click", () => {
-    const music = document.getElementById("bgMusic");
-    if (music && music.paused) {
-        music.play().catch(() => {
-            // Manejar error si el navegador bloquea la reproducción automática
-            console.warn("Reproducción de música de fondo bloqueada por el navegador. Se intentará de nuevo al interactuar.");
-        });
-    }
-}, { once: true }); // 'once: true' asegura que el evento solo se dispare una vez
-
-// Inicializar al cargar la página
+const music = document.getElementById("bgMusic");
+if (music && music.paused) {
+music.play().catch(() => {});
+}
+}, { once: true });
 window.addEventListener("load", () => {
-    // Asignar el evento al botón
-    document.getElementById("checkButton").addEventListener("click", checkCode);
-
-    // Asignar el evento a la tecla Enter en el input
-    document.getElementById("codeInput").addEventListener("keypress", function(event) {
-        if (event.key === "Enter") {
-            event.preventDefault(); // Previene el comportamiento por defecto de Enter (ej. enviar formulario)
-            checkCode();
-        }
-    });
-
-    // Obtener la cantidad total de mensajes para el progreso inicial
-    // Necesitas poner tu objeto 'mensajes' aquí o pasarlo de alguna forma
-    // para que la función pueda contar el total.
-    // Si no tienes los mensajes aquí, el total será 0 inicialmente.
-    // Una forma simple es contar el tamaño del objeto mensajes globalmente.
-    const total = Object.keys(mensajes).length; // Esto funcionará si 'mensajes' está definido arriba
-    actualizarProgreso(total);
+document.getElementById("codeInput").addEventListener("keypress", function(event) {
+if (event.key === "Enter") {
+event.preventDefault();
+checkCode();
+}
 });
-
+actualizarProgreso();
+});
 function mostrarImagenModal(src) {
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImg");
-    modal.style.display = "flex"; // Usa flexbox para centrar la imagen
-    modal.style.alignItems = "center";
-    modal.style.justifyContent = "center";
-    modalImg.src = src;
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+modal.style.display = "block";
+modalImg.src = src;
 }
-
 function cerrarModal() {
-    document.getElementById("imageModal").style.display = "none";
+document.getElementById("imageModal").style.display = "none";
+}
+document.addEventListener("visibilitychange", () => {
+const bgMusic = document.getElementById("bgMusic");
+const codeAudio = document.getElementById("codeAudio");
+if (document.visibilityState === "visible") {
+    if (bgMusic && bgMusic.paused && codeAudio.paused) {
+        bgMusic.play().catch(() => {});
+    }
 }
 
-// Manejo de la visibilidad de la pestaña para pausar/reanudar música
-document.addEventListener("visibilitychange", () => {
-    const bgMusic = document.getElementById("bgMusic");
-    const codeAudio = document.getElementById("codeAudio");
-
-    if (document.visibilityState === "visible") {
-        if (bgMusic && bgMusic.paused && codeAudio.paused) {
-            bgMusic.play().catch(() => {});
-        }
-    } else {
-        // Pausar toda la música cuando la pestaña no está visible
-        if (bgMusic && !bgMusic.paused) {
-            bgMusic.pause();
-        }
-        if (codeAudio && !codeAudio.paused) {
-            codeAudio.pause();
-        }
-    }
 });
