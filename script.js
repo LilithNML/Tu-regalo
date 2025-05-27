@@ -246,7 +246,7 @@ que te haría temblar el alma.
 
 Con todo lo que soy,  
 Tu niña. Tu Luna. Tuya siempre.`,
-  "miniñohermoso": `Amo tu ternura,  
+  "mininohermoso": `Amo tu ternura,  
 esa que se esconde en tus gestos pequeños,  
 en cómo me hablas, en cómo te preocupas,  
 en cómo me haces sentir segura sin decir mucho.
