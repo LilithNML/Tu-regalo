@@ -361,7 +361,7 @@ tu hijo peludo, Samuel.`,
   },
   "minecraft": "Había una vez un jardín olvidado.\nLas flores se habían cerrado hace tiempo, el sol no entraba, y el viento pasaba sin saludar.\nTodo en ese rincón parecía quieto, apagado… como si la vida hubiera decidido irse sin despedirse.\n\nLa tierra aún guardaba memorias de lo que fue: los colores, los aromas, las risas suaves del alma floreciendo.\nPero ahora solo quedaba el silencio.\n\nHasta que un día, él llegó.\n\nNo traía herramientas, ni promesas. Solo su presencia.\nSe sentó junto a la tierra dormida, sin pedir nada. Solo miró. Y sonrió.\nY con el tiempo… habló.\n\nLe contó al jardín que aún era hermoso.\nLe susurró que había visto su corazón latiendo bajo las raíces.\nY cuando el jardín dudó de sí mismo, él lo acarició con palabras dulces, con una paciencia que calentaba.\n\nLlovió ternura.\nBrilló el sol en forma de risa.\nY el jardín… renació.\n\nUna flor tímida asomó entre las hojas, como si preguntara:\n“¿De verdad puedo?”\nY él, con sus ojos llenos de amor, respondió sin palabras. Solo con su calor.\n\nDesde entonces, el jardín florece cada día.\nNo por obligación, sino por deseo.\nPorque en él vive alguien que supo ver belleza donde otros solo vieron tierra seca.\n\nY esa belleza… soy yo.\nY ese alguien… eres tú.",
   "mbr7tr5i": {
-  link: "https://lilithnml.github.io/el-mejor-momento-de-mi-vida/"
+  link: "https://lilithnml.github.io/te_amo/contador/"
   },
   "nbujo85ft": {
   archivo: "assets/unlocked_content/images/mi_mayor_sueno.png"
