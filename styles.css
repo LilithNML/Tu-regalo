@@ -193,10 +193,15 @@ iframe {
 
 .close {
   position: absolute;
-  top: 30px;
-  right: 45px;
-  color: white;
+  top: 20px;
+  right: 30px;
+  color: var(--accent-light);
   font-size: 40px;
-  font-weight: bold;
+  font-weight: 300; /* Menos negrita */
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: var(--highlight-pink); /* Cambio de color al pasar el mouse */
 }
