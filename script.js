@@ -488,13 +488,26 @@ tu hijo peludo, Samuel.`,
   
 };
 
+/**
+ * Normaliza un texto eliminando acentos, espacios, y convirtiendo caracteres especiales (como 'ñ')
+ * a su equivalente más común, y luego a minúsculas.
+ * @param {string} text El texto a normalizar.
+ * @returns {string} El texto normalizado.
+ */
 function normalizarTexto(texto) {
-  return texto
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/\s+/g, "")
-    .toLowerCase();
+  let normalized = texto
+    .normalize("NFD") // Normaliza a la forma de descomposición (ej. "á" -> "a" + diacrítico)
+    .replace(/[\u0300-\u036f]/g, ""); // Elimina los diacríticos (acentos, tildes)
+
+  // NUEVO: Reemplazos específicos para caracteres que no son solo diacríticos
+  normalized = normalized
+    .replace(/ñ/g, 'n') // Reemplaza 'ñ' por 'n'
+    .replace(/Ñ/g, 'N'); // Reemplaza 'Ñ' por 'N' (antes de convertir a minúsculas)
+
+  // Elimina espacios múltiples y al inicio/final, luego convierte a minúsculas
+  return normalized.replace(/\s+/g, "").toLowerCase();
 }
+
 
 function checkCode() {
   const input = document.getElementById("codeInput");
@@ -580,6 +593,9 @@ function checkCode() {
 
   input.value = "";
   actualizarProgreso();
+
+  //Hace que el input pierda el foco, ocultando el teclado.
+  codeInput.blur();
 }
 
 function actualizarProgreso() {
