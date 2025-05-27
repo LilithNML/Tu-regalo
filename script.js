@@ -347,7 +347,8 @@ tu hijo peludo, Samuel.`,
   imagen: "assets/unlocked_content/images/paimon_xd.jpg"
   },
   "sobame": {
-  link: "https://www.google.com/search?q=kit+anticolicos"
+  texto: "jsjsj", 
+  link: "https://bit.ly/4dAZHGr"
   },
   "uwu": "Hola, mi cosita linda…\nSolo quería decirte algo, así sin avisar, sin motivo especial… simplemente porque lo siento con todo mi corazón.\n\nTe amo. Mucho. Más de lo que sé explicar.\nA veces me dan ganas de abrazarte tan fuerte que te metas dentro de mí y no te vayas nunca. Eres lo más bonito que tengo, lo más tierno, lo más mío. Y no hay un solo día en el que no me sienta agradecida por tenerte.\n\nMe haces tan feliz… con tus palabras, con tus caricias, con esa forma de mirarme que me derrite.\nY si supieras cómo te pienso cuando no estás… hasta cuando estoy ocupada, tú estás ahí, escondidito en mis pensamientos, haciéndome sonreír como tonta.\n\nNo sé cómo explicarlo, amorcito, pero amarte me sale natural. Como respirar. Como cerrar los ojos y sentirme en paz.\n\nGracias por existir, por ser mi amorcito precioso, mi cosita linda.\nTe adoro… con cada parte de mí.",
   "abrazame": {
