@@ -228,18 +228,9 @@ iframe {
   border: 2px solid var(--highlight-pink); /* Borde de acento */
   border-radius: 10px;
   box-shadow: 0 0 40px rgba(248, 200, 220, 0.6); /* Sombra que "brilla" */
-  background-color: var(--container-bg-dark); /* Fondo del modal */
+  background-color: var(--container-bg-dark); /* Reutiliza el color del contenedor */
   padding: 20px; /* Padding interno */
-  object-fit: contain; /* NUEVO: Asegura que la imagen se vea completa dentro de su contenedor */
-  cursor: zoom-in; /* NUEVO: Indica que la imagen es clickeable para zoom */
-  transition: transform 0.3s ease-in-out; /* NUEVO: Transición suave para el zoom */
-  transform-origin: center center; /* NUEVO: El zoom se originará desde el centro */
-}
-
-/* NUEVO: Clase para cuando la imagen está "zoomeada" */
-.modal-content.zoomed {
-  cursor: grab; /* Cambia el cursor para indicar que se puede arrastrar */
-  /* El valor de transform: scale() se aplicará dinámicamente con JavaScript */
+  overflow-y: auto; /* Permite scroll si el contenido es largo */
 }
 
 /* Botón de cerrar del modal: Posicionamiento y transiciones */
