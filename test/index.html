@@ -3,26 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para Alan</title>
+<title>Para Alan con Amor</title>
 <link rel="stylesheet" href="styles.css">
-<link rel="preconnect" href="[se quitó una URL no válida]">
-<link rel="preconnect" href="[se quitó una URL no válida]" crossorigin>
-<link href="[se quitó una URL no válida]" rel="stylesheet">
+<link rel="stylesheet" href="[se quitó una URL no válida]"/>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+</style>
 </head>
 <body>
-<div class="background"></div>
+<div class="background-overlay"></div>
 <div class="container">
-<div class="header">
-<img src="decoracion.png" alt="Decoración romántica" class="header-icon">
-<h1>Un Mensaje para Ti, Alan</h1>
-<p class="subtitle">Introduce el código especial para desbloquearlo.</p>
+<div class="header-animation">
+<div class="heart"></div>
 </div>
-<div class="input-area">
-<input type="text" id="codeInput" placeholder="Ingresa el código aquí..." />
-<button id="checkButton">Desbloquear</button>
-</div>
-<div id="contenido" class="contenido"></div>
-<p id="progreso" class="progress-text"></p>
+<h1>Descubre un Mensaje Especial</h1>
+<input type="text" id="codeInput" placeholder="Ingresa el código de tu corazón...">
+<button onclick="checkCode()">Desbloquear Tesoro</button>
+<div id="contenido" class="contenido animate__animated"></div>
+<p id="progreso" class="progreso"></p>
 </div>
 <audio id="correctSound" src="correct.mp3" preload="auto"></audio>
 <audio id="incorrectSound" src="incorrect.mp3" preload="auto"></audio>
@@ -30,8 +28,8 @@
 <audio id="codeAudio"></audio>
 
 <div id="imageModal" class="modal">
-    <span class="close" onclick="cerrarModal()">&times;</span>
-    <img class="modal-content" id="modalImg" alt="Imagen modal">
+    <span class="close" onclick="cerrarModal()">×</span>
+    <img class="modal-content" id="modalImg">
 </div>
 
 <script src="script.js"></script>
