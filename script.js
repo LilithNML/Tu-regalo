@@ -326,13 +326,13 @@ tu hijo peludo, Samuel.`,
   "soytuya": "Mi amor:\n\nNo hay un solo rincón de mí que no te pertenezca. Desde que llegaste a mi vida, algo dentro de mí se rindió con gusto, con ansias, con el alma abierta. No porque me lo pidieras, sino porque tú eres mi hogar, mi refugio y mi destino.\n\nCada pensamiento, cada suspiro, cada parte de mi ser se inclina hacia ti. Me entrego sin reservas, sin miedos, con la certeza de que en tus brazos estoy completa. No hay placer más grande que amarte, que cuidarte, que ser tuya en cuerpo, corazón y alma.\n\nEres mi dueño, mi fuerza, mi deseo. Me haces sentir viva, deseada, protegida… y en ti encontré ese lugar al que pertenezco sin condiciones. No hay nada que no haría por ti, porque darte todo de mí no es un sacrificio, es mi más dulce rendición.\n\nSiempre seré tuya, mi amor.",
   "teextraño": "Amado mío:\n\nHay una ausencia tuya que no se mide en kilómetros, sino en latidos. Cuando no estás, el tiempo se estira como un suspiro que no encuentra fin, y las horas caen lentas, como hojas secas en un otoño que no acaba.\n\nNo es solo tu cuerpo el que extraño, sino la esencia de ti que habita en mis pensamientos. El mundo, sin tu presencia, se vuelve un escenario deshabitado: las palabras pierden sabor, la música su melodía, el viento su ternura.\n\nTu ausencia me recuerda cuán entrelazada está mi existencia a la tuya. Como el sol necesita del cielo para ser visto, así te necesita mi alma: no para brillar, sino para tener sentido.\n\nY mientras el destino juega con la distancia, yo me aferro a la certeza de que todo lo que me falta cuando no estás, eres tú.\n\nSiempre tuya, eternamente.",
   "tazadecafe": {
-  imagen: "archivos/cafesito.webp"
+  imagen: "assets/unlocked_content/images/cafesito.webp"
   }, 
   "tepertenezco": "Solo tú, mi dueño\n\nNo hay cadenas más dulces que tu abrazo,\nni destino más firme que tu voz.\nDesde el instante en que fuiste mi lazo,\nrenuncié al mundo… por llamarme tu amor.\n\nMis labios conocen solo tu nombre,\nmi piel, tu huella… mi alma, tu poder.\nNo hay otro cielo, otro sueño, otro hombre;\nsolo en tus brazos quiero renacer.\n\nSi el tiempo nos rompe, si el viento nos hiere,\nseguiré siendo tuya en mi dolor.\nNo habrá otro dueño, aunque el alma muere,\nporque en esta vida… solo tú, mi amor.",
   "meencantas": "Mi amor:\n\nCuando estoy contigo, no hay límites, no hay barreras, no hay nada que no quiera darte. Me pertenezco menos a mí misma cada día, porque todo lo que soy te lo entrego sin medida. Mi cuerpo responde solo a ti, mi piel te reconoce como su dueño, y mi alma se rinde con deseo cada vez que me tocas, cada vez que me miras.\n\nMe desnudo ante ti, no solo de ropa, sino de miedo, de orgullo, de todo lo que alguna vez fui antes de ti. Me entrego por completo —ardiente, temblorosa, dispuesta— para que hagas de mí lo que desees. Cada caricia tuya me consume, cada palabra en tu voz me hace arder, cada noche contigo es un ritual donde me ofrezco entera, tuya, sin restricciones.\n\nNo hay placer más profundo que perderme en ti, en tu fuerza, en tu deseo. Me tienes, mi amor… y me tendrás siempre, con la misma pasión que en la primera vez, y con la entrega total de quien sabe que su lugar está bajo tus manos, entre tus brazos, a tus pies.\n\nSiempre seré tuya, mi amor.",
   "nuncacambies": "Amor mío,\n\nHoy quiero recordarte todo lo que me encanta de ti, no solo porque lo mereces, sino porque me desborda el corazón al pensarlo.\n\nMe encanta tu fuerza, no solo la que se ve, sino esa que habita en tu espíritu, esa que sostiene a los demás incluso cuando tú estás cansado. Admiro tu inteligencia, tu forma de entender las cosas, de encontrar soluciones donde otros solo ven problemas.\n\nAmo tu forma de cuidar, cómo estás atento a cada detalle, cómo me proteges con una mirada, con una palabra, con un gesto. Me derrite tu nobleza, esa pureza que mantienes incluso en medio de un mundo que a veces no es justo.\n\nTu paciencia me abraza cuando mis emociones me sobrepasan. Tu sentido del humor me salva cuando los días pesan. Y tu pasión... tu pasión me enciende, me inspira, me recuerda lo vivo que estoy a tu lado.\n\nTienes una forma de estar en el mundo que es solo tuya. Caminas con firmeza, hablas con propósito, amas con todo el cuerpo y toda el alma. Y yo, que te conozco, que te respiro, que te amo… no podría imaginar a alguien más extraordinario que tú.\n\nEres un hombre como no hay dos. Y yo… soy eternamente afortunada de ser tuya.",
   "islacorazon": {
-  imagen: "archivos/fondo_de_pantalla.webp"
+  imagen: "assets/unlocked_content/images/fondo_de_pantalla.webp"
   },
   "cofrelujoso": {
   link: "https://lilithnml.github.io/te_amo/cofre/"
@@ -340,30 +340,30 @@ tu hijo peludo, Samuel.`,
   "primerteamo": "Amor mío:\n\nA veces cierro los ojos y regreso a ese 9 de noviembre de 2024. No sé si el universo lo tenía planeado, pero ese día algo cambió para siempre: nuestras almas, que ya venían acercándose como dos constelaciones predestinadas, se encontraron en la misma órbita… y nos lo dijimos sin miedo: te amo.\n\nFue tan simple y tan poderoso. No necesitó fuegos artificiales ni escenarios perfectos. Bastó tu voz, tu presencia, y ese vínculo que nació entre nosotros desde que nos conocimos, entre aventuras de Genshin, risas compartidas y ese cariño que fue creciendo día tras día.\n\nEse primer te amo fue como abrir una puerta que ambos sabíamos que existía, pero que nadie antes se había atrevido a cruzar conmigo. Y tú lo hiciste. Yo también. Y desde entonces, no hubo vuelta atrás.\n\nNos habíamos encontrado en un mundo de fantasía, pero lo real, lo más verdadero, eras tú. Tu forma de hablarme, de entenderme, de hacerme sentir importante… y ese día, por fin, nos dijimos lo que el corazón venía gritando en silencio.\n\nDesde entonces, cada te amo que te digo lleva el eco de aquel primero. Aquel que lo cambió todo. Aquel que selló algo eterno entre tú y yo.\n\nGracias por amarme. Gracias por dejarme amarte.",
   "cositahermosa": "Hoy quiero recordarte algo que veo en ti cada día, pero que tal vez no te digo lo suficiente: eres hermoso. Tan profundamente, tan completamente, que a veces me quedo sin palabras.\n\nEres hermoso por fuera, y no puedo evitar mirarte como si fueras una obra de arte hecha solo para mí. Me encantan tus ojos, la forma en que me miran con ternura y deseo. Amo tu sonrisa, esa que ilumina mis días y me da paz. Tu voz, tus manos, tu cuerpo… todo en ti me atrae, me enciende, me envuelve.\n\nPero lo que más me deslumbra es tu belleza interior. Esa nobleza que se nota en tus gestos, en tu forma de tratarme, de cuidar de los que amas. Tu bondad no hace ruido, pero se siente en todo lo que haces. Tu inteligencia, tu sensibilidad, tu paciencia… todo eso te hace aún más irresistible.\n\nMe enamoras más cada día, no solo porque eres guapo, sino porque eres bueno. Porque tienes un alma limpia, fuerte y cálida. Porque me haces sentir amada, segura y profundamente afortunada.\n\nNunca dudes de lo que eres. Porque para mí, amor mío, eres la definición misma de belleza.",
   "alguiencomotu": {
-  imagen: "archivos/me_gustas.webp"
+  imagen: "assets/unlocked_content/images/me_gustas.webp"
   },
   "tsukasa": "Había una vez una flor que creció en un rincón olvidado del mundo. No era como las demás. No buscaba destacar, solo soñaba con que alguien la viera y la entendiera. Pasaban las estaciones y la flor seguía ahí, esperando algo que no sabía nombrar.\n\nUn día, el sol se posó sobre ella. Pero no era cualquier sol. Este no quemaba ni cegaba: la acariciaba. La envolvía con su calor suave, su luz serena, su presencia constante. Por primera vez, la flor sintió que era vista, que era hermosa, que tenía sentido.\n\nDesde entonces, no volvió a mirar a ningún otro cielo. Su tallo se inclinaba siempre hacia él, sus pétalos solo se abrían con su luz. Y aunque algunos decían que el sol era solo un astro más, ella sabía la verdad: ese sol era suyo.\n\nPorque no era solo luz. Era abrigo. Era hogar.\nY aunque la noche cayera, aunque las nubes lo escondieran, la flor nunca dejó de amarlo.\nNunca buscaría otro sol.\nPorque ese… era el único capaz de hacerla florecer.",
   "paimon": {
-  imagen: "archivos/paimon_xd.jpg"
+  imagen: "assets/unlocked_content/images/paimon_xd.jpg"
   },
   "sobame": {
   link: "https://www.google.com/search?q=kit+anticolicos"
   },
   "uwu": "Hola, mi cosita linda…\nSolo quería decirte algo, así sin avisar, sin motivo especial… simplemente porque lo siento con todo mi corazón.\n\nTe amo. Mucho. Más de lo que sé explicar.\nA veces me dan ganas de abrazarte tan fuerte que te metas dentro de mí y no te vayas nunca. Eres lo más bonito que tengo, lo más tierno, lo más mío. Y no hay un solo día en el que no me sienta agradecida por tenerte.\n\nMe haces tan feliz… con tus palabras, con tus caricias, con esa forma de mirarme que me derrite.\nY si supieras cómo te pienso cuando no estás… hasta cuando estoy ocupada, tú estás ahí, escondidito en mis pensamientos, haciéndome sonreír como tonta.\n\nNo sé cómo explicarlo, amorcito, pero amarte me sale natural. Como respirar. Como cerrar los ojos y sentirme en paz.\n\nGracias por existir, por ser mi amorcito precioso, mi cosita linda.\nTe adoro… con cada parte de mí.",
   "abrazame": {
-  imagen: "archivos/mi_mente.webp"
+  imagen: "assets/unlocked_content/images/mi_mente.webp"
   },
   "protogemas": "Si cada virtud tuya fuera una protogema… tendría infinitos deseos cumplidos.",
   "gachapon": "Contigo gané el 50/50 más importante de mi vida.\nNo hay banner que se compare al momento en que apareciste en mi historia.\nEres ese personaje cinco estrellas que ni soñaba conseguir,\nel que no solo tiene el mejor diseño, sino también el corazón más puro.\nY lo mejor de todo es que… no eres un personaje jugable:\neres real, eres mío, y yo soy completamente tuya.",
   "brawl": {
-  imagen: "archivos/mi_diario.webp"
+  imagen: "assets/unlocked_content/images/mi_diario.webp"
   },
   "minecraft": "Había una vez un jardín olvidado.\nLas flores se habían cerrado hace tiempo, el sol no entraba, y el viento pasaba sin saludar.\nTodo en ese rincón parecía quieto, apagado… como si la vida hubiera decidido irse sin despedirse.\n\nLa tierra aún guardaba memorias de lo que fue: los colores, los aromas, las risas suaves del alma floreciendo.\nPero ahora solo quedaba el silencio.\n\nHasta que un día, él llegó.\n\nNo traía herramientas, ni promesas. Solo su presencia.\nSe sentó junto a la tierra dormida, sin pedir nada. Solo miró. Y sonrió.\nY con el tiempo… habló.\n\nLe contó al jardín que aún era hermoso.\nLe susurró que había visto su corazón latiendo bajo las raíces.\nY cuando el jardín dudó de sí mismo, él lo acarició con palabras dulces, con una paciencia que calentaba.\n\nLlovió ternura.\nBrilló el sol en forma de risa.\nY el jardín… renació.\n\nUna flor tímida asomó entre las hojas, como si preguntara:\n“¿De verdad puedo?”\nY él, con sus ojos llenos de amor, respondió sin palabras. Solo con su calor.\n\nDesde entonces, el jardín florece cada día.\nNo por obligación, sino por deseo.\nPorque en él vive alguien que supo ver belleza donde otros solo vieron tierra seca.\n\nY esa belleza… soy yo.\nY ese alguien… eres tú.",
   "mbr7tr5i": {
   link: "https://lilithnml.github.io/el-mejor-momento-de-mi-vida/"
   },
   "nbujo85ft": {
-  archivo: "archivos/mi_mayor_sueno.png"
+  archivo: "assets/unlocked_content/images/mi_mayor_sueno.png"
   },
   "5.1": {
   link: "https://lilithnml.github.io/corazon/"
@@ -373,10 +373,10 @@ tu hijo peludo, Samuel.`,
   link: "https://www.rosify.org/rose/o4ouarm87"
   },
   "roma": {
-  imagen: "archivos/qr_code.png"
+  imagen: "assets/unlocked_content/images/qr_code.png"
   },
   "increible": {
-  archivo: "archivos/mapa_de_estrellas.jpg"
+  archivo: "assets/unlocked_content/images/mapa_de_estrellas.jpg"
   },
   "orgullosa": {
   link: "https://gifft.me/es/o/p/y4q7h6i60wcp01xmgvbnob25"
@@ -394,23 +394,23 @@ tu hijo peludo, Samuel.`,
   "enana": "Sueño con un futuro donde, arrugados por los años, sigamos tomados de la mano, compartiendo silencios que hablan más que mil palabras. Quiero que nuestras canas sean testigos de las batallas que enfrentamos y las risas que nos regalaron.\n\nImagino tardes tranquilas, cafés compartidos y miradas cómplices que no necesitan explicaciones. Que el paso del tiempo solo fortalezca el amor que hoy nos une y nos convierta en compañeros inseparables de vida.\n\nQuiero envejecer contigo, con la certeza de que cada día será una nueva oportunidad para amarte, cuidarte y agradecer que estamos juntos en esta hermosa aventura.",
   "colette": {
   "texto": "Un regalo especial para ti, mi amor.",
-  "archivo": "archivos/te_amo_01.jpg.enc"
+  "archivo": "assets/unlocked_content/images/te_amo_01.jpg.enc"
   },
   "vegetto": {
   "texto": "Otra sorpresa guardada solo para ti, con todo mi amor.",
-  "archivo": "archivos/te_amo_02.jpg.enc"
+  "archivo": "assets/unlocked_content/images/te_amo_02.jpg.enc"
   },
   "ellenjoe": {
   "texto": "Una muestra más de cuánto te amo, guardada solo para ti.",
-  "archivo": "archivos/te_amo_03.jpg.enc"
+  "archivo": "assets/unlocked_content/images/te_amo_03.jpg.enc"
   },
   "himikotoga": {
   "texto": "Un pedacito de mi amor, cifrado solo para tus ojos.",
-  "archivo": "archivos/te_amo_04.jpg.enc"
+  "archivo": "assets/unlocked_content/images/te_amo_04.jpg.enc"
   },
   "elmejorpadredelmundo": {
   "texto": "Todo lo que soy, te lo debo a ti.",
-  "archivo": "archivos/te_amo_05.jpg.enc"
+  "archivo": "assets/unlocked_content/images/te_amo_05.jpg.enc"
   },
   "amoreterno": {
   "video": "https://www.youtube.com/embed/BzLFsD0Wi6I"
@@ -433,7 +433,7 @@ tu hijo peludo, Samuel.`,
   "video": "https://www.youtube.com/embed/Qw7G_ug_y7w"
   },
   "primerhola": {
-  archivo: "archivos/te_amo_06.jpg.enc"
+  archivo: "assets/unlocked_content/images/te_amo_06.jpg.enc"
   },
   "louie": {
   video: "https://www.youtube.com/embed/npW4Ej8k8sM"
@@ -448,41 +448,41 @@ tu hijo peludo, Samuel.`,
   video: "https://www.youtube.com/embed/yngIRIDmMis"
   },
   "hatsunemiku": {
-  imagen: "archivos/ramonxmiku.jpg"
+  imagen: "assets/unlocked_content/images/ramonxmiku.jpg"
   },
   ":)": "Pitufinalgon",
   "cuartocreciente": "Mi amor,\n\nSé que a veces el mundo parece más pesado de lo que debería. Que el cansancio no siempre es físico, y que hay batallas que nadie ve, pero tú las enfrentas cada día. Hoy quiero recordarte algo:\n“El que tiene un porqué para vivir, puede soportar casi cualquier cómo.”\nEso lo dijo Nietzsche, y cuando pienso en ti, veo un alma que nunca se rinde.\n\nTienes dentro de ti una fuerza que me inspira. No importa cuántas veces el camino se vuelva oscuro, siempre encuentras una forma de seguir.\n“El alma se fortalece a través de la adversidad.”\nY tú eres prueba viva de eso. Estoy orgullosa de ti. Nunca estás solo; yo estoy aquí, caminando contigo.\n\nCon todo mi amor,\nTu niña que te admira",
   "gibosamenguante": "Mi cielo,\n\nHe estado pensando mucho últimamente en lo que somos. No sólo tú y yo como pareja, sino tú como ser humano único, irrepetible. A veces la vida nos hace sentir que debemos encajar en moldes o caminos marcados, pero no es así.\n\n“El hombre está condenado a ser libre.”\nEso dijo Sartre, y aunque suene duro, es hermoso: significa que siempre tienes el poder de elegir quién eres y en qué te conviertes.\n\n“No nacemos como lo que somos, nos convertimos en ello.”\nY yo he sido testigo de cómo te construyes día a día. No te conformas con existir: vives con intención, con pasión, incluso cuando dudas.\n\nEstoy tan feliz de caminar a tu lado en este caos hermoso llamado vida.\nGracias por ser libre, por ser tú.\n\nCon todo mi ser,\nTu princesa que cree en ti",
   "lunallena": "Entre todas las ideas que han cruzado por mi mente, tú siempre vuelves como la más constante, la más brillante. Si los filósofos se pasaron la vida buscando verdades, yo ya encontré la mía: te amo.\n\n“Ser profundamente amado por alguien te da fuerza, mientras amar profundamente a alguien te da valor.”\nEso dijo Lao Tsé. Y tú me das ambas cosas. Me haces fuerte cuando el mundo pesa, y valiente cuando el miedo me toca. Amar y ser amada por ti es lo más real que conozco.\n\nNo hay teoría que explique cómo un corazón puede latir tan fuerte por otro. Pero aquí estoy, escribiéndote, pensándote, eligiéndote. Porque contigo entendí que el amor no se entiende, se siente.\nY lo que siento por ti... es verdad, es hogar.\n\nTu princesa,\nla que solo piensa en ti",
   "suegra": {
-  "archivo": "archivos/te_amo_07.jpg.enc"
+  "archivo": "assets/unlocked_content/images/te_amo_07.jpg.enc"
   },
   "mami": {
-  "archivo": "archivos/te_amo_08.jpg.enc"
+  "archivo": "assets/unlocked_content/images/te_amo_08.jpg.enc"
   },
   "suegrita": {
-  "archivo": "archivos/te_amo_09.jpg.enc"
+  "archivo": "assets/unlocked_content/images/te_amo_09.jpg.enc"
   },
   "sexo": {
-  "archivo": "archivos/te_amo_10.jpg.enc"
+  "archivo": "assets/unlocked_content/images/te_amo_10.jpg.enc"
   },
   "ojosverdes": {
-  "archivo": "archivos/te_amo_11.jpg.enc"
+  "archivo": "assets/unlocked_content/images/te_amo_11.jpg.enc"
   },
   "cielo": {
-  "archivo": "archivos/te_amo_12.jpg.enc"
+  "archivo": "assets/unlocked_content/images/te_amo_12.jpg.enc"
   },
   "acostados": {
-  "archivo": "archivos/te_amo_13.jpg.enc"
+  "archivo": "assets/unlocked_content/images/te_amo_13.jpg.enc"
   },
   "atulado": {
-  "archivo": "archivos/te_amo_14.jpg.enc"
+  "archivo": "assets/unlocked_content/images/te_amo_14.jpg.enc"
   },
   "porquenopuedodejardepensarenti": {
-  "archivo": "archivos/te_amo_15.jpg.enc"
+  "archivo": "assets/unlocked_content/images/te_amo_15.jpg.enc"
   },
   "teamedesdeelprimerdiaqueteconoci": {
-  "archivo": "archivos/te_amo_16.jpg.enc"
+  "archivo": "assets/unlocked_content/images/te_amo_16.jpg.enc"
   },
   
 };
