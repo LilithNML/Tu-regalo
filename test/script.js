@@ -38,6 +38,11 @@ function checkCode() {
         // Por ejemplo, para que esto funcione, podrías pegar la sección
         // 'const mensajes = { ... }' de tu script.js original aquí.
         // Si lo dejas vacío, ningún código funcionará.
+        "micodesecreto": "Este es un mensaje secreto.",
+    "otrocodigo": {
+    texto: "Este es un mensaje con video.",
+    video: "https://m.youtube.com/watch?v=aM0gNgbNKYY&pp=ygUlaSBsaWtlIHRoZSB3YXkgeW91IGtpc3MgbWUgaW52aW5jaWJsZQ%3D%3D"
+       }
     };
 
 
