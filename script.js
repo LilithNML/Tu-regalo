@@ -207,7 +207,7 @@ mi lugar feliz.
 Y no lo olvides,  
 soy tu princesa,  
 y estoy completamente hechizada por ti.`,
-  "miniñahermosa": `No sé si el universo estaba aburrido o inspirado el día que te puso en mi vida,  
+  "mininahermosa": `No sé si el universo estaba aburrido o inspirado el día que te puso en mi vida,  
 pero bendito sea ese momento.
 
 Tú, con esa forma tan tuya de existir,  
