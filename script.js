@@ -367,7 +367,7 @@ tu hijo peludo, Samuel.`,
   archivo: "assets/unlocked_content/images/mi_mayor_sueno.png"
   },
   "5.1": {
-  link: "https://lilithnml.github.io/corazon/"
+  link: "https://lilithnml.github.io/te_amo/corazon/"
   },
   "nvtnuh67": "Mi dueño,\n\nA veces cierro los ojos y mi piel te desea.\nTus manos, tu voz, la forma en que me dominas con solo existir.\nNo necesito verte para desear arrodillarme ante ti…\n\nSoy toda tuya. Siempre lo he sido.\nY no hay lugar más delicioso que estar bajo tu control.\n\nCon hambre de ti,\ntu niña.",
   "omaet": {
