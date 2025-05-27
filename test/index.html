@@ -1,38 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para Alan con Amor</title>
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="styles.css"/>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-</style>
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Alan: Un Mensaje Especial</title>
+  <meta name="description" content="Descubre mensajes secretos para Alan. Una experiencia romántica y personalizada." />
+  <meta name="keywords" content="mensaje, secreto, romántico, Alan, personalizado, amor" />
+  <meta name="author" content="Tu Nombre o LilithNml" />
+  <link rel="stylesheet" href="styles.css" />
+  </head>
 <body>
-<div class="background-overlay"></div>
-<div class="container">
-<div class="header-animation">
-<div class="heart"></div>
-</div>
-<h1>Descubre un Mensaje Especial</h1>
-<input type="text" id="codeInput" placeholder="Ingresa el código de tu corazón...">
-<button onclick="checkCode()">Desbloquear Tesoro</button>
-<div id="contenido" class="contenido animate__animated"></div>
-<p id="progreso" class="progreso"></p>
-</div>
-<audio id="correctSound" src="correct.mp3" preload="auto"></audio>
-<audio id="incorrectSound" src="incorrect.mp3" preload="auto"></audio>
-<audio id="bgMusic" src="musica-fondo.mp3" loop preload="auto"></audio>
-<audio id="codeAudio"></audio>
+  <div class="background-overlay" role="presentation"></div>
 
-<div id="imageModal" class="modal">
-    <span class="close" onclick="cerrarModal()">×</span>
-    <img class="modal-content" id="modalImg">
-</div>
+  <main class="container" aria-labelledby="main-heading">
+    <img src="decoracion.png" alt="Una delicada ilustración de flores, estrellas o un corazón, con un estilo romántico y suave." class="header-img" aria-hidden="true"/>
+    <h1 id="main-heading">Descubre un Mensaje Secreto</h1>
+    <label for="codeInput" class="sr-only">Ingresa tu código secreto</label>
+    <input
+      type="text"
+      id="codeInput"
+      placeholder="Ingresa tu código..."
+      aria-label="Campo para ingresar el código secreto"
+      aria-required="true"
+      autocomplete="off"
+      autocapitalize="off"
+      spellcheck="false"
+    />
+    <button type="button" onclick="checkCode()" aria-label="Desbloquear mensaje secreto">Desbloquear</button>
+    <div id="contenido" class="contenido" role="region" aria-live="polite" aria-atomic="true">
+      </div>
+    <p id="progreso" class="progreso" aria-live="polite">
+      </p>
+  </main>
 
-<script src="script.js"></script>
+  <audio id="correctSound" src="correct.mp3" preload="auto" aria-label="Sonido de código correcto"></audio>
+  <audio id="incorrectSound" src="incorrect.mp3" preload="auto" aria-label="Sonido de código incorrecto"></audio>
+  <audio id="bgMusic" src="musica-fondo.mp3" loop preload="auto" aria-label="Música de fondo romántica"></audio>
+  <audio id="codeAudio" aria-label="Audio asociado al código desbloqueado"></audio>
 
+  <script src="script.js"></script>
+
+  <div id="imageModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-content-wrapper">
+      <h2 id="modalTitle" class="sr-only">Imagen Desbloqueada</h2>
+      <button type="button" class="close" onclick="cerrarModal()" aria-label="Cerrar imagen ampliada">
+        &times;
+      </button>
+      <img class="modal-content" id="modalImg" alt="Imagen desbloqueada del mensaje secreto" />
+    </div>
+  </div>
 </body>
 </html>
