@@ -1,278 +1,169 @@
-/* Importar fuentes de Google Fonts */
-/* Montserrat para elementos generales, moderna y limpia */
-/* Cormorant Garamond para títulos y texto principal, elegante y clásica */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+/* Fuente romántica */
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
-/* Paleta de Colores Elegante y Sutil: */
-/* --primary-dark: #2F3645;  Gris azulado oscuro, base del fondo */
-/* --secondary-dark: #4A5568; Gris azulado medio, para fondos de elementos */
-/* --accent-light: #C0C5E0;  Lavanda pálido, para texto principal y detalles */
-/* --accent-medium: #A4B3CC; Gris azulado claro, para algunos bordes o textos */
-/* --highlight-pink: #F8C8DC; Rosa pálido, para acentos románticos (botones, títulos) */
-/* --text-dark: #2F3645;     Texto oscuro para elementos claros (si los hubiera) */
-
-
-/* Variables CSS para una gestión de color más sencilla */
-:root {
-  --primary-dark: #2F3645;
-  --secondary-dark: #4A5568;
-  --accent-light: #C0C5E0;
-  --accent-medium: #A4B3CC;
-  --highlight-pink: #F8C8DC;
-  --text-dark: #2F3645;
-}
-
-/* Restablecimiento básico y fuente global */
+/* Fondo con imagen mágica */
 body {
-  font-family: 'Montserrat', sans-serif; /* Fuente sans-serif para el cuerpo general */
+  font-family: 'Courgette', cursive;
   margin: 0;
   padding: 0;
-  background-color: var(--primary-dark); /* Fondo principal de un gris azulado oscuro */
-  color: var(--accent-light); /* Color de texto base, lavanda pálido */
+  background: url('fondo-romantico.jpg') no-repeat center center fixed;
+  background-size: cover;
   min-height: 100vh;
-  display: flex; /* Usar flexbox para centrar contenido */
-  justify-content: center;
-  align-items: center;
   overflow-x: hidden;
   overflow-y: auto;
   position: relative;
-  line-height: 1.6;
+  color: #CDD8D5; /* Ajuste de color de texto */
 }
 
-/* NO USAMOS UNA IMAGEN DE FONDO DIRECTAMENTE EN BODY PARA ESTE DISEÑO */
-/* Si aún quieres una imagen, podrías ponerla con un bajo opacity y un filtro de color
-   en un pseudo-elemento o en un div específico, debajo del overlay. */
-
-/* Filtro de niebla romántica (más sutil o para efecto de textura) */
+/* Filtro de niebla romántica */
 .background-overlay {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.2); /* Oscurecer ligeramente para añadir profundidad */
-  backdrop-filter: blur(5px); /* Menos blur, más sutil */
+  background: rgba(32, 30, 43, 0.7);
+  backdrop-filter: blur(8px);
   z-index: 0;
   pointer-events: none;
 }
 
-/* Contenedor principal de la carta */
 .container {
   position: relative;
   z-index: 1;
-  background-color: var(--secondary-dark); /* Fondo del contenedor, gris azulado medio */
-  padding: 60px 40px; /* Más padding para una sensación de espacio */
-  margin: 40px auto; /* Mantener margen */
-  border-radius: 20px; /* Bordes suaves */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Sombra suave y difusa */
-  max-width: 650px; /* Ajuste de ancho */
+  background-color: rgba(32, 30, 43, 0.85);
+  padding: 40px;
+  margin: 60px auto;
+  border-radius: 25px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+  max-width: 600px;
   text-align: center;
-  animation: fadeInScale 1.8s ease-out forwards; /* Nueva animación de aparición */
-  border: 1px solid rgba(192, 197, 224, 0.2); /* Borde muy sutil para definición */
-  overflow: hidden; /* Asegurar que los elementos internos no se desborden */
+  animation: fadeIn 1.5s ease-in;
 }
 
-/* Imagen decorativa superior - Puede ser un ícono SVG, una flor, etc. */
+/* Imagen decorativa superior */
 .header-img {
-  width: 70px; /* Tamaño más discreto */
-  margin-bottom: 30px; /* Más espacio */
-  animation: float 3.5s ease-in-out infinite;
-  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2));
+  width: 80px;
+  margin-bottom: 15px;
+  animation: float 3s ease-in-out infinite;
 }
 
-/* Título principal */
 h1 {
-  font-family: 'Cormorant Garamond', serif; /* Fuente elegante y clásica para el título */
-  color: var(--highlight-pink); /* Rosa pálido para el título, muy romántico */
-  font-size: 3.2rem; /* Tamaño más grande para el título */
-  margin-bottom: 40px; /* Más espacio */
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
-  letter-spacing: 0.08em; /* Más espaciado entre letras */
-  text-transform: uppercase; /* Darle un toque moderno y formal */
-}
-
-/* Campos de entrada (input) */
-input {
-  padding: 14px;
-  width: 85%; /* Ligeramente más ancho */
-  font-size: 1.1rem;
-  border-radius: 8px; /* Menos redondeado para un look más moderno */
-  border: 1px solid var(--accent-medium); /* Borde gris azulado claro */
-  outline: none;
-  background-color: rgba(255, 255, 255, 0.05); /* Fondo muy transparente */
-  color: var(--accent-light);
-  text-transform: none;
+  color: #BCBDB9;
+  font-size: 2.4rem;
   margin-bottom: 25px;
-  transition: all 0.3s ease-in-out;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-input::placeholder {
-  color: rgba(192, 197, 224, 0.6); /* Color del placeholder */
+input {
+  padding: 12px;
+  width: 80%;
+  font-size: 18px;
+  border-radius: 12px;
+  border: 2px solid #8E7383;
+  outline: none;
+  background-color: #6B5D74;
+  color: #CDD8D5;
+  text-transform: lowercase;
+  margin-bottom: 15px;
 }
 
-input:focus {
-  border-color: var(--highlight-pink); /* Borde rosa al enfocar */
-  background-color: rgba(255, 255, 255, 0.1); /* Más transparente */
-  box-shadow: 0 0 10px rgba(248, 200, 220, 0.4); /* Sombra rosa suave al enfocar */
-}
-
-/* Botones */
 button {
-  padding: 15px 35px;
-  background-color: var(--highlight-pink); /* Color rosa pálido para el botón */
-  color: var(--text-dark); /* Texto oscuro para contraste */
-  font-size: 1.15rem; /* Ligeramente más grande */
-  font-weight: 600; /* Más peso para que destaque */
+  padding: 12px 28px;
+  background-color: #9A8C8B;
+  color: white;
+  font-size: 18px;
   border: none;
-  border-radius: 50px; /* Completamente redondeado (pastilla) */
+  border-radius: 25px;
   cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  letter-spacing: 0.05em;
-  text-transform: uppercase; /* Mayúsculas para el texto del botón */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #E2B2C9; /* Un rosa ligeramente más oscuro al pasar el mouse */
-  transform: translateY(-2px); /* Ligeramente hacia arriba */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background-color: #3F3938;
+  transform: scale(1.05);
 }
 
 button:active {
-  transform: translateY(0);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 
-/* Contenido de la carta */
 .contenido {
-  margin-top: 40px;
-  padding: 30px;
-  background-color: rgba(255, 255, 255, 0.08); /* Fondo muy sutil para el contenido */
+  margin-top: 25px;
+  padding: 25px;
+  background-color: #1E2021;
   border-radius: 15px;
-  border: 1px solid rgba(192, 197, 224, 0.1); /* Borde aún más sutil */
-  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra interna para profundidad */
+  border: 1px solid #272626;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   display: none;
-  color: var(--accent-light); /* Color de texto del contenido */
-  font-family: 'Cormorant Garamond', serif; /* Usar Cormorant Garamond para el texto de la carta */
-  font-size: 1.25rem; /* Tamaño de fuente generoso para legibilidad y elegancia */
-  line-height: 1.8; /* Mayor line-height para legibilidad */
+  color: #AEA5A5;
+  font-size: 18px;
+  line-height: 1.7;
   text-align: left;
   max-height: none;
-  overflow-y: auto; /* Para que el contenido pueda scrollear si es muy largo */
 }
 
 .contenido.show {
   display: block;
-  animation: slideInUp 1.2s ease-out forwards; /* Nueva animación para el contenido */
+  animation: fadeIn 1s ease-in-out;
 }
 
 iframe {
   width: 100%;
-  height: 380px; /* Más alto */
-  margin-top: 30px;
-  border-radius: 15px;
+  height: 315px;
+  margin-top: 15px;
+  border-radius: 12px;
   border: none;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Animaciones */
-@keyframes fadeInScale {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-@keyframes slideInUp {
-  from { opacity: 0; transform: translateY(30px); }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); } /* Flotando un poco más para un efecto más "mágico" */
+  50% { transform: translateY(-6px); }
 }
 
 /* Responsividad */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .container {
-    padding: 40px 25px;
-    margin: 30px 15px;
+    padding: 30px 20px;
+    margin: 30px 10px;
   }
 
   h1 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+    font-size: 1.8rem;
   }
 
   input, button {
-    font-size: 1rem;
-    padding: 12px;
-  }
-
-  .contenido {
-    padding: 25px;
-    font-size: 1.1rem;
-    line-height: 1.7;
+    font-size: 16px;
   }
 
   iframe {
-    height: 300px;
+    height: 200px;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .container {
-    padding: 30px 20px;
-    margin: 20px 10px;
-  }
-
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 25px;
-  }
-
-  input {
-    width: 90%;
-  }
-
-  button {
-    font-size: 0.95rem;
-    padding: 12px 25px;
-  }
-
-  .header-img {
-    width: 60px;
-    margin-bottom: 20px;
-  }
-  
-  .contenido {
-    font-size: 1rem;
-  }
-
-  iframe {
-    height: 250px;
-  }
-}
-
-
-/* Progreso y lista de códigos (ajustados al nuevo estilo) */
 .progreso {
-  margin-top: 30px;
-  font-size: 1rem;
-  color: var(--accent-medium); /* Color más sutil para el progreso */
-  font-weight: 500;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #A3C3BD;
 }
 
 .lista-codigos {
-  margin-top: 15px;
+  margin-top: 10px;
   list-style-type: none;
   padding: 0;
-  color: rgba(192, 197, 224, 0.7); /* Menos opaco para la lista */
-  font-size: 0.9rem;
+  color: #E0CFC1;
+  font-size: 14px;
 }
 
 .lista-codigos li {
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
-/* Modal (rediseño) */
 .modal {
   display: none;
   position: fixed;
@@ -302,15 +193,10 @@ iframe {
 
 .close {
   position: absolute;
-  top: 20px;
-  right: 30px;
-  color: var(--accent-light);
+  top: 30px;
+  right: 45px;
+  color: white;
   font-size: 40px;
-  font-weight: 300; /* Menos negrita */
+  font-weight: bold;
   cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.close:hover {
-  color: var(--highlight-pink); /* Cambio de color al pasar el mouse */
 }
