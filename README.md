@@ -49,7 +49,7 @@ Para interactuar con la página, simplemente:
  * tazadecafe
  * cofrevalioso
  * nbujo85ft
- * 
+
 # 💖 Contribuciones
 
 Este proyecto es una creación personal. Sin embargo, si tienes ideas para mejorar la experiencia o detectas algún problema, ¡siéntete libre de abrir un issue o enviar un pull request!
