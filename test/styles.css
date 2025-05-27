@@ -1,232 +1,250 @@
-/* Fuente romántica */
+/* Fuente romántica: 'Courgette' para un toque delicado */
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-/* Fondo degradado romántico /
+
+/* Variables CSS para una gestión de colores más sencilla y coherente */
+:root {
+  --primary-font: 'Courgette', cursive;
+  --text-light: #CDD8D5; /* Color de texto general */
+  --text-medium: #AEA5A5; /* Color de texto para contenido secundario */
+  --text-dark: #E0CFC1; /* Color de texto para elementos de lista */
+  --header-color: #BCBDB9; /* Color para títulos */
+  --background-overlay-dark: rgba(32, 30, 43, 0.7); /* Oscuro con transparencia para superposición */
+  --container-bg-dark: rgba(32, 30, 43, 0.85); /* Oscuro con más opacidad para el contenedor */
+  --content-bg-dark: #1E2021; /* Fondo del área de contenido */
+  --border-color-input: #8E7383; /* Borde de los campos de entrada */
+  --input-bg: #6B5D74; /* Fondo de los campos de entrada */
+  --button-bg-initial: #9A8C8B; /* Fondo inicial del botón */
+  --button-bg-hover: #3F3938; /* Fondo del botón al pasar el mouse */
+  --progress-color: #A3C3BD; /* Color para el texto de progreso */
+  --highlight-pink: #F8C8DC; /* Tono rosa destacado para interacciones o énfasis */
+  --accent-light: #C9B2DA; /* Color de acento claro, como para el botón cerrar del modal */
+}
+
+/* Estilos base del cuerpo: Fondo con imagen mágica y tipografía romántica */
 body {
-font-family: 'Courgette', cursive;
-margin: 0;
-padding: 0;
-background: linear-gradient(135deg, #4A004E, #D71B88); / Degradado morado a magenta /
-background-size: cover;
-min-height: 100vh;
-overflow: hidden;
-position: relative;
-color: #f4f4f4; / Texto claro para contraste */
+  font-family: var(--primary-font);
+  margin: 0;
+  padding: 0;
+  background: url('fondo-romantico.jpg') no-repeat center center fixed;
+  background-size: cover; /* Asegura que la imagen de fondo cubra toda la pantalla */
+  min-height: 100vh; /* Mínimo de altura para asegurar que el fondo sea visible */
+  overflow-x: hidden; /* Evita el scroll horizontal innecesario */
+  overflow-y: auto; /* Permite el scroll vertical cuando el contenido excede la altura */
+  position: relative;
+  color: var(--text-light); /* Color de texto general */
 }
-/* Filtro sutil /
+
+/* Filtro de niebla romántica: Superposición semi-transparente y desenfocada */
 .background-overlay {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.3); / Ligeramente oscuro */
-z-index: 0;
-pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background-overlay-dark);
+  backdrop-filter: blur(8px); /* Efecto de desenfoque para la "niebla" */
+  z-index: 0; /* Asegura que esté detrás del contenido principal */
+  pointer-events: none; /* Permite que los clics pasen a través del overlay */
 }
+
+/* Contenedor principal: Estilo y animación de aparición */
 .container {
-position: relative;
-z-index: 1;
-background-color: rgba(255, 255, 255, 0.1); /* Contenedor semitransparente /
-padding: 40px;
-margin: 50px auto;
-border-radius: 15px;
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-max-width: 550px;
-text-align: center;
-backdrop-filter: blur(10px); / Efecto de desenfoque */
-animation: fadeIn 1s ease-out;
+  position: relative;
+  z-index: 1; /* Asegura que esté por encima del overlay */
+  background-color: var(--container-bg-dark);
+  padding: 40px;
+  margin: 60px auto; /* Centrado y con margen superior/inferior */
+  border-radius: 25px; /* Bordes redondeados para un aspecto suave */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4); /* Sombra sutil para profundidad */
+  max-width: 600px; /* Ancho máximo para legibilidad */
+  text-align: center;
+  animation: fadeIn 1.5s ease-in; /* Animación de aparición */
 }
-/* Animación de corazón */
-.header-animation {
-display: flex;
-justify-content: center;
-margin-bottom: 20px;
+
+/* Imagen decorativa superior: Pequeña animación flotante */
+.header-img {
+  width: 80px;
+  margin-bottom: 15px;
+  animation: float 3s ease-in-out infinite; /* Animación de flotación suave */
 }
-.heart {
-width: 50px;
-height: 50px;
-background-color: #e74c3c;
-position: relative;
-transform: rotate(-45deg);
-box-shadow: -10px 10px 90px rgba(255, 0, 0, 0.6);
-animation: pulse 1.5s infinite;
-}
-.heart:before,
-.heart:after {
-content: "";
-width: 50px;
-height: 50px;
-background-color: #e74c3c;
-border-radius: 50%;
-position: absolute;
-}
-.heart:before {
-top: -25px;
-left: 0;
-}
-.heart:after {
-left: 25px;
-top: 0;
-}
-@keyframes pulse {
-0% {
-transform: rotate(-45deg) scale(1);
-}
-50% {
-transform: rotate(-45deg) scale(1.1);
-}
-100% {
-transform: rotate(-45deg) scale(1);
-}
-}
+
+/* Título principal */
 h1 {
-color: #fff;
-font-size: 2.5rem;
-margin-bottom: 30px;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: var(--header-color);
+  font-size: 2.4rem;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para resaltar el texto */
 }
+
+/* Campos de entrada: Estilo uniforme y adaptado a la estética */
 input {
-padding: 15px;
-width: 85%;
-font-size: 1rem;
-border-radius: 10px;
-border: 1px solid #ddd;
-outline: none;
-margin-bottom: 20px;
-background-color: rgba(255, 255, 255, 0.8);
-color: #333;
-box-sizing: border-box;
+  padding: 12px;
+  width: 80%; /* Ancho responsivo */
+  font-size: 18px;
+  border-radius: 12px;
+  border: 2px solid var(--border-color-input);
+  outline: none; /* Elimina el contorno al enfocar */
+  background-color: var(--input-bg);
+  color: var(--text-light);
+  text-transform: lowercase; /* Sugerencia de diseño para unificarlos */
+  margin-bottom: 15px;
 }
+
+/* Botones: Diseño con transiciones suaves para interactividad */
 button {
-padding: 15px 30px;
-background-color: #D71B88;
-color: white;
-font-size: 1.1rem;
-border: none;
-border-radius: 30px;
-cursor: pointer;
-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-transition: transform 0.2s ease, background-color 0.2s ease;
+  padding: 12px 28px;
+  background-color: var(--button-bg-initial);
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
 }
+
 button:hover {
-background-color: #B80A6A;
-transform: translateY(-2px);
+  background-color: var(--button-bg-hover);
+  transform: scale(1.05); /* Efecto de escala al pasar el mouse */
 }
+
 button:active {
-transform: translateY(1px);
+  transform: scale(0.98); /* Ligera compresión al hacer clic */
 }
+
+/* Área de contenido: Estilo y animación de aparición */
 .contenido {
-margin-top: 30px;
-padding: 25px;
-background-color: rgba(0, 0, 0, 0.5);
-border-radius: 10px;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-color: #eee;
-font-size: 1rem;
-line-height: 1.6;
-text-align: left;
-display: none;
+  margin-top: 25px;
+  padding: 25px;
+  background-color: var(--content-bg-dark);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil y más suave */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: none; /* Oculto por defecto, se muestra con JS */
+  color: var(--text-medium);
+  font-size: 18px;
+  line-height: 1.7; /* Mejor legibilidad en bloques de texto */
+  text-align: left;
+  max-height: none; /* Asegura que no haya límite de altura si el contenido es dinámico */
 }
+
 .contenido.show {
-display: block;
+  display: block;
+  animation: fadeIn 1s ease-in-out; /* Animación de aparición para el contenido */
 }
+
+/* iFrame para contenido incrustado (ej. YouTube) */
 iframe {
-width: 100%;
-height: auto;
-aspect-ratio: 16 / 9;
-margin-top: 15px;
-border-radius: 8px;
-border: none;
+  width: 100%;
+  height: 315px;
+  margin-top: 15px;
+  border-radius: 12px;
+  border: none;
 }
-/* Animaciones */
+
+/* Animaciones globales */
 @keyframes fadeIn {
-from {
-opacity: 0;
-transform: translateY(20px);
-}
-to {
-opacity: 1;
-transform: translateY(0);
-}
-}
-/* Responsividad */
-@media screen and (max-width: 768px) {
-.container {
-margin: 30px 20px;
-padding: 30px;
-}
-h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-
-input,
-button {
-    font-size: 1rem;
-    padding: 12px;
-    border-radius: 8px;
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
+/* Responsividad para pantallas pequeñas (móviles) */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 30px 20px; /* Reducción de padding */
+    margin: 30px 10px; /* Ajuste de margen */
+  }
 
-button {
-    padding: 12px 25px;
+  h1 {
+    font-size: 1.8rem; /* Tamaño de fuente más pequeño para títulos */
+  }
+
+  input,
+  button {
+    font-size: 16px; /* Tamaño de fuente más pequeño para inputs y botones */
+  }
+
+  iframe {
+    height: 200px; /* Altura más compacta para iframes */
+  }
 }
 
-
-.contenido {
-    margin-top: 20px;
-    padding: 20px;
-    font-size: 0.9rem;
-}
-
-}
-@media screen and (max-width: 480px) {
-h1 {
-font-size: 1.7rem;
-}
-input {
-    width: 90%;
-}
-
-}
+/* Estilos para elementos de progreso y lista de códigos */
 .progreso {
-margin-top: 20px;
-font-size: 0.9rem;
-color: #ccc;
+  margin-top: 20px;
+  font-size: 16px;
+  color: var(--progress-color);
 }
+
+.lista-codigos {
+  margin-top: 10px;
+  list-style-type: none; /* Elimina los puntos de la lista */
+  padding: 0;
+  color: var(--text-dark);
+  font-size: 14px;
+}
+
+.lista-codigos li {
+  margin-bottom: 5px;
+}
+
+/* Estilos del modal: Superposición y efecto de desenfoque dramático */
 .modal {
-display: none;
-position: fixed;
-z-index: 1000;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-overflow: auto;
-background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  position: fixed;
+  z-index: 2000; /* Alto z-index para asegurar que esté en la parte superior */
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro semitransparente */
+  backdrop-filter: blur(15px); /* Mucho más blur para un efecto dramático */
+  animation: fadeIn 0.5s ease-out forwards; /* Animación de aparición rápida */
 }
+
+/* Contenido del modal: Centrado, con borde y sombra "brillante" */
 .modal-content {
-margin: auto;
-display: block;
-max-width: 90%;
-max-height: 90%;
-border-radius: 10px;
+  display: block;
+  margin: 50px auto; /* Centrado y con margen superior */
+  max-width: 80%;
+  max-height: 80%;
+  border: 2px solid var(--highlight-pink); /* Borde de acento */
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(248, 200, 220, 0.6); /* Sombra que "brilla" */
+  background-color: var(--container-bg-dark); /* Reutiliza el color del contenedor */
+  padding: 20px; /* Padding interno */
+  overflow-y: auto; /* Permite scroll si el contenido es largo */
 }
+
+/* Botón de cerrar del modal: Posicionamiento y transiciones */
 .close {
-position: absolute;
-top: 15px;
-right: 35px;
-color: #f1f1f1;
-font-size: 40px;
-font-weight: bold;
-transition: 0.3s;
-text-decoration: none;
-cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: var(--accent-light);
+  font-size: 40px;
+  font-weight: 300; /* Menos negrita para un look más suave */
+  cursor: pointer;
+  transition: color 0.3s ease; /* Transición de color al pasar el mouse */
 }
-.close:hover,
-.close:focus {
-color: #bbb;
-text-decoration: none;
-cursor: pointer;
-}
+
+.close:hover {
+  color: var(--highlight-pink); /* Cambio de color al pasar el mouse */
+    }
