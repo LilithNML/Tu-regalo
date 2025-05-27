@@ -1,42 +1,55 @@
 /* Importar fuentes de Google Fonts */
-/* Crimson Text para el cuerpo del texto - Elegante y legible */
-/* Playfair Display para títulos - Más dramática y sofisticada */
-/* Opción extra: Lora si prefieres serifa con toque más suave */
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Playfair+Display:wght@400;700&display=swap');
+/* Montserrat para elementos generales, moderna y limpia */
+/* Cormorant Garamond para títulos y texto principal, elegante y clásica */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
-/* Colores de la paleta (puedes ajustarlos a tu gusto): */
-/* #F0EAD6 - Casi blanco, un beige muy claro para fondos sutiles */
-/* #D5BDAF - Tono rosa pálido/tierra, cálido y romántico */
-/* #A07855 - Tono marrón medio, para acentos y elementos importantes */
-/* #6F4541 - Tono vino oscuro/rojizo, para botones y elementos destacados */
-/* #3A2F3D - Tono púrpura grisáceo oscuro, para el fondo principal */
-/* #F0EAD6 - Texto principal para un contraste suave */
+/* Paleta de Colores Elegante y Sutil: */
+/* --primary-dark: #2F3645;  Gris azulado oscuro, base del fondo */
+/* --secondary-dark: #4A5568; Gris azulado medio, para fondos de elementos */
+/* --accent-light: #C0C5E0;  Lavanda pálido, para texto principal y detalles */
+/* --accent-medium: #A4B3CC; Gris azulado claro, para algunos bordes o textos */
+/* --highlight-pink: #F8C8DC; Rosa pálido, para acentos románticos (botones, títulos) */
+/* --text-dark: #2F3645;     Texto oscuro para elementos claros (si los hubiera) */
 
 
-/* Fondo y estilo base */
+/* Variables CSS para una gestión de color más sencilla */
+:root {
+  --primary-dark: #2F3645;
+  --secondary-dark: #4A5568;
+  --accent-light: #C0C5E0;
+  --accent-medium: #A4B3CC;
+  --highlight-pink: #F8C8DC;
+  --text-dark: #2F3645;
+}
+
+/* Restablecimiento básico y fuente global */
 body {
-  font-family: 'Crimson Text', serif; /* Mantener esta para el cuerpo */
+  font-family: 'Montserrat', sans-serif; /* Fuente sans-serif para el cuerpo general */
   margin: 0;
   padding: 0;
-  /* Fondo más sofisticado - asume que 'fondo-romantico.jpg' es de alta calidad */
-  background: url('fondo-romantico.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-color: var(--primary-dark); /* Fondo principal de un gris azulado oscuro */
+  color: var(--accent-light); /* Color de texto base, lavanda pálido */
   min-height: 100vh;
+  display: flex; /* Usar flexbox para centrar contenido */
+  justify-content: center;
+  align-items: center;
   overflow-x: hidden;
   overflow-y: auto;
   position: relative;
-  color: #F0EAD6; /* Nuevo color de texto principal, más claro y sutil */
-  line-height: 1.6; /* Unificar line-height base para mejor lectura */
+  line-height: 1.6;
 }
 
-/* Superposición de fondo para un efecto más "atmosférico" */
+/* NO USAMOS UNA IMAGEN DE FONDO DIRECTAMENTE EN BODY PARA ESTE DISEÑO */
+/* Si aún quieres una imagen, podrías ponerla con un bajo opacity y un filtro de color
+   en un pseudo-elemento o en un div específico, debajo del overlay. */
+
+/* Filtro de niebla romántica (más sutil o para efecto de textura) */
 .background-overlay {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  /* Un color más oscuro y profundo para el overlay, que complemente la paleta */
-  background: rgba(58, 47, 61, 0.8); /* Tono púrpura grisáceo oscuro */
-  backdrop-filter: blur(10px); /* Un poco más de blur para mayor profundidad */
+  background: rgba(0, 0, 0, 0.2); /* Oscurecer ligeramente para añadir profundidad */
+  backdrop-filter: blur(5px); /* Menos blur, más sutil */
   z-index: 0;
   pointer-events: none;
 }
@@ -45,138 +58,147 @@ body {
 .container {
   position: relative;
   z-index: 1;
-  /* Fondo del contenedor más integrado con la paleta y ligeramente transparente */
-  background-color: rgba(58, 47, 61, 0.95); /* Tono púrpura grisáceo oscuro, casi opaco */
-  padding: 50px; /* Aumentar el padding para más "aire" */
-  margin: 80px auto; /* Aumentar margin top/bottom */
-  border-radius: 30px; /* Bordes más redondeados */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada y suave */
-  max-width: 700px; /* Aumentar ligeramente el ancho máximo */
+  background-color: var(--secondary-dark); /* Fondo del contenedor, gris azulado medio */
+  padding: 60px 40px; /* Más padding para una sensación de espacio */
+  margin: 40px auto; /* Mantener margen */
+  border-radius: 20px; /* Bordes suaves */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Sombra suave y difusa */
+  max-width: 650px; /* Ajuste de ancho */
   text-align: center;
-  animation: fadeIn 1.8s ease-out forwards; /* Animación más lenta y suave */
-  border: 1px solid rgba(240, 234, 214, 0.1); /* Borde sutil para definir el contenedor */
+  animation: fadeInScale 1.8s ease-out forwards; /* Nueva animación de aparición */
+  border: 1px solid rgba(192, 197, 224, 0.2); /* Borde muy sutil para definición */
+  overflow: hidden; /* Asegurar que los elementos internos no se desborden */
 }
 
-/* Imagen decorativa superior */
+/* Imagen decorativa superior - Puede ser un ícono SVG, una flor, etc. */
 .header-img {
-  width: 90px; /* Ligeramente más grande */
-  margin-bottom: 25px; /* Más espacio debajo de la imagen */
-  animation: float 3s ease-in-out infinite;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)); /* Sombra para la imagen */
+  width: 70px; /* Tamaño más discreto */
+  margin-bottom: 30px; /* Más espacio */
+  animation: float 3.5s ease-in-out infinite;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2));
 }
 
 /* Título principal */
 h1 {
-  font-family: 'Playfair Display', serif; /* Usar Playfair Display para un título más impactante */
-  color: #D5BDAF; /* Un tono rosa pálido/tierra para el título, más cálido */
-  font-size: 3rem; /* Aumentar el tamaño del título */
-  margin-bottom: 35px; /* Más espacio debajo del título */
-  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4); /* Sombra más suave y definida */
-  letter-spacing: 0.05em; /* Ligeramente más espaciado entre letras para elegancia */
+  font-family: 'Cormorant Garamond', serif; /* Fuente elegante y clásica para el título */
+  color: var(--highlight-pink); /* Rosa pálido para el título, muy romántico */
+  font-size: 3.2rem; /* Tamaño más grande para el título */
+  margin-bottom: 40px; /* Más espacio */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  letter-spacing: 0.08em; /* Más espaciado entre letras */
+  text-transform: uppercase; /* Darle un toque moderno y formal */
 }
 
 /* Campos de entrada (input) */
 input {
-  padding: 15px; /* Más padding */
-  width: 75%; /* Ajustar ancho para más espacio lateral */
-  font-size: 1.1rem; /* Ligeramente más grande */
-  border-radius: 15px; /* Más redondeado */
-  border: 1px solid #A07855; /* Borde con un color de acento cálido */
+  padding: 14px;
+  width: 85%; /* Ligeramente más ancho */
+  font-size: 1.1rem;
+  border-radius: 8px; /* Menos redondeado para un look más moderno */
+  border: 1px solid var(--accent-medium); /* Borde gris azulado claro */
   outline: none;
-  background-color: rgba(160, 120, 85, 0.2); /* Fondo más transparente del mismo color de acento */
-  color: #F0EAD6; /* Color de texto del input */
-  text-transform: none; /* No forzar lowercase, deja que el usuario decida mayúsculas/minúsculas */
-  margin-bottom: 20px; /* Más espacio */
-  transition: all 0.3s ease-in-out; /* Transición suave al enfocar */
+  background-color: rgba(255, 255, 255, 0.05); /* Fondo muy transparente */
+  color: var(--accent-light);
+  text-transform: none;
+  margin-bottom: 25px;
+  transition: all 0.3s ease-in-out;
 }
 
-input::placeholder { /* Estilo para el placeholder */
-  color: rgba(240, 234, 214, 0.6);
+input::placeholder {
+  color: rgba(192, 197, 224, 0.6); /* Color del placeholder */
 }
 
 input:focus {
-  border-color: #6F4541; /* Borde más oscuro al enfocar */
-  background-color: rgba(111, 69, 65, 0.3); /* Fondo más oscuro al enfocar */
-  box-shadow: 0 0 10px rgba(111, 69, 65, 0.5); /* Sombra sutil al enfocar */
+  border-color: var(--highlight-pink); /* Borde rosa al enfocar */
+  background-color: rgba(255, 255, 255, 0.1); /* Más transparente */
+  box-shadow: 0 0 10px rgba(248, 200, 220, 0.4); /* Sombra rosa suave al enfocar */
 }
 
 /* Botones */
 button {
-  padding: 15px 35px; /* Más padding */
-  background-color: #6F4541; /* Color vino oscuro/rojizo para el botón */
-  color: #F0EAD6; /* Color de texto más claro para contraste */
-  font-size: 1.1rem; /* Tamaño de fuente ligeramente más grande */
+  padding: 15px 35px;
+  background-color: var(--highlight-pink); /* Color rosa pálido para el botón */
+  color: var(--text-dark); /* Texto oscuro para contraste */
+  font-size: 1.15rem; /* Ligeramente más grande */
+  font-weight: 600; /* Más peso para que destaque */
   border: none;
-  border-radius: 30px; /* Más redondeado */
+  border-radius: 50px; /* Completamente redondeado (pastilla) */
   cursor: pointer;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-  letter-spacing: 0.03em; /* Espaciado sutil */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  letter-spacing: 0.05em;
+  text-transform: uppercase; /* Mayúsculas para el texto del botón */
 }
 
 button:hover {
-  background-color: #A07855; /* Un tono más claro del acento al pasar el mouse */
-  transform: translateY(-3px) scale(1.02); /* Ligeramente hacia arriba y un poco más grande */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra más intensa al hover */
+  background-color: #E2B2C9; /* Un rosa ligeramente más oscuro al pasar el mouse */
+  transform: translateY(-2px); /* Ligeramente hacia arriba */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 button:active {
-  transform: translateY(0) scale(0.98); /* Volver a la posición y tamaño originales */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra original */
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Contenido de la carta */
 .contenido {
-  margin-top: 35px; /* Más espacio superior */
-  padding: 30px; /* Más padding interno */
-  background-color: rgba(32, 30, 43, 0.6); /* Un fondo más suave y translúcido para el contenido */
-  border-radius: 20px; /* Más redondeado */
-  border: 1px solid rgba(240, 234, 214, 0.15); /* Borde sutil y más claro */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra más definida */
+  margin-top: 40px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.08); /* Fondo muy sutil para el contenido */
+  border-radius: 15px;
+  border: 1px solid rgba(192, 197, 224, 0.1); /* Borde aún más sutil */
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra interna para profundidad */
   display: none;
-  color: #F0EAD6; /* Nuevo color de texto para el contenido, más claro */
-  font-size: 1.1rem; /* Ligeramente más grande para mejor lectura */
-  line-height: 1.8; /* Aumentar ligeramente el line-height para párrafos largos */
+  color: var(--accent-light); /* Color de texto del contenido */
+  font-family: 'Cormorant Garamond', serif; /* Usar Cormorant Garamond para el texto de la carta */
+  font-size: 1.25rem; /* Tamaño de fuente generoso para legibilidad y elegancia */
+  line-height: 1.8; /* Mayor line-height para legibilidad */
   text-align: left;
   max-height: none;
+  overflow-y: auto; /* Para que el contenido pueda scrollear si es muy largo */
 }
 
 .contenido.show {
   display: block;
-  animation: fadeIn 1.2s ease-in-out forwards; /* Animación de aparición más suave */
+  animation: slideInUp 1.2s ease-out forwards; /* Nueva animación para el contenido */
 }
 
 iframe {
   width: 100%;
-  height: 350px; /* Ligeramente más alto */
-  margin-top: 25px; /* Más espacio arriba */
-  border-radius: 15px; /* Más redondeado */
+  height: 380px; /* Más alto */
+  margin-top: 30px;
+  border-radius: 15px;
   border: none;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para el iframe */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Animaciones */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); } /* Empieza más abajo */
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); } /* Flotando un poco más */
+  50% { transform: translateY(-10px); } /* Flotando un poco más para un efecto más "mágico" */
 }
 
 /* Responsividad */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .container {
-    padding: 30px 25px; /* Ajustar padding */
-    margin: 40px 15px; /* Ajustar margin */
-    border-radius: 20px;
+    padding: 40px 25px;
+    margin: 30px 15px;
   }
 
   h1 {
-    font-size: 2.2rem; /* Tamaño de título para móviles */
-    margin-bottom: 25px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
   }
 
   input, button {
@@ -185,7 +207,42 @@ iframe {
   }
 
   .contenido {
-    padding: 20px;
+    padding: 25px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  iframe {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 30px 20px;
+    margin: 20px 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  input {
+    width: 90%;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 12px 25px;
+  }
+
+  .header-img {
+    width: 60px;
+    margin-bottom: 20px;
+  }
+  
+  .contenido {
     font-size: 1rem;
   }
 
@@ -194,61 +251,66 @@ iframe {
   }
 }
 
-/* Estilos de progreso y lista de códigos */
+
+/* Progreso y lista de códigos (ajustados al nuevo estilo) */
 .progreso {
-  margin-top: 25px;
-  font-size: 0.95rem; /* Un poco más pequeño */
-  color: #D5BDAF; /* Usar el color rosa pálido/tierra */
+  margin-top: 30px;
+  font-size: 1rem;
+  color: var(--accent-medium); /* Color más sutil para el progreso */
+  font-weight: 500;
 }
 
 .lista-codigos {
   margin-top: 15px;
   list-style-type: none;
   padding: 0;
-  color: rgba(240, 234, 214, 0.8); /* Un blanco sutil para la lista */
-  font-size: 0.85rem; /* Más pequeño para ser discreto */
+  color: rgba(192, 197, 224, 0.7); /* Menos opaco para la lista */
+  font-size: 0.9rem;
 }
 
 .lista-codigos li {
-  margin-bottom: 8px; /* Más espacio entre elementos de la lista */
+  margin-bottom: 6px;
 }
 
-/* Modal (si lo usas para algo, mejora de estilos) */
+/* Modal (rediseño) */
 .modal {
   display: none;
   position: fixed;
-  z-index: 2000; /* Asegurar que esté por encima de todo */
-  padding-top: 80px;
+  z-index: 2000;
+  padding-top: 60px;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.9); /* Fondo más oscuro para el modal */
-  backdrop-filter: blur(12px); /* Añadir blur también al modal */
+  background-color: rgba(0,0,0,0.85); /* Fondo oscuro semitransparente */
+  backdrop-filter: blur(15px); /* Mucho más blur para un efecto dramático */
+  animation: fadeIn 0.5s ease-out forwards; /* Animación de aparición rápida */
 }
 
 .modal-content {
   display: block;
-  margin: auto;
-  max-width: 70%; /* Ligeramente más pequeño para mejor visualización */
-  max-height: 85%;
-  border: 4px solid #D5BDAF; /* Borde con color de acento */
-  border-radius: 15px;
-  box-shadow: 0 0 30px rgba(213, 189, 175, 0.5); /* Sombra que brilla con el acento */
+  margin: 50px auto; /* Centrado y con margen superior */
+  max-width: 80%;
+  max-height: 80%;
+  border: 2px solid var(--highlight-pink); /* Borde de acento */
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(248, 200, 220, 0.6); /* Sombra que "brilla" */
+  background-color: var(--secondary-dark); /* Fondo del modal */
+  padding: 20px; /* Padding interno */
 }
 
 .close {
   position: absolute;
   top: 20px;
   right: 30px;
-  color: #F0EAD6; /* Color de cierre más claro */
-  font-size: 45px; /* Más grande */
-  font-weight: normal; /* No tan bold, más sutil */
+  color: var(--accent-light);
+  font-size: 40px;
+  font-weight: 300; /* Menos negrita */
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .close:hover {
-  color: #D5BDAF; /* Cambio de color al pasar el mouse */
+  color: var(--highlight-pink); /* Cambio de color al pasar el mouse */
 }
