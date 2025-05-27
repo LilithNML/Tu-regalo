@@ -1,9 +1,9 @@
 /* Fuente romántica */
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 /* Fondo con imagen mágica */
 body {
-  font-family: 'Courgette', cursive;
+  font-family: "Crimson Text", serif;
   margin: 0;
   padding: 0;
   background: url('fondo-romantico.jpg') no-repeat center center fixed;
