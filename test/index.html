@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué tan compatibles somos, mi amor?</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="heart-particles"></div>
+
+    <header>
+        <h1>¿Qué tan compatibles somos, mi amor?</h1>
+        <button id="muteButton" aria-label="Silenciar música"><svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M13.5 4.036a9.977 9.977 0 0 1 6.464 6.464l-3.055 1.647a6.98 6.98 0 0 0-4.53-4.53L13.5 4.036ZM19.964 10.5a9.977 9.977 0 0 1-6.464 6.464l3.055 1.647a6.98 6.98 0 0 0 4.53-4.53l-1.127-1.127ZM7.5 19.964a9.977 9.977 0 0 1-6.464-6.464l3.055-1.647a6.98 6.98 0 0 0 4.53 4.53l1.127 1.127ZM4.036 13.5a9.977 9.977 0 0 1 6.464-6.464L9.445 5.4a6.98 6.98 0 0 0-4.53 4.53l1.127 1.127Z"/><path d="M12 3a9 9 0 0 0-8.495 5.505 9 9 0 0 0 0 12.728A9 9 0 0 0 20.495 15.505 9 9 0 0 0 12 3ZM6.37 7.757a6 6 0 0 1 0 8.486A6 6 0 0 1 17.63 7.757a6 6 0 0 1-11.26 0Z"/></svg></button>
+    </header>
+
+    <main class="container">
+        <section id="introduction">
+            <p>Responde con sinceridad y descubre qué tan enamoradas están nuestras almas.</p>
+        </section>
+
+        <section id="quiz">
+            <div id="question-container">
+                </div>
+            <button id="next-button">Siguiente</button>
+        </section>
+
+        <section id="results" class="hidden">
+            <h2 id="compatibility-message"></h2>
+            <div class="result-image">
+                <img src="assets/images/pareja_corazones.png" alt="Ilustración de una pareja con corazones">
+            </div>
+            <div class="result-actions">
+                <button id="restart-button">Volver a empezar</button>
+                <button id="share-button">Compartir resultado</button>
+                <p id="secret-code-unlock" class="hidden">Código Secreto Desbloqueado: <span id="secret-code"></span></p>
+            </div>
+        </section>
+    </main>
+
+    <audio id="backgroundMusic" loop src="assets/audio/suave_instrumental.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
