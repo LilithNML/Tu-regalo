@@ -1,100 +1,180 @@
+// --- Definición de Preguntas (Objetos sin valores secretos, ya que el resultado es fijo) ---
 const questions = [
     {
-        question: "¿Qué prefieres hacer un domingo por la tarde?",
-        options: ["Acurrucarnos a ver una película", "Salir a explorar un lugar nuevo", "Disfrutar de un hobby individual en la misma habitación", "Visitar a familiares o amigos"],
+        question: "¿Cuál es tu escenario ideal para una escapada romántica?",
+        options: [
+            "Una cabaña acogedora en la montaña con chimenea y chocolate caliente.",
+            "Una playa de arena blanca al atardecer, con el sonido de las olas.",
+            "Explorar una ciudad histórica, llena de arte y cultura.",
+            "Un campamento bajo las estrellas, lejos de la civilización."
+        ]
     },
     {
-        question: "¿Cómo reaccionas cuando estás molesto?",
-        options: ["Necesito espacio para procesar mis emociones", "Quiero hablarlo inmediatamente", "Me quedo en silencio hasta sentirme mejor", "Busco una distracción"],
+        question: "¿Qué gesto de cariño valoras más en el día a día?",
+        options: [
+            "Un mensaje inesperado de 'te quiero' durante el día.",
+            "Un abrazo fuerte y silencioso cuando lo necesito.",
+            "Que recuerde y celebre pequeños detalles importantes para mí.",
+            "Compartir un momento de risas sin razón alguna."
+        ]
     },
     {
-        question: "¿Qué es más importante en una relación?",
-        options: ["La comunicación abierta y honesta", "La confianza y el respeto mutuo", "La pasión y la aventura", "El apoyo incondicional"],
+        question: "¿Cómo prefieres celebrar un logro importante de tu pareja?",
+        options: [
+            "Una cena elegante y especial, solo para los dos.",
+            "Organizar una pequeña reunión sorpresa con sus seres queridos.",
+            "Comprar un regalo significativo que sé que desea.",
+            "Estar ahí para escuchar y celebrar sus éxitos con entusiasmo."
+        ]
     },
     {
-        question: "¿Cuál es tu idea de una cita perfecta?",
-        options: ["Una cena romántica a la luz de las velas", "Una actividad divertida y emocionante juntos", "Una noche tranquila en casa", "Un paseo por la naturaleza"],
+        question: "¿Qué actividad te parece más divertida para hacer juntos un fin de semana?",
+        options: [
+            "Cocinar una nueva receta elaborada en casa.",
+            "Aventurarnos en una excursión o deporte al aire libre.",
+            "Visitar un museo o galería y hablar sobre arte.",
+            "Simplemente relajarnos en casa viendo series o jugando."
+        ]
     },
     {
-        question: "¿Qué valoras más en tu pareja?",
-        options: ["Su sentido del humor y alegría", "Su inteligencia y curiosidad", "Su amabilidad y empatía", "Su ambición y determinación"],
+        question: "¿Cómo manejas los desacuerdos o conflictos en la relación?",
+        options: [
+            "Prefiero hablarlo de inmediato y resolverlo lo antes posible.",
+            "Necesito un tiempo para calmarme y luego lo hablamos con calma.",
+            "Busco llegar a un compromiso que funcione para ambos.",
+            "Me enfoco en el problema, no en la persona, para buscar soluciones."
+        ]
     },
     {
-        question: "¿Qué escenario te parece más relajante?",
-        options: ["Una playa tranquila al atardecer", "Una cabaña acogedora en la montaña nevada", "Un campo de flores bajo el sol", "Una ciudad bulliciosa por la noche"],
+        question: "¿Qué cualidad te atrae más en tu pareja a largo plazo?",
+        options: [
+            "Su capacidad de hacerme reír y ver el lado positivo.",
+            "Su inteligencia y la profundidad de sus pensamientos.",
+            "Su lealtad incondicional y su apoyo constante.",
+            "Su pasión por la vida y su deseo de crecer."
+        ]
     },
     {
-        question: "¿Qué tipo de regalo te hace sentir más amado/a?",
-        options: ["Algo hecho a mano y personalizado", "Una experiencia o aventura juntos", "Algo práctico que sé que necesito", "Un detalle inesperado y espontáneo"],
+        question: "¿Qué tipo de sorpresa te haría sentir más especial?",
+        options: [
+            "Un viaje sorpresa a un lugar que siempre he querido visitar.",
+            "Una carta escrita a mano expresando sus sentimientos.",
+            "Que me dedique tiempo de calidad y me escuche atentamente.",
+            "Un gesto público de afecto que me haga sentir amado/a."
+        ]
     },
     {
-        question: "¿Cómo prefieres celebrar un aniversario?",
-        options: ["Una escapada romántica", "Una cena especial en casa", "Revivir un recuerdo significativo", "Una fiesta con nuestros seres queridos"],
+        question: "¿Qué prefieres para una noche tranquila en casa?",
+        options: [
+            "Ver una película o serie acurrucados en el sofá.",
+            "Leer un libro cada uno en silencio, disfrutando la compañía.",
+            "Jugar juegos de mesa o videojuegos juntos.",
+            "Tener una conversación profunda y significativa."
+        ]
+    },
+    {
+        question: "¿Qué es lo más importante para ti en la intimidad emocional?",
+        options: [
+            "Sentir que puedo ser completamente vulnerable y comprendido/a.",
+            "Compartir sueños y metas para el futuro.",
+            "Saber que somos un equipo y nos apoyamos mutuamente.",
+            "Experimentar una conexión profunda y apasionada."
+        ]
+    },
+    {
+        question: "¿Qué tipo de música preferirías escuchar juntos en un viaje largo?",
+        options: [
+            "Pop romántico y baladas que nos hagan cantar.",
+            "Rock clásico o indie que nos llene de energía.",
+            "Música instrumental suave que cree un ambiente relajado.",
+            "Nuestros podcasts favoritos o audiolibros interesantes."
+        ]
     }
 ];
 
-// Referencias a elementos del DOM
-const startButton = document.getElementById('start-button');
+
+// --- Referencias a elementos del DOM ---
+const introductionSection = document.getElementById('introduction-section');
+const quizSection = document.getElementById('quiz-section');
+const resultsSection = document.getElementById('results-section');
+const startButton = document.getElementById('startButton');
 const questionContainer = document.getElementById('question-container');
-const nextButton = document.getElementById('next-button');
-const resultsSection = document.getElementById('results');
+const nextButton = document.getElementById('nextButton');
 const compatibilityMessage = document.getElementById('compatibility-message');
-const restartButton = document.getElementById('restart-button');
-const quizSection = document.getElementById('quiz');
-const introductionSection = document.getElementById('introduction');
+const restartButton = document.getElementById('restartButton');
 const secretCodeUnlock = document.getElementById('secret-code-unlock');
-const secretCodeDisplay = document.getElementById('secret-code');
-const copyCodeButton = document.getElementById('copy-code-button'); // Nuevo botón de copiar
-const copyTooltip = document.getElementById('copy-tooltip'); // Tooltip del botón de copiar
+const secretCodeDisplay = document.getElementById('secretCodeDisplay');
+const copyCodeButton = document.getElementById('copyCodeButton');
+const copyTooltip = document.getElementById('copyTooltip');
 const backgroundMusic = document.getElementById('backgroundMusic');
 const muteButton = document.getElementById('muteButton');
 const body = document.body;
 
+// --- Variables de Estado ---
 let currentQuestionIndex = 0;
-const secretNumber = "ALMASGEMELASINFINITAS"; // Código secreto a desbloquear
+const SECRET_CODE = "NUESTROSAMORINFINITO"; // El código secreto que se desbloquea
 
-// --- Funciones del Test ---
+// --- Funciones Principales de Navegación entre Secciones ---
 
+/**
+ * Muestra una sección específica y oculta las demás, con animaciones.
+ * @param {HTMLElement} sectionToShow La sección que se debe mostrar.
+ */
 function showSection(sectionToShow) {
-    const sections = [introductionSection, quizSection, resultsSection];
-    sections.forEach(section => {
-        if (section === sectionToShow) {
-            section.classList.remove('hidden');
-            // Añadir clase 'show' para animaciones de fade-in
-            setTimeout(() => section.classList.add('show'), 10);
+    const allCards = document.querySelectorAll('.card');
+    allCards.forEach(card => {
+        if (card === sectionToShow) {
+            card.classList.remove('hidden', 'leaving');
+            card.classList.add('active', 'entering');
+            // Quitar la clase 'entering' después de la animación para mantener el estado 'active'
+            card.addEventListener('transitionend', () => {
+                card.classList.remove('entering');
+            }, { once: true });
         } else {
-            section.classList.remove('show');
-            section.classList.add('hidden');
+            card.classList.remove('active', 'entering');
+            card.classList.add('leaving');
+            // Ocultar completamente después de que la animación 'leaving' termine
+            card.addEventListener('transitionend', () => {
+                card.classList.add('hidden');
+                card.classList.remove('leaving');
+            }, { once: true });
         }
     });
 }
 
+/**
+ * Carga la pregunta actual en el contenedor.
+ */
 function loadQuestion() {
     if (currentQuestionIndex < questions.length) {
         const questionData = questions[currentQuestionIndex];
         questionContainer.innerHTML = `
-            <h2 class="question">${questionData.question}</h2>
-            <div class="options">
+            <p class="question-text">${questionData.question}</p>
+            <div class="options-grid">
                 ${questionData.options.map((option, index) =>
                     `<button class="option-button" data-index="${index}">${option}</button>`
                 ).join('')}
             </div>
         `;
-        const optionButtons = document.querySelectorAll('.option-button');
-        optionButtons.forEach(button => {
+        // Añadir event listeners a los nuevos botones de opción
+        document.querySelectorAll('.option-button').forEach(button => {
             button.addEventListener('click', selectAnswer);
         });
         nextButton.classList.add('hidden'); // Ocultar el botón "Siguiente" hasta que se seleccione una respuesta
     } else {
-        showResults();
+        showResults(); // Todas las preguntas respondidas, mostrar resultados
     }
 }
 
+/**
+ * Marca la respuesta seleccionada y habilita el botón "Siguiente".
+ * @param {Event} event El evento de clic.
+ */
 function selectAnswer(event) {
     const selectedButton = event.target;
     const optionsContainer = selectedButton.parentNode;
 
-    // Remover 'selected' de todos los botones y luego añadirlo al seleccionado
+    // Remover la clase 'selected' de todos los botones y añadirla al botón clickeado
     Array.from(optionsContainer.children).forEach(button => {
         button.classList.remove('selected');
     });
@@ -102,47 +182,62 @@ function selectAnswer(event) {
     nextButton.classList.remove('hidden'); // Mostrar el botón "Siguiente"
 }
 
+/**
+ * Avanza a la siguiente pregunta o muestra los resultados.
+ */
 function nextQuestion() {
     // Solo avanza si una opción ha sido seleccionada
     if (document.querySelector('.option-button.selected')) {
-        questionContainer.classList.add('slide-out'); // Inicia la animación de salida
+        // Aplica la clase 'leaving' a la tarjeta de quiz para iniciar la transición de salida
+        quizSection.classList.add('leaving');
 
+        // Espera a que termine la animación de salida antes de cargar la siguiente pregunta
+        // y aplicar la animación de entrada.
         setTimeout(() => {
             currentQuestionIndex++;
+            loadQuestion(); // Carga la siguiente pregunta o los resultados
+
+            // Si aún estamos en la sección del quiz (no pasamos a resultados)
             if (currentQuestionIndex < questions.length) {
-                loadQuestion();
-                questionContainer.classList.remove('slide-out');
-                questionContainer.classList.add('slide-in'); // Inicia la animación de entrada
+                // Elimina 'leaving' y añade 'entering' para la nueva pregunta
+                quizSection.classList.remove('leaving');
+                quizSection.classList.add('entering');
+                // Asegura que la clase 'entering' se remueve después de su animación
                 setTimeout(() => {
-                    questionContainer.classList.remove('slide-in');
+                    quizSection.classList.remove('entering');
                 }, 400); // Duración de la transición CSS
             } else {
-                showResults();
+                // Si ya pasamos a resultados, showResults() ya manejará las clases
             }
-        }, 400); // Tiempo para que la animación 'slide-out' se complete
+        }, 400); // Coincide con la duración de la transición 'leaving' en CSS
     }
 }
 
+
+/**
+ * Muestra la sección de resultados.
+ */
 function showResults() {
     showSection(resultsSection);
     compatibilityMessage.textContent = "¡Ustedes dos son fuego y ternura, alma con alma!";
     secretCodeUnlock.classList.remove('hidden');
-    secretCodeDisplay.textContent = secretNumber;
-
-    // Reiniciar tooltip del botón de copiar
-    copyTooltip.textContent = "Copiar";
+    secretCodeDisplay.textContent = SECRET_CODE; // Asignar el código
+    copyTooltip.textContent = "Copiar"; // Reiniciar texto del tooltip
 }
 
+/**
+ * Reinicia el test volviendo a la introducción.
+ */
 function restartQuiz() {
     currentQuestionIndex = 0;
     showSection(introductionSection); // Volver a la introducción
-    secretCodeUnlock.classList.add('hidden'); // Ocultar el código secreto al reiniciar
-    // Asegurar que la tarjeta de introducción esté animada al mostrarse
-    introductionSection.classList.remove('show');
-    setTimeout(() => introductionSection.classList.add('show'), 10);
+    secretCodeUnlock.classList.add('hidden'); // Ocultar el código secreto
 }
 
 // --- Funcionalidad de Copiar Código ---
+/**
+ * Copia el código secreto al portapapeles y muestra un feedback visual.
+ */
 function copySecretCode() {
     navigator.clipboard.writeText(secretCodeDisplay.textContent)
         .then(() => {
@@ -161,32 +256,35 @@ function copySecretCode() {
 }
 
 // --- Música de fondo y Controles ---
-let isMusicPlaying = false; // Asume que la música no está reproduciéndose al inicio
+let isMusicPlaying = false; // Estado inicial: música pausada
 
-// Intentar reproducir la música al primer clic del usuario (para sortear autoplay policies)
-window.addEventListener("click", () => {
+/**
+ * Intenta reproducir la música de fondo. Maneja la política de autoplay del navegador.
+ */
+function tryPlayMusic() {
     if (backgroundMusic.paused && !isMusicPlaying) {
         backgroundMusic.play()
             .then(() => {
                 isMusicPlaying = true;
-                body.classList.remove('music-muted');
+                body.classList.remove('music-muted'); // Asegura que el icono no esté silenciado
             })
             .catch(e => {
-                console.warn("Autoplay de música de fondo bloqueado por el navegador:", e);
-                isMusicPlaying = false; // No se pudo reproducir, mantener en estado de 'silenciado'
-                body.classList.add('music-muted');
+                console.warn("Autoplay de música de fondo bloqueado:", e);
+                isMusicPlaying = false; // Si se bloquea, el estado sigue siendo "no reproduciendo"
+                body.classList.add('music-muted'); // Mostrar el icono de silencio
             });
     }
-}, { once: true });
+}
 
-// Botón de silenciar/desilenciar
-muteButton.addEventListener('click', () => {
+/**
+ * Alterna el estado de reproducción de la música.
+ */
+function toggleMusic() {
     if (isMusicPlaying) {
         backgroundMusic.pause();
         isMusicPlaying = false;
         body.classList.add('music-muted');
     } else {
-        // Al intentar reproducir manualmente, también manejar la promesa
         backgroundMusic.play()
             .then(() => {
                 isMusicPlaying = true;
@@ -194,112 +292,30 @@ muteButton.addEventListener('click', () => {
             })
             .catch(e => {
                 console.warn("Intento de reproducción manual bloqueado:", e);
-                isMusicPlaying = false; // No se pudo reproducir
-                body.classList.add('music-muted'); // Asegura que el icono de silencio permanezca
+                isMusicPlaying = false;
+                body.classList.add('music-muted');
             });
     }
-});
-
-// --- Partículas de corazón (implementación básica con Canvas) ---
-const heartParticlesContainer = document.querySelector('.heart-particles');
-const heartCanvas = document.createElement('canvas');
-const heartContext = heartCanvas.getContext('2d');
-heartParticlesContainer.appendChild(heartCanvas);
-
-let hearts = [];
-const maxHearts = 35; // Aumentado ligeramente para más ambiente
-
-function resizeCanvas() {
-    heartCanvas.width = window.innerWidth;
-    heartCanvas.height = window.innerHeight;
-    // Opcional: Si los corazones se reinician al cambiar el tamaño, puedes llamarlo aquí
-    // initHearts();
 }
 
-class Heart {
-    constructor() {
-        this.reset();
-    }
-
-    reset() {
-        this.x = Math.random() * heartCanvas.width;
-        this.y = heartCanvas.height + Math.random() * heartCanvas.height / 2; // Empieza desde abajo o fuera de pantalla
-        this.size = Math.random() * 8 + 5; // Tamaño entre 5 y 13
-        this.speedY = Math.random() * 0.5 + 0.2; // Velocidad de flotación
-        this.opacity = Math.random() * 0.6 + 0.2; // Opacidad
-        this.rotation = Math.random() * Math.PI * 2; // Rotación inicial
-        this.rotationSpeed = (Math.random() - 0.5) * 0.02; // Velocidad de rotación
-        this.hue = Math.floor(Math.random() * 30 + 330); // Tonos rosados/rojizos
-    }
-
-    draw() {
-        heartContext.save();
-        heartContext.translate(this.x, this.y);
-        heartContext.rotate(this.rotation);
-        heartContext.fillStyle = `hsla(${this.hue}, 100%, 80%, ${this.opacity})`;
-        heartContext.shadowBlur = 5;
-        heartContext.shadowColor = `hsla(${this.hue}, 100%, 80%, ${this.opacity * 0.8})`;
-
-        heartContext.beginPath();
-        heartContext.moveTo(0, this.size / 2);
-        heartContext.bezierCurveTo(this.size / 2, 0, this.size, this.size / 2, 0, this.size);
-        heartContext.bezierCurveTo(-this.size, this.size / 2, -this.size / 2, 0, 0, this.size / 2);
-        heartContext.closePath();
-        heartContext.fill();
-        heartContext.restore();
-    }
-
-    update() {
-        this.y -= this.speedY;
-        this.rotation += this.rotationSpeed;
-        if (this.y < -this.size * 2) { // Si el corazón sale por arriba, reiniciarlo
-            this.reset();
-        }
-    }
-}
-
-function initHearts() {
-    hearts = [];
-    for (let i = 0; i < maxHearts; i++) {
-        hearts.push(new Heart());
-    }
-}
-
-function animateHearts() {
-    heartContext.clearRect(0, 0, heartCanvas.width, heartCanvas.height);
-    hearts.forEach(heart => {
-        heart.update();
-        heart.draw();
-    });
-    requestAnimationFrame(animateHearts);
-}
 
 // --- Inicialización y Event Listeners ---
 document.addEventListener('DOMContentLoaded', () => {
-    resizeCanvas(); // Asegurar que el canvas tenga el tamaño correcto al cargar
-    initHearts(); // Crear los corazones iniciales
-    animateHearts(); // Iniciar la animación de los corazones
-    showSection(introductionSection); // Mostrar la sección de introducción al cargar
+    // Establecer la sección de introducción como activa al cargar
+    showSection(introductionSection);
 
-    // Asegurar que la sección de introducción tiene la clase 'show' para animarse
-    setTimeout(() => introductionSection.classList.add('show'), 10);
-
-    // Event listener para el botón "Empezar Test"
+    // Event Listeners
     startButton.addEventListener('click', () => {
         showSection(quizSection); // Muestra la sección del quiz
         loadQuestion(); // Carga la primera pregunta
-        // Asegurar que la tarjeta del quiz esté animada al mostrarse
-        quizSection.classList.remove('show');
-        setTimeout(() => quizSection.classList.add('show'), 10);
     });
 
-    // Event listener para el botón "Siguiente"
     nextButton.addEventListener('click', nextQuestion);
-
-    // Event listeners para los botones de resultado
     restartButton.addEventListener('click', restartQuiz);
-    copyCodeButton.addEventListener('click', copySecretCode); // Nuevo listener para copiar el código
+    copyCodeButton.addEventListener('click', copySecretCode);
+    muteButton.addEventListener('click', toggleMusic);
 
-    // Listener para ajustar el canvas si la ventana cambia de tamaño
-    window.addEventListener('resize', resizeCanvas);
+    // Intentar reproducir música al primer clic general del usuario (para navegadores restrictivos)
+    // Se usa { once: true } para que solo se ejecute una vez.
+    window.addEventListener("click", tryPlayMusic, { once: true });
 });
