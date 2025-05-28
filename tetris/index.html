@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tetris Amoroso</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Juega Tetris con Amor</h1>
+    <div class="game-container">
+      <canvas id="tetris" width="240" height="400"></canvas>
+      <div class="info">
+        <p>Puntuación: <span id="score">0</span></p>
+        <div id="touch-controls">
+          <button id="left">◀️</button>
+          <button id="rotate">🔄</button>
+          <button id="right">▶️</button>
+          <button id="down">🔽</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="code-modal" class="hidden">
+    <div class="modal-content">
+      <h2>¡Código desbloqueado! 💖</h2>
+      <p>Usa este código en la página principal:</p>
+      <div class="code-box">
+        <span id="secret-code">amorparasiempre</span>
+        <button id="copy-btn">Copiar código</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+        </html>
