@@ -1,16 +1,16 @@
+/* Variables CSS para una fácil personalización */
 :root {
-    --primary-pink: #f9c6d8; /* Rosado principal (claro) */
-    --accent-pink: #e6a7be;  /* Rosado de acento (más oscuro) */
-    --text-color-dark: #7c506b; /* Morado/rosa oscuro para texto */
-    --text-color-light: #ffffff; /* Blanco para texto en botones oscuros */
-    --bg-gradient-start: #fdecf2; /* Inicio degradado de fondo */
-    --bg-gradient-end: #f9c6d8;   /* Fin degradado de fondo */
-    --card-bg: rgba(255, 255, 255, 0.95); /* Fondo de tarjetas */
+    --primary-blue: #a7d9f7; /* Azul claro principal */
+    --accent-blue: #61a9e7; /* Azul de acento (más vibrante) */
+    --dark-blue: #2c3e50;   /* Azul oscuro para texto/botones principales */
+    --light-gray: #f8f8f8;  /* Gris muy claro para fondos/tarjetas */
+    --text-light: #ffffff;  /* Texto blanco */
+    --text-dark: #34495e;   /* Texto oscuro */
     --shadow-light: rgba(0, 0, 0, 0.1);
     --shadow-medium: rgba(0, 0, 0, 0.2);
 
     /* Fuentes */
-    --font-handwriting: 'Courgette', cursive;
+    --font-heading: 'Dancing Script', cursive;
     --font-body: 'Montserrat', sans-serif;
 }
 
@@ -18,47 +18,39 @@ body {
     font-family: var(--font-body);
     margin: 0;
     padding: 0;
-    color: var(--text-color-dark);
+    color: var(--text-dark);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    overflow: hidden; /* Ocultar barras de scroll del body para el fondo */
+    overflow: hidden; /* Controla el overflow para la animación de fondo */
+    background-color: var(--dark-blue); /* Color de fallback */
     position: relative;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-.background-overlay {
+/* Animación de Fondo (puedes ajustar los colores y la velocidad) */
+.background-animation {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    background: linear-gradient(135deg, #e0f2f7, #c1e0f0, #9fd1ed); /* Degradado suave de azules */
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
     z-index: -2;
 }
 
-.heart-particles {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-.heart-particles canvas {
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute; /* Asegura que el canvas no afecte el layout */
-    top: 0;
-    left: 0;
-}
-
+/* Encabezado Principal */
 .main-header {
     position: absolute;
     top: 20px;
@@ -69,26 +61,27 @@ body {
 }
 
 .main-header h1 {
-    font-family: var(--font-handwriting);
-    font-size: 2.8em; /* Ajustado para mejor legibilidad */
-    color: var(--text-color-dark);
+    font-family: var(--font-heading);
+    font-size: 3em; /* Tamaño más grande para el título */
+    color: var(--text-light);
     margin: 0;
-    text-shadow: 2px 2px 4px var(--shadow-light);
+    text-shadow: 2px 2px 8px var(--shadow-medium);
     line-height: 1.2;
 }
 
+/* Botón de Silencio */
 .mute-button {
     position: absolute;
-    top: 15px; /* Ajuste fino */
+    top: 15px;
     right: 20px;
     background: none;
     border: none;
-    color: var(--text-color-dark);
+    color: var(--text-light); /* Icono blanco */
     cursor: pointer;
     padding: 8px;
-    opacity: 0.7;
+    opacity: 0.8;
     transition: opacity 0.3s ease, transform 0.2s ease;
-    border-radius: 50%; /* Para un toque más suave */
+    border-radius: 50%;
 }
 
 .mute-button:hover {
@@ -97,13 +90,12 @@ body {
 }
 
 .mute-button svg {
-    width: 28px; /* Tamaño del icono */
+    width: 28px;
     height: 28px;
-    display: block; /* Eliminar espacio extra bajo el SVG */
+    display: block;
 }
 
 .mute-button .mute-icon-line {
-    /* Esta es la línea de silencio */
     fill: none;
     stroke: currentColor;
     stroke-width: 1.5;
@@ -114,137 +106,166 @@ body.music-muted .mute-button .mute-icon-line {
     opacity: 0; /* Oculta la línea de silencio cuando está muteado */
 }
 
-
-/* Contenedor principal del contenido */
-.content-container {
+/* Contenedor Principal del Contenido */
+.content-wrapper {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 100px); /* Ajuste para el header/footer */
+    min-height: calc(100vh - 100px); /* Ajuste para el header */
     padding: 20px;
-    box-sizing: border-box; /* Incluir padding en el width/height */
-    width: 100%; /* Asegurar que ocupe todo el ancho disponible para centrar el card */
-    max-width: 1000px; /* Limitar el ancho máximo para pantallas grandes */
+    box-sizing: border-box;
+    width: 100%;
+    position: relative; /* Para el posicionamiento absoluto de las tarjetas */
 }
 
+/* Estilo Base de las Tarjetas (Secciones) */
 .card {
-    background-color: var(--card-bg);
+    background-color: var(--light-gray);
     border-radius: 20px;
     box-shadow: 0 10px 30px var(--shadow-medium);
     padding: 40px;
     text-align: center;
-    width: 100%; /* Ocupa todo el ancho del content-container */
-    max-width: 600px; /* Ancho máximo de la tarjeta */
-    opacity: 0; /* Por defecto invisible para transiciones */
-    transform: translateY(20px); /* Ligero desplazamiento para animación */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    margin: 20px 0; /* Margen para separar si hay varios elementos */
-}
-
-.card.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-#introduction p {
-    font-size: 1.4em;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    font-family: var(--font-body);
-}
-
-.action-button {
-    background-color: var(--accent-pink);
-    color: var(--text-color-light);
-    border: none;
-    border-radius: 50px; /* Botones más redondeados */
-    padding: 15px 35px;
-    font-size: 1.2em;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-}
-
-.action-button:hover {
-    background-color: var(--text-color-dark);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px var(--shadow-light);
-}
-
-#question-container {
-    margin-bottom: 30px;
     width: 100%;
-    position: relative;
-    /* Transiciones para el cambio de preguntas */
+    max-width: 650px; /* Ancho máximo de la tarjeta */
+    position: absolute; /* Para superponer las tarjetas y controlar la visibilidad */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrado perfecto */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out, visibility 0.8s;
+}
+
+.card.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 1; /* Asegura que la tarjeta activa esté arriba */
+}
+
+/* Clases para transiciones de preguntas (opcional, si queremos un efecto más elaborado) */
+.card.leaving {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
     transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 }
 
-.question {
-    font-size: 1.6em;
-    margin-bottom: 25px;
-    line-height: 1.4;
-    font-family: var(--font-body);
-    font-weight: 700;
+.card.entering {
+    opacity: 0; /* Inicia invisible */
+    transform: translate(-50%, -50%) scale(1.1); /* Inicia un poco más grande */
 }
 
-.options {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.card.entering.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 0.4s ease-in, transform 0.4s ease-in;
+}
+
+
+/* Introducción */
+#introduction-section h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--dark-blue);
+}
+
+#introduction-section p {
+    font-size: 1.3em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* Botones de Acción (General) */
+.action-button {
+    background-color: var(--accent-blue);
+    color: var(--text-light);
+    border: none;
+    border-radius: 50px;
+    padding: 15px 40px;
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px var(--shadow-light);
+}
+
+.action-button:hover {
+    background-color: var(--dark-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px var(--shadow-medium);
+}
+
+/* Sección de Preguntas */
+#question-container {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.question-text {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna por defecto */
+    gap: 15px;
     width: 90%;
     margin: 0 auto;
 }
 
 .option-button {
-    background-color: var(--primary-pink);
-    color: var(--text-color-dark);
-    border: 2px solid var(--primary-pink);
+    background-color: var(--primary-blue);
+    color: var(--text-dark);
+    border: 2px solid var(--primary-blue);
     border-radius: 15px;
     padding: 15px 20px;
     font-size: 1.1em;
     cursor: pointer;
-    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
     text-align: left;
-    font-family: var(--font-body);
+    font-weight: 400;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .option-button:hover {
-    background-color: var(--accent-pink);
-    border-color: var(--accent-pink);
-    color: var(--text-color-light);
+    background-color: var(--accent-blue);
+    border-color: var(--accent-blue);
+    color: var(--text-light);
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--shadow-light);
 }
 
 .option-button.selected {
-    background-color: var(--text-color-dark);
-    color: var(--text-color-light);
-    border-color: var(--text-color-dark);
-    box-shadow: 0 4px 10px var(--shadow-light);
+    background-color: var(--dark-blue);
+    color: var(--text-light);
+    border-color: var(--dark-blue);
+    box-shadow: 0 4px 10px var(--shadow-medium);
     transform: scale(1.02);
 }
 
-#results {
-    text-align: center;
-    /* Propiedades de transición para la tarjeta de resultados */
-}
-
-#compatibility-message {
-    font-family: var(--font-handwriting);
-    font-size: 2.5em;
+/* Sección de Resultados */
+#results-section h2 {
+    font-family: var(--font-heading);
+    font-size: 3em; /* Tamaño más grande para el mensaje de resultado */
     margin-bottom: 20px;
     line-height: 1.3;
-    color: var(--text-color-dark);
-    text-shadow: 1px 1px 2px var(--shadow-light);
+    color: var(--dark-blue);
+    text-shadow: 1px 1px 3px var(--shadow-light);
 }
 
 .result-image img {
-    max-width: 280px;
-    width: 70%;
+    max-width: 300px;
+    width: 80%;
     height: auto;
-    margin: 25px auto;
+    margin: 30px auto;
     display: block;
     animation: fadeInScale 1s ease-out forwards;
 }
@@ -259,7 +280,7 @@ body.music-muted .mute-button .mute-icon-line {
 }
 
 .result-actions .action-button {
-    margin-top: 15px; /* Espacio entre el botón y el código */
+    margin-top: 15px;
     padding: 12px 30px;
     font-size: 1.1em;
 }
@@ -267,73 +288,76 @@ body.music-muted .mute-button .mute-icon-line {
 #secret-code-unlock {
     margin-top: 30px;
     font-size: 1.2em;
-    color: var(--text-color-dark);
+    color: var(--text-dark);
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Para que el botón de copiar se ajuste en móviles */
-    gap: 8px; /* Espacio entre el texto y el botón de copiar */
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-#secret-code {
-    color: var(--accent-pink);
+#secretCodeDisplay {
+    color: var(--accent-blue);
     font-family: var(--font-body);
     font-weight: 700;
     letter-spacing: 0.05em;
-    background-color: rgba(255, 255, 255, 0.5); /* Fondo para el código */
-    padding: 5px 10px;
-    border-radius: 5px;
-    display: inline-block; /* Para que el padding funcione bien */
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: inline-block;
+    border: 1px dashed var(--primary-blue); /* Borde punteado para destacar */
 }
 
 .copy-button {
-    background-color: var(--primary-pink);
+    background-color: var(--primary-blue);
     border: none;
-    border-radius: 5px;
-    padding: 6px 10px;
+    border-radius: 8px;
+    padding: 8px 12px;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-    display: inline-flex; /* Permite alinear el icono y el texto del tooltip */
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* Para el tooltip */
+    position: relative;
+    margin-left: 5px; /* Espacio entre el código y el botón */
 }
 
 .copy-button:hover {
-    background-color: var(--accent-pink);
+    background-color: var(--accent-blue);
     transform: translateY(-1px);
+    box-shadow: 0 3px 8px var(--shadow-light);
 }
 
 .copy-button svg {
     width: 20px;
     height: 20px;
-    color: var(--text-color-dark);
+    color: var(--text-dark);
     display: block;
 }
 
 .copy-button:hover svg {
-    color: var(--text-color-light); /* Icono blanco en hover */
+    color: var(--text-light);
 }
 
 /* Tooltip para el botón de copiar */
 .tooltip-text {
     visibility: hidden;
     width: auto;
-    background-color: var(--text-color-dark);
-    color: var(--text-color-light);
+    background-color: var(--dark-blue);
+    color: var(--text-light);
     text-align: center;
     border-radius: 6px;
-    padding: 5px 8px;
+    padding: 5px 10px;
     position: absolute;
     z-index: 1;
-    bottom: 125%; /* Posición encima del botón */
+    bottom: 120%; /* Posición encima del botón */
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.3s;
-    font-size: 0.8em;
-    white-space: nowrap; /* Asegura que el texto no se rompa */
+    font-size: 0.85em;
+    white-space: nowrap;
 }
 
 .copy-button:hover .tooltip-text {
@@ -341,6 +365,7 @@ body.music-muted .mute-button .mute-icon-line {
     opacity: 1;
 }
 
+/* Utilidad */
 .hidden {
     display: none !important;
 }
@@ -349,7 +374,7 @@ body.music-muted .mute-button .mute-icon-line {
 @media (max-width: 768px) {
     .main-header h1 {
         font-size: 2.2em;
-        padding: 0 40px; /* Para que no se corte en móviles pequeños */
+        padding: 0 40px;
     }
 
     .mute-button {
@@ -366,11 +391,14 @@ body.music-muted .mute-button .mute-icon-line {
     .card {
         padding: 30px 20px;
         border-radius: 15px;
-        margin: 10px 0;
     }
 
-    #introduction p {
-        font-size: 1.2em;
+    #introduction-section h2 {
+        font-size: 2em;
+    }
+
+    #introduction-section p {
+        font-size: 1.1em;
         margin-bottom: 25px;
     }
 
@@ -379,12 +407,12 @@ body.music-muted .mute-button .mute-icon-line {
         font-size: 1.1em;
     }
 
-    .question {
-        font-size: 1.4em;
+    .question-text {
+        font-size: 1.5em;
         margin-bottom: 20px;
     }
 
-    .options {
+    .options-grid {
         width: 100%;
         gap: 10px;
     }
@@ -395,8 +423,8 @@ body.music-muted .mute-button .mute-icon-line {
         border-radius: 12px;
     }
 
-    #compatibility-message {
-        font-size: 1.8em;
+    #results-section h2 {
+        font-size: 2em;
     }
 
     .result-image img {
@@ -407,6 +435,10 @@ body.music-muted .mute-button .mute-icon-line {
         font-size: 1em;
         flex-direction: column; /* Apila el texto y el botón en móviles */
         gap: 10px;
+    }
+    .copy-button {
+        margin-left: 0; /* Elimina el margen a la izquierda en móviles */
+        margin-top: 5px; /* Pequeño margen superior para separación */
     }
 }
 
@@ -420,7 +452,11 @@ body.music-muted .mute-button .mute-icon-line {
         padding: 25px 15px;
     }
 
-    #introduction p {
+    #introduction-section h2 {
+        font-size: 1.8em;
+    }
+
+    #introduction-section p {
         font-size: 1em;
     }
 
@@ -429,8 +465,8 @@ body.music-muted .mute-button .mute-icon-line {
         font-size: 1em;
     }
 
-    .question {
-        font-size: 1.2em;
+    .question-text {
+        font-size: 1.3em;
     }
 
     .option-button {
@@ -438,12 +474,7 @@ body.music-muted .mute-button .mute-icon-line {
         font-size: 0.9em;
     }
 
-    #compatibility-message {
-        font-size: 1.5em;
-    }
-
-    .result-actions .action-button {
-        font-size: 1em;
-        padding: 10px 20px;
+    #results-section h2 {
+        font-size: 1.6em;
     }
 }
