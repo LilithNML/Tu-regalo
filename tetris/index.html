@@ -2,29 +2,30 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tetris para mi amor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="game-container">
-    <h1>Mi amor y el Tetris 💗</h1>
-    <canvas id="tetris" width="240" height="400"></canvas>
-    <div id="score">Puntos: 0</div>
-    <button id="restart-btn">Volver a jugar</button>
-  </div>
-
-  <div id="code-modal" class="hidden">
-    <div class="modal-content">
-      <p>¡Felicidades! Has desbloqueado un código secreto:</p>
-      <div class="code-box">
-        <span id="secret-code">gibosamenguante</span>
-        <button id="copy-btn">Copiar</button>
+  <div class="book">
+    <div class="page cover front">
+      <div class="content">
+        <h1>Nosotros,<br>capítulo a capítulo</h1>
+        <p class="dedication">Para el amor de mi vida,<br>que hace de cada página algo inolvidable.</p>
+        <button id="start">Empezar</button>
       </div>
-      <button id="close-modal">Cerrar</button>
     </div>
+    <div class="page" data-page="1"><div class="content"><h2>Capítulo 1: La primera chispa</h2><p>Todo comenzó como una casualidad disfrazada de destino. En ese momento, entre tantos rostros comunes, apareciste tú. Con una sonrisa que no supe si me desarmaba o me reconstruía. No fue amor a primera vista... fue curiosidad, fue intriga, fue ese cosquilleo extraño que nadie entiende hasta que lo vive.</p></div></div>
+    <div class="page" data-page="2"><div class="content"><h2>Capítulo 2: Conversaciones infinitas</h2><p>Podíamos hablar de todo... o de nada. De dragones, del fin del mundo, de lo que no entendíamos, de lo que dolía, de sueños tontos. Y sin saber cómo, ya no necesitaba buscar palabras porque tú ya las tenías todas.</p></div></div>
+    <div class="page" data-page="3"><div class="content"><h2>Capítulo 3: Mi lugar favorito: tú</h2><p>Fuiste mi refugio en los días grises y mi fiesta en los soleados. No importaba el lugar, ni la hora. Si estabas tú, ya estaba bien. Empecé a ver el mundo con tus ojos, y todo era más bonito desde ahí.</p></div></div>
+    <div class="page" data-page="4"><div class="content"><h2>Capítulo 4: Los días difíciles (pero contigo)</h2><p>Hubo momentos donde el mundo pesaba. Donde todo parecía romperse. Pero ahí estabas tú, con tus abrazos silenciosos y tu forma de decir “vamos a estar bien” sin siquiera pronunciarlo. Y sí... juntos siempre fuimos más fuertes.</p></div></div>
+    <div class="page" data-page="5"><div class="content"><h2>Capítulo 5: Secretos y promesas</h2><p>Te conté cosas que nadie más sabía. Te dejé ver los rincones más ocultos de mí. Y tú hiciste lo mismo. Prometimos cosas pequeñas, pero enormes. Como quedarnos. Como no soltarnos, incluso si un día temblamos.</p></div></div>
+    <div class="page" data-page="6"><div class="content"><h2>Capítulo 6: Un universo con tu nombre</h2><p>Si existiera un universo paralelo, estoy segura de que también estarías ahí. Quizá en forma de estrella, de canción, de página. Pero te encontraría. Siempre lo haría. Porque mi alma parece tener tu nombre escrito desde antes de conocerte.</p></div></div>
+    <div class="page" data-page="7"><div class="content"><h2>Capítulo 7: Fin del libro, principio de todo</h2><p>No importa cuántas páginas pasen, siempre voy a querer más capítulos contigo. Este libro termina, pero lo nuestro apenas comienza. Gracias por existir. Por hacerme sentir que soy la protagonista de una historia que jamás quiero que termine.</p></div></div>
+    <div class="page cover back"><div class="content center"><p>Con todo mi amor,<br>Tu niña.</p></div></div>
   </div>
-
+  <audio id="flipSound" src="page-flip.mp3" preload="auto"></audio>
   <script src="script.js"></script>
 </body>
 </html>
