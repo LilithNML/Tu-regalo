@@ -128,47 +128,25 @@ function updateScore() {
 let dropCounter = 0;
 let dropInterval = 1000;
 let lastTime = 0;
-let modalShown = false;
+let modalShown = false; // CORRECTO: Asegura que esté en false al iniciar
 
-function update(time = 0) {
-  const deltaTime = time - lastTime;
-  lastTime = time;
-  dropCounter += deltaTime;
-  if (dropCounter > dropInterval) playerDrop();
-  draw();
-  requestAnimationFrame(update);
+function updateScore() {
+  scoreDisplay.textContent = `Puntos: ${player.score}`;
+  if (player.score >= 5000 && !modalShown) {
+    modalShown = true;
+    showModal();
+  }
 }
 
-document.addEventListener('keydown', event => {
-  if (event.key === 'ArrowLeft') playerMove(-1);
-  else if (event.key === 'ArrowRight') playerMove(1);
-  else if (event.key === 'ArrowDown') playerDrop();
-  else if (event.key === 'ArrowUp') playerRotate();
-});
+function showModal() {
+  modal.classList.remove('hidden');
+}
 
-restartBtn.addEventListener('click', () => {
-  player.score = 0;
-  modalShown = false;
-  playerReset();
-  updateScore();
-});
-
-copyBtn.addEventListener('click', () => {
-  navigator.clipboard.writeText("gibosamenguante");
-  copyBtn.textContent = "¡Copiado!";
-  setTimeout(() => copyBtn.textContent = "Copiar", 2000);
-});
-
-closeModal.addEventListener('click', () => {
+function hideModal() {
   modal.classList.add('hidden');
+}
+
+// Asegúrate de tener esto para cerrar el modal
+closeModal.addEventListener('click', () => {
+  hideModal();
 });
-
-const arena = createMatrix(12, 20);
-const player = {
-  pos: {x: 0, y: 0},
-  matrix: null,
-  score: 0,
-};
-
-playerReset();
-update();
