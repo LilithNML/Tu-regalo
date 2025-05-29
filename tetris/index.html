@@ -1,25 +1,30 @@
-<!DOCTYPE html><html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tetris Amoroso</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tetris para mi amor</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>🎮 Juego de Tetris</h1>
-    <p>Puntaje: <span id="score">0</span></p>
-    <p id="unlocked-message" class="hidden">✅ Código desbloqueado</p>
+  <div id="game-container">
+    <h1>Mi amor y el Tetris 💗</h1>
     <canvas id="tetris" width="240" height="400"></canvas>
-  </div>  <div id="codeModal" class="modal hidden">
+    <div id="score">Puntos: 0</div>
+    <button id="restart-btn">Volver a jugar</button>
+  </div>
+
+  <div id="code-modal" class="hidden">
     <div class="modal-content">
-      <span id="closeModal" class="close">&times;</span>
-      <h2>¡Felicidades! 🎉</h2>
-      <p>Has desbloqueado el siguiente código:</p>
+      <p>¡Felicidades! Has desbloqueado un código secreto:</p>
       <div class="code-box">
-        <code id="codeText">tetris123</code>
-        <button id="copyCode">Copiar código</button>
+        <span id="secret-code">gibosamenguante</span>
+        <button id="copy-btn">Copiar</button>
       </div>
+      <button id="close-modal">Cerrar</button>
     </div>
-  </div>  <script src="script.js"></script></body>
-    </html>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
