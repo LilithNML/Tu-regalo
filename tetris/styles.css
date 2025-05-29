@@ -1,105 +1,238 @@
+:root {
+    --primary-light: #F8E0E0; /* Rosa claro */
+    --secondary-light: #FAF0E6; /* Beige */
+    --text-color: #5C4F5F; /* Tono suave de morado/gris */
+    --accent-color: #D3A7A7; /* Tono más oscuro de rosa */
+    --shadow-color: rgba(0, 0, 0, 0.15);
+}
+
+@font-face {
+    font-family: 'DancingScript';
+    src: url('https://fonts.gstatic.com/s/dancingscript/v24/If2LXoZhNyCch-Gm7GXzDlsywaHLF_K_Cg.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DancingScript';
+    src: url('https://fonts.gstatic.com/s/dancingscript/v24/If2LXoZhNyCch-Gm7GXzDlsywaHLF_K_Cg.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
 body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom, #fff8f5, #ffe3e3);
-  font-family: 'Zeyada', cursive;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'DancingScript', cursive;
+    background-color: var(--secondary-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* Evita scroll si el libro es más grande que la vista */
+    color: var(--text-color);
+}
+
+.book-container {
+    perspective: 1500px; /* Para el efecto 3D */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%; /* Ajuste inicial para responsive */
+    max-width: 800px; /* Ancho máximo para el libro */
+    aspect-ratio: 3/2; /* Proporción para libro abierto (dos páginas) */
+    position: relative;
 }
 
 .book {
-  width: 90vw;
-  max-width: 800px;
-  height: 90vh;
-  position: relative;
-  perspective: 2000px;
-  transform-style: preserve-3d;
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
 }
 
 .page {
-  background: #fff;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform-origin: left center;
-  transition: transform 0.7s ease;
-  backface-visibility: hidden;
-  overflow-y: auto;
-  padding: 40px;
-  box-sizing: border-box;
-  border-radius: 6px;
+    position: absolute;
+    width: 50%; /* Cada página ocupa la mitad del ancho del libro abierto */
+    height: 100%;
+    background-color: var(--primary-light);
+    border: 1px solid var(--accent-color);
+    box-shadow: 0 4px 15px var(--shadow-color);
+    transform-origin: left center; /* Para rotar desde el lomo */
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+                box-shadow 0.8s ease; /* Transición para rotación y sombra */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden; /* Oculta la parte trasera de la página al rotar */
+    overflow: hidden;
 }
 
-.page.cover.front {
-  background: #ffc6c6;
-  text-align: center;
-  z-index: 10;
+.page:not(.cover):not(.back-cover) {
+    left: 50%; /* Posiciona las páginas de capítulo en el lado derecho */
 }
 
-.page.cover.back {
-  background: #ffc6c6;
-  transform: rotateY(180deg);
-  text-align: center;
-  z-index: 0;
+.cover {
+    left: 0; /* La portada siempre está a la izquierda */
+    z-index: 100; /* Siempre al frente */
+    background-image: radial-gradient(circle at top left, var(--secondary-light) 10%, var(--primary-light) 60%);
+    border-right: none;
 }
 
-.page .content {
-  font-size: 1.6rem;
-  line-height: 2.2rem;
-  color: #5a2d2d;
+.back-cover {
+    left: 50%; /* La contraportada siempre está a la derecha */
+    z-index: 99; /* Detrás de la portada */
+    background-image: radial-gradient(circle at top right, var(--secondary-light) 10%, var(--primary-light) 60%);
+    border-left: none;
 }
 
-.page h1 {
-  margin-top: 20%;
-  font-size: 2.8rem;
-  color: #5a2d2d;
+.page-content {
+    padding: 10%;
+    text-align: center;
+    width: 80%; /* Asegura que el contenido no se desborde */
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.page h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    color: var(--accent-color);
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.8em;
+    color: var(--accent-color);
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: justify;
+    color: var(--text-color);
+}
+
+.cover h1, .cover h2, .cover p {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
 }
 
 .dedication {
-  margin-top: 2rem;
-  font-size: 1.4rem;
-  color: #7d4f4f;
+    font-size: 1.4em;
+    line-height: 1.8;
+    font-style: italic;
+    text-align: center;
+    color: var(--accent-color);
 }
 
-button#start {
-  margin-top: 2rem;
-  padding: 10px 20px;
-  font-size: 1.4rem;
-  background-color: #ffffff;
-  border: 2px solid #7d4f4f;
-  border-radius: 5px;
-  cursor: pointer;
-  color: #7d4f4f;
-  transition: background 0.3s;
+/* Efecto de pasar página */
+.page.flipped {
+    transform: rotateY(-180deg);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al voltear */
+    z-index: 1; /* Llevar al fondo al voltear */
 }
 
-button#start:hover {
-  background-color: #ffe3e3;
+/* Z-index para el apilamiento de páginas */
+/* Las páginas deben tener un z-index alto cuando están "activas" y bajarlo al voltear */
+.page:nth-child(2) { z-index: 9; } /* Cap 1 */
+.page:nth-child(3) { z-index: 8; } /* Cap 2 */
+.page:nth-child(4) { z-index: 7; } /* Cap 3 */
+.page:nth-child(5) { z-index: 6; } /* Cap 4 */
+.page:nth-child(6) { z-index: 5; } /* Cap 5 */
+.page:nth-child(7) { z-index: 4; } /* Cap 6 */
+.page:nth-child(8) { z-index: 3; } /* Cap 7 */
+
+
+/* Botón de empezar */
+#startButton {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    font-family: 'DancingScript', cursive;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-top: 30px;
 }
 
-@media screen and (max-width: 768px) {
-  .page .content {
-    font-size: 1.3rem;
-    line-height: 1.8rem;
-  }
-  .page h2 {
-    font-size: 1.6rem;
-  }
-  .page h1 {
-    font-size: 2rem;
-  }
+#startButton:hover {
+    background-color: #B28F8F; /* Tono más oscuro al hover */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .book-container {
+        width: 95%;
+        max-width: 600px;
+        aspect-ratio: 2/3; /* Proporción para libro cerrado en móvil */
+    }
+
+    .book {
+        display: flex; /* Para apilar páginas verticalmente en móvil */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .page {
+        width: 100%; /* Cada página ocupa todo el ancho */
+        height: 100%;
+        left: 0 !important; /* Resetea la posición */
+        transform-origin: center center; /* Para rotar desde el centro si aplica, aunque preferimos flip total */
+        transform: none !important; /* Desactiva la rotación 3D en mobile para un flip simple */
+        transition: opacity 0.5s ease; /* Transición más simple para móvil */
+        backface-visibility: visible; /* Asegura que no haya problemas si la rotación 3D no se usa */
+    }
+
+    .page:not(.active-page) {
+        opacity: 0;
+        pointer-events: none; /* Deshabilita interacciones en páginas ocultas */
+        position: absolute;
+    }
+
+    .page.active-page {
+        opacity: 1;
+        position: relative; /* La página activa se muestra */
+    }
+
+    .cover, .back-cover {
+        width: 100%;
+        left: 0;
+        border: 1px solid var(--accent-color);
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .dedication {
+        font-size: 1.2em;
+    }
+
+    #startButton {
+        padding: 12px 25px;
+        font-size: 1.2em;
+    }
+}
+
+/* Asegurar el z-index correcto para páginas que ya no están activas */
+.page.turned {
+    z-index: 0 !important; /* Asegura que las páginas que ya pasaron queden al fondo */
 }
