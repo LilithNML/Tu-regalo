@@ -8,12 +8,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&family=Indie+Flower&family=Rye&family=Amatic+SC&family=Bangers&family=Fredericka+the+Great&display=swap" rel="stylesheet">
 </head>
 <body>
-  <audio id="bg-music" autoplay loop>
+  <audio id="bg-music" loop>
     <source src="intro.opus" type="audio/mpeg">
     Tu navegador no soporta audio HTML5.
   </audio>
 
-  <div class="container">
+  <!-- Pantalla de bienvenida -->
+  <div id="intro" class="intro-screen">
+    <button id="enter-btn">Entrar</button>
+  </div>
+
+  <!-- Contenido principal -->
+  <div id="main" class="container hidden">
     <h2 class="loki" id="clickable">
       <p class="letter">H</p>
       <p class="letter">A</p>
