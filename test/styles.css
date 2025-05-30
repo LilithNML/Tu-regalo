@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  background-color: #0b0c10;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#container {
+  text-align: center;
+  cursor: pointer;
+}
+
+#title {
+  font-size: 8vw;
+  letter-spacing: 0.1em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: transform 0.3s ease;
+}
+
+.letter {
+  margin: 0 5px;
+  transition: all 0.4s ease;
+}
