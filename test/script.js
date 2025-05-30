@@ -21,5 +21,5 @@ setInterval(rollIntro, 350);
 
 // Redirección al hacer clic
 document.getElementById('clickable').addEventListener('click', () => {
-  window.location.href = "https://tupagina.com"; // ← cámbialo por tu URL
+  window.location.href = "https://es.m.wikipedia.org/wiki/Lilit"; // ← cámbialo por tu URL
 });
