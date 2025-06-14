@@ -641,7 +641,7 @@ function actualizarProgreso() {
     desbloqueados.forEach(code => {
       const li = document.createElement('li');
       // Solo mostramos el código, no el contenido para mantener el misterio de los mensajes
-      li.textContent = `[${code}] desbloqueado`; 
+      li.textContent = `${code}`; 
       unlockedCodesList.appendChild(li);
     });
   } else {
