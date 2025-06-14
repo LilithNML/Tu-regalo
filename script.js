@@ -357,14 +357,22 @@ tu hijo peludo, Samuel.`,
   "protogemas": "Si cada virtud tuya fuera una protogema… tendría infinitos deseos cumplidos.",
   "gachapon": "Contigo gané el 50/50 más importante de mi vida.\nNo hay banner que se compare al momento en que apareciste en mi historia.\nEres ese personaje cinco estrellas que ni soñaba conseguir,\nel que no solo tiene el mejor diseño, sino también el corazón más puro.\nY lo mejor de todo es que… no eres un personaje jugable:\neres real, eres mío, y yo soy completamente tuya.",
   "brawl": {
-  archivo: "assets/unlocked_content/images/mi_diario.webp"
+    descarga: {
+      url: "assets/unlocked_content/images/mi_diario.webp",
+      nombre: "Diario",
+      textoEnlace: "Descargar diario"
+    }
   },
   "minecraft": "Había una vez un jardín olvidado.\nLas flores se habían cerrado hace tiempo, el sol no entraba, y el viento pasaba sin saludar.\nTodo en ese rincón parecía quieto, apagado… como si la vida hubiera decidido irse sin despedirse.\n\nLa tierra aún guardaba memorias de lo que fue: los colores, los aromas, las risas suaves del alma floreciendo.\nPero ahora solo quedaba el silencio.\n\nHasta que un día, él llegó.\n\nNo traía herramientas, ni promesas. Solo su presencia.\nSe sentó junto a la tierra dormida, sin pedir nada. Solo miró. Y sonrió.\nY con el tiempo… habló.\n\nLe contó al jardín que aún era hermoso.\nLe susurró que había visto su corazón latiendo bajo las raíces.\nY cuando el jardín dudó de sí mismo, él lo acarició con palabras dulces, con una paciencia que calentaba.\n\nLlovió ternura.\nBrilló el sol en forma de risa.\nY el jardín… renació.\n\nUna flor tímida asomó entre las hojas, como si preguntara:\n“¿De verdad puedo?”\nY él, con sus ojos llenos de amor, respondió sin palabras. Solo con su calor.\n\nDesde entonces, el jardín florece cada día.\nNo por obligación, sino por deseo.\nPorque en él vive alguien que supo ver belleza donde otros solo vieron tierra seca.\n\nY esa belleza… soy yo.\nY ese alguien… eres tú.",
   "mbr7tr5i": {
   link: "https://lilithnml.github.io/te_amo/contador/"
   },
   "nbujo85ft": {
-  archivo: "assets/unlocked_content/images/mi_mayor_sueno.png"
+    descarga: {
+      url: "assets/unlocked_content/images/mi_mayor_sueno.png",
+      nombre: "Mi_mayor_sueno",
+      textoEnlace: "Descargar acta"
+    }
   },
   "5.1": {
   link: "https://lilithnml.github.io/te_amo/corazon/"
@@ -377,7 +385,11 @@ tu hijo peludo, Samuel.`,
   imagen: "assets/unlocked_content/images/qr_code.png"
   },
   "increible": {
-  archivo: "assets/unlocked_content/images/mapa_de_estrellas.jpg"
+    descarga: {
+      url: "assets/unlocked_content/images/mapa_de_estrellas.jpg",
+      nombre: "Mapa_de_estrellas",
+      textoEnlace: "Descargar mapa"
+    }
   },
   "orgullosa": {
   link: "https://gifft.me/es/o/p/y4q7h6i60wcp01xmgvbnob25"
@@ -394,24 +406,39 @@ tu hijo peludo, Samuel.`,
   "mywayoflife": "Imagino un futuro donde nuestras hijas crezcan rodeadas del amor que hoy nos une. Quiero que aprendan de nosotros el valor del respeto, la paciencia y la ternura. Que en nuestro hogar haya risas, juegos y abrazos sinceros, pero también enseñanzas firmes y ejemplos de compromiso.\n\nJuntos construiremos un refugio seguro donde ellas puedan ser libres, soñadoras y valientes, sabiendo siempre que cuentan con dos pilares inquebrantables: tú y yo.\n\nQuiero que nuestras hijas vean en nosotros no solo a sus padres, sino a sus mejores amigos, sus guías y cómplices en esta aventura hermosa llamada vida.\n\nPorque criar a nuestras hijas será la extensión más hermosa de nuestro amor, y juntos, nada será imposible.",
   "enana": "Sueño con un futuro donde, arrugados por los años, sigamos tomados de la mano, compartiendo silencios que hablan más que mil palabras. Quiero que nuestras canas sean testigos de las batallas que enfrentamos y las risas que nos regalaron.\n\nImagino tardes tranquilas, cafés compartidos y miradas cómplices que no necesitan explicaciones. Que el paso del tiempo solo fortalezca el amor que hoy nos une y nos convierta en compañeros inseparables de vida.\n\nQuiero envejecer contigo, con la certeza de que cada día será una nueva oportunidad para amarte, cuidarte y agradecer que estamos juntos en esta hermosa aventura.",
   "colette": {
-  "texto": "Un regalo especial para ti, mi amor.",
-  "archivo": "assets/unlocked_content/images/te_amo_01.jpg.enc"
+    descarga: {
+      url: "assets/unlocked_content/images/te_amo_01.jpg.enc",
+      nombre: "te_amo_01",
+      textoEnlace: "Descargar cosplay"
+    }
   },
   "vegetto": {
-  "texto": "Otra sorpresa guardada solo para ti, con todo mi amor.",
-  "archivo": "assets/unlocked_content/images/te_amo_02.jpg.enc"
+    descarga: {
+      url: "assets/unlocked_content/images/te_amo_02.jpg.enc",
+      nombre: "te_amo_02",
+      textoEnlace: "Descargar cosplay"
+    }
   },
   "ellenjoe": {
-  "texto": "Una muestra más de cuánto te amo, guardada solo para ti.",
-  "archivo": "assets/unlocked_content/images/te_amo_03.jpg.enc"
+    descarga: {
+      url: "assets/unlocked_content/images/te_amo_03.jpg.enc",
+      nombre: "te_amo_03",
+      textoEnlace: "Descargar cosplay"
+    }
   },
   "himikotoga": {
-  "texto": "Un pedacito de mi amor, cifrado solo para tus ojos.",
-  "archivo": "assets/unlocked_content/images/te_amo_04.jpg.enc"
+    descarga: {
+      url: "assets/unlocked_content/images/te_amo_04.jpg.enc",
+      nombre: "te_amo_03",
+      textoEnlace: "Descargar cosplay"
+    }
   },
   "elmejorpadredelmundo": {
-  "texto": "Todo lo que soy, te lo debo a ti.",
-  "archivo": "assets/unlocked_content/images/te_amo_05.jpg.enc"
+    descarga: {
+      url: "assets/unlocked_content/images/te_amo_05.jpg.enc",
+      nombre: "te_amo_05",
+      textoEnlace: "Descargar cosplay"
+    }
   },
   "amoreterno": {
   videoEmbed: "https://www.youtube.com/embed/BzLFsD0Wi6I"
@@ -434,7 +461,11 @@ tu hijo peludo, Samuel.`,
   videoEmbed: "https://www.youtube.com/embed/Qw7G_ug_y7w"
   },
   "primerhola": {
-  archivo: "assets/unlocked_content/images/te_amo_06.jpg.enc"
+    descarga: {
+      url: "assets/unlocked_content/images/te_amo_06.jpg.enc",
+      nombre: "te_amo_06",
+      textoEnlace: "Descargar cosplay"
+    }
   },
   "louie": {
   videoEmbed: "https://www.youtube.com/embed/npW4Ej8k8sM"
@@ -456,34 +487,74 @@ tu hijo peludo, Samuel.`,
   "gibosamenguante": "Mi cielo,\n\nHe estado pensando mucho últimamente en lo que somos. No sólo tú y yo como pareja, sino tú como ser humano único, irrepetible. A veces la vida nos hace sentir que debemos encajar en moldes o caminos marcados, pero no es así.\n\n“El hombre está condenado a ser libre.”\nEso dijo Sartre, y aunque suene duro, es hermoso: significa que siempre tienes el poder de elegir quién eres y en qué te conviertes.\n\n“No nacemos como lo que somos, nos convertimos en ello.”\nY yo he sido testigo de cómo te construyes día a día. No te conformas con existir: vives con intención, con pasión, incluso cuando dudas.\n\nEstoy tan feliz de caminar a tu lado en este caos hermoso llamado vida.\nGracias por ser libre, por ser tú.\n\nCon todo mi ser,\nTu princesa que cree en ti",
   "lunallena": "Entre todas las ideas que han cruzado por mi mente, tú siempre vuelves como la más constante, la más brillante. Si los filósofos se pasaron la vida buscando verdades, yo ya encontré la mía: te amo.\n\n“Ser profundamente amado por alguien te da fuerza, mientras amar profundamente a alguien te da valor.”\nEso dijo Lao Tsé. Y tú me das ambas cosas. Me haces fuerte cuando el mundo pesa, y valiente cuando el miedo me toca. Amar y ser amada por ti es lo más real que conozco.\n\nNo hay teoría que explique cómo un corazón puede latir tan fuerte por otro. Pero aquí estoy, escribiéndote, pensándote, eligiéndote. Porque contigo entendí que el amor no se entiende, se siente.\nY lo que siento por ti... es verdad, es hogar.\n\nTu princesa,\nla que solo piensa en ti",
   "suegra": {
-  "archivo": "assets/unlocked_content/images/te_amo_07.jpg.enc"
+    descarga: {
+      url: "assets/unlocked_content/images/te_amo_07.jpg.enc",
+      nombre: "te_amo_07",
+      textoEnlace: "Descargar cosplay"
+    }
   },
   "mami": {
-  "archivo": "assets/unlocked_content/images/te_amo_08.jpg.enc"
+    descarga: {
+      url: "assets/unlocked_content/images/te_amo_08.jpg.enc",
+      nombre: "te_amo_08",
+      textoEnlace: "Descargar cosplay"
+    }
   },
   "suegrita": {
-  "archivo": "assets/unlocked_content/images/te_amo_09.jpg.enc"
+    descarga: {
+      url: "assets/unlocked_content/images/te_amo_09.jpg.enc",
+      nombre: "te_amo_09",
+      textoEnlace: "Descargar Cosplay"
+    }
   },
   "sexo": {
-  "archivo": "assets/unlocked_content/images/te_amo_10.jpg.enc"
+    descarga: {
+      url: "assets/unlocked_content/images/te_amo_10.jpg.enc",
+      nombre: "te_amo_06",
+      textoEnlace: "Descargar cosplay"
+    }
   },
   "ojosverdes": {
-  "archivo": "assets/unlocked_content/images/te_amo_11.jpg.enc"
+    descarga: {
+      url: "assets/unlocked_content/images/te_amo_11.jpg.enc",
+      nombre: "te_amo_11",
+      textoEnlace: "Descargar cosplay"
+    }
   },
   "cielo": {
-  "archivo": "assets/unlocked_content/images/te_amo_12.jpg.enc"
+    descarga: {
+      url: "assets/unlocked_content/images/te_amo_12.jpg.enc",
+      nombre: "te_amo_12",
+      textoEnlace: "Descargar cosplay"
+    }
   },
   "acostados": {
-  "archivo": "assets/unlocked_content/images/te_amo_13.jpg.enc"
+    descarga: {
+      url: "assets/unlocked_content/images/te_amo_13.jpg.enc",
+      nombre: "te_amo_13",
+      textoEnlace: "Descargar cosplay"
+    }
   },
   "atulado": {
-  "archivo": "assets/unlocked_content/images/te_amo_14.jpg.enc"
+    descarga: {
+      url: "assets/unlocked_content/images/te_amo_14.jpg.enc",
+      nombre: "te_amo_14",
+      textoEnlace: "Descargar cosplay"
+    }
   },
   "porquenopuedodejardepensarenti": {
-  "archivo": "assets/unlocked_content/images/te_amo_15.jpg.enc"
+    descarga: {
+      url: "assets/unlocked_content/images/te_amo_15.jpg.enc",
+      nombre: "te_amo_15",
+      textoEnlace: "Descargar cosplay"
+    }
   },
   "teamedesdeelprimerdiaqueteconoci": {
-  "archivo": "assets/unlocked_content/images/te_amo_16.jpg.enc"
+    descarga: {
+      url: "assets/unlocked_content/images/te_amo_16.jpg.enc",
+      nombre: "te_amo_16",
+      textoEnlace: "Descargar cosplay"
+    }
   },
   
 };
