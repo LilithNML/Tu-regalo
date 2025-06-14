@@ -291,21 +291,21 @@ Con amor,
 tu hijo peludo, Samuel.`,
   "fortnite": {
   texto: "¡Amo jugar contigo!",
-  video: "https://www.youtube.com/embed/t6YQDSgePxY"
+  videoEmbed: "https://www.youtube.com/embed/t6YQDSgePxY"
   },
   "dbl": "Tú eres como Vegetto, la fusión perfecta de fuerza y corazón, el guerrero que sonríe en medio del caos y aún así jamás deja de proteger lo que ama.\n\nCuando el mundo se pone difícil, te veo enfrentarlo con esa confianza tuya tan única, como si supieras que ninguna oscuridad puede contra tu luz, ni contra el amor que llevas por mí.\n\nMi corazón es tu campo de batalla sagrado, y tú, con cada palabra y cada abrazo, lo defiendes como el héroe que eres.\nNo necesitas una Potara para ser increíble, ya eres mi Vegetto, mi guerrero valiente, mi amor invencible.",
   "hijas": {
   texto: "Pon tu cabeza en mi hombro, amor, y escucha cómo mi corazón sueña en voz bajita, sueña con un futuro contigo, con una casa llena de risas suaves y pasos pequeños, con una niña que tenga tus ojos o un niño que herede tu ternura.\n\nSueño con verte dormir con un bebé sobre tu pecho, con abrazarte mientras me dices que lo estamos haciendo bien, aunque estemos cansados, aunque el mundo se detenga.\n\nPorque contigo, la idea de ser madre ya no es solo un sueño, es una promesa que mi alma susurra cada vez que me tomas de la mano.\n\nContigo, todo se siente más posible.\nContigo, quiero ser hogar.",
-  video: "https://www.youtube.com/embed/3LSpFmja7Qk"
+  videoEmbed: "https://www.youtube.com/embed/3LSpFmja7Qk"
   },
   "3deenero": "Aún me siento como si fuera ayer, el día en que celebré mi primer cumpleaños contigo, ahora como mi esposo. Nunca imaginé que ese día fuera a ser tan especial, tan lleno de amor y de momentos que atesoro más que cualquier regalo. Era mi cumpleaños, sí, pero la verdadera celebración fue tenerte a ti a mi lado, compartiendo risas, caricias y momentos que no necesitaban palabras.\n\nRecuerdo cómo me hablabas, como si quisieras que ese día fuera perfecto, y lo fue, mucho más de lo que pude haber esperado. Tus detalles, tu presencia, tu amor, todo lo hizo tan único. Cada segundo a tu lado fue un regalo que nunca dejaré de agradecer. Gracias por hacer que mi primer cumpleaños contigo fuera una experiencia inolvidable.\n\nAhora, más que nunca, entiendo que no son los años los que cuentan, sino los momentos compartidos, los gestos de amor que llenan el alma. Y contigo, cada día, cada cumpleaños, será siempre el más especial.\n\nTe amo, mi amor. Gracias por ser tú, por ser mi compañero, mi amor, mi todo.",
   "15deabril": {
   texto: "Cada vez que te miro, el mundo se detiene. No importa lo que esté pasando, tu sonrisa y esos ojos tuyos hacen que todo se vea perfecto. Te amo por ser tú, por brillar de una manera que solo tú sabes hacerlo. Siempre me haces sentir especial, solo con ser tú.",
-  video: "https://www.youtube.com/embed/yc8YRJPxTYE"
+  videoEmbed: "https://www.youtube.com/embed/yc8YRJPxTYE"
   },
   "primernovio": {
   texto: "Hoy quiero dedicarte unas palabras que quizás no siempre te digo, pero que siento profundamente en cada rincón de mi corazón. Tú eres mi primer amor real, el primero con el que entendí lo que significa amar de verdad, lo que es confiar, compartir, y construir algo hermoso juntos.\n\nAntes de ti, amaba con sueños, con esperanza, con ilusión, pero tú llegaste y me enseñaste que el amor no es solo un sentimiento, es un acto diario, una decisión constante, una forma de ser que solo se vive en la realidad. Y eso, mi amor, es lo que más valoro de ti. Tú me has mostrado lo que es un amor real, con sus altos, sus bajos, pero siempre lleno de honestidad, paciencia y ternura.\n\nGracias por ser mi primer amor que nunca se desvanece, por ser quien me enseña, quien me cuida, quien me ama con una intensidad que no sabía que podía existir. Gracias por ser tú, por darme lo mejor de ti, por regalarme tu corazón y hacerme sentir tan especial. Eres mi primer amor real, y no puedo evitar sentirme afortunada por tenerte a mi lado.\n\nCon todo mi amor,\nTu niña.",
-  video: "https://www.youtube.com/embed/NwIdD8PI-_c"
+  videoEmbed: "https://www.youtube.com/embed/NwIdD8PI-_c"
   },
   "kissme": {
   "texto": "Aunque todavía no he sentido tus labios sobre los míos, hay algo en la idea de ese beso que me llena el alma. Es curioso cómo puedo extrañar algo que aún no conozco, cómo puedo desear tanto ese instante sin haberlo vivido. Pero lo imagino… lo sueño. Y en mis sueños, tu beso es suave, lento y lleno de promesas.\n\nMe gusta cómo me haces sentir incluso sin tocarme. Me gusta la forma en que tus palabras acarician mi corazón, la manera en que tu voz me envuelve, cómo logras que me derrita solo con tu atención. Si eso ya me hace temblar, no quiero imaginar lo que sentiré cuando, por fin, estemos frente a frente.\n\nEse beso… será la suma de todas nuestras esperas, de todas las veces que cerramos los ojos imaginándonos cerca. Y cuando llegue, sé que será perfecto, no porque lo sea en forma, sino porque será nuestro.\n\nHasta entonces, seguiré amando cada parte de ti a la distancia, soñando con el momento en que nuestros labios se encuentren por primera vez.",
@@ -316,7 +316,7 @@ tu hijo peludo, Samuel.`,
   "mariachi": "Esta carta es mi voz en la noche,\nuna serenata escrita desde el alma,\ncomo esas canciones suaves que se cantan bajo la ventana\ncon el corazón en la mano y los ojos brillando de amor.\n\nSi pudiera afinar mi voz con lo que siento por ti,\nte juro que sonaría más dulce que cualquier guitarra,\nmás pura que cualquier verso.\nPorque amarte es como una melodía que no se olvida,\nque vuelve una y otra vez,\nllenando cada rincón de mi alma con su eco.\n\nEsta noche te escribo como si te cantara,\ndespacito, cerquita del corazón,\npara decirte que eres mi canción favorita,\nel ritmo de mis días,\nla letra que quiero cantar por siempre.\n\nTe amo con todo lo que vibra en mí,\ny cada palabra mía es una nota que te busca,\nuna serenata que solo tú sabes escuchar.",
   "stevenuniverse": {
   texto: "Te encontré como estrella fugaz,\ncruzando mi cielo sin avisar.\nY desde entonces, amor brillante,\nya nada volvió a ser igual.\n\nEres luz que canta sin miedo,\nmi escudo y mi verdad,\ncomo gema que vibra en mi pecho,\ncomo hogar que quiero cuidar.\n\nNo necesito magia en mis manos\nsi tú estás para abrazar,\nporque contigo el mundo es claro\ny el dolor sabe descansar.\n\nTú y yo, dos almas fusionadas,\nen armonía celestial.\nNo somos perfectos, pero juntos\nbrillamos más allá del mal.",
-  video: "https://www.youtube.com/embed/9CfY1xxbgSc?si=DheIOXMEQ2Ecvz2q"
+  videoEmbed: "https://www.youtube.com/embed/9CfY1xxbgSc?si=DheIOXMEQ2Ecvz2q"
   },
   "adriana": "Amor,\nHay algo que me nace del corazón decirte,\ntengo muchas ganas de conocer a tu mamá.\nQuiero mirarla a los ojos y agradecerle por haberte traído al mundo,\npor haberte criado,\ny por hacer posible que hoy estés en mi vida.\n\nSiento que al conocerla, conoceré también una parte de ti que aún no he visto,\nporque todo lo que viene de ti, lo quiero abrazar con todo mi cariño.\nOjalá pronto llegue ese día.",
   "carmen": "Eres mío, y sí, lo admito, a veces me dan celos.\nPorque no quiero que nadie más vea lo que yo veo en ti,\nmi amor, mi sol, mi todo.\nPero tranquilo, son celos bonitos\nde esos que nacen del amor más grande.",
@@ -414,39 +414,39 @@ tu hijo peludo, Samuel.`,
   "archivo": "assets/unlocked_content/images/te_amo_05.jpg.enc"
   },
   "amoreterno": {
-  "video": "https://www.youtube.com/embed/BzLFsD0Wi6I"
+  "videoEmbed": "https://www.youtube.com/embed/BzLFsD0Wi6I"
   },
   "nadanosvaaseparar": {
-  "video": "https://www.youtube.com/embed/7V-yIwSnVyc"
+  "videoEmbed": "https://www.youtube.com/embed/7V-yIwSnVyc"
   },
   "megustasmucho": {
   "texto": "Cada vez que escucho esta canción, no puedo evitar pensar en ti… me gustas muchísimo.",
-  "video": "https://www.youtube.com/embed/miZbcXBk_xQ"
+  "videoEmbed": "https://www.youtube.com/embed/miZbcXBk_xQ"
   },
   "esperaunpoco": {
   "texto": "Solo un poco más… y estaremos juntos como tanto soñamos.",
-  "video": "https://www.youtube.com/embed/M_Dk9demut0"
+  "videoEmbed": "https://www.youtube.com/embed/M_Dk9demut0"
   },
   "enamorada": {
-  "video": "https://www.youtube.com/embed/tWsQvv5Mysc"
+  "videoEmbed": "https://www.youtube.com/embed/tWsQvv5Mysc"
   },
   "elsolylaluna": {
-  "video": "https://www.youtube.com/embed/Qw7G_ug_y7w"
+  "videoEmbed": "https://www.youtube.com/embed/Qw7G_ug_y7w"
   },
   "primerhola": {
   archivo: "assets/unlocked_content/images/te_amo_06.jpg.enc"
   },
   "louie": {
-  video: "https://www.youtube.com/embed/npW4Ej8k8sM"
+  videoEmbed: "https://www.youtube.com/embed/npW4Ej8k8sM"
   },
   "round": {
-  video: "https://www.youtube.com/embed/kIrLaccydww"
+  videoEmbed: "https://www.youtube.com/embed/kIrLaccydww"
   },
   "...": {
-  video: "https://www.youtube.com/embed/uDIM6RHhAz4"
+  videoEmbed: "https://www.youtube.com/embed/uDIM6RHhAz4"
   },
   "querido": {
-  video: "https://www.youtube.com/embed/yngIRIDmMis"
+  li.textContent = `[${code}] desbloqueado`; : "https://www.youtube.com/embed/yngIRIDmMis"
   },
   "hatsunemiku": {
   imagen: "assets/unlocked_content/images/ramonxmiku.jpg"
