@@ -1,3 +1,4 @@
+/* styles.css */
 /* Fuente romántica: 'Courgette' para un toque delicado */
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
@@ -18,6 +19,8 @@
   --progress-color: #A3C3BD; /* Color para el texto de progreso */
   --highlight-pink: #F8C8DC; /* Tono rosa destacado para interacciones o énfasis */
   --accent-light: #C9B2DA; /* Color de acento claro, como para el botón cerrar del modal */
+  --success-color: #7EC850; /* Color para éxito */
+  --error-color: #D64545; /* Color para error */
 }
 
 /* Estilos base del cuerpo: Fondo con imagen mágica y tipografía romántica */
@@ -64,7 +67,7 @@ body {
 /* Imagen decorativa superior: Pequeña animación flotante */
 .header-img {
   width: 80px;
-  margin-bottom: 15px;
+  margin-bottom: 25px; /* Aumento de margen para reemplazar <br> */
   animation: float 3s ease-in-out infinite; /* Animación de flotación suave */
 }
 
@@ -87,7 +90,19 @@ input {
   background-color: var(--input-bg);
   color: var(--text-light);
   text-transform: lowercase; /* Sugerencia de diseño para unificarlos */
-  margin-bottom: 15px;
+  margin-bottom: 20px; /* Margen para espaciar del botón */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transición para feedback */
+}
+
+/* Feedback visual para input */
+input.success {
+  border-color: var(--success-color);
+  box-shadow: 0 0 8px var(--success-color);
+}
+
+input.error {
+  border-color: var(--error-color);
+  box-shadow: 0 0 8px var(--error-color);
 }
 
 /* Botones: Diseño con transiciones suaves para interactividad */
@@ -100,16 +115,18 @@ button {
   border-radius: 25px;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
 }
 
 button:hover {
   background-color: var(--button-bg-hover);
   transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 button:active {
   transform: scale(0.98); /* Ligera compresión al hacer clic */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Área de contenido: Estilo y animación de aparición */
@@ -125,7 +142,7 @@ button:active {
   font-size: 18px;
   line-height: 1.7; /* Mejor legibilidad en bloques de texto */
   text-align: left;
-  max-height: none; /* Asegura que no haya límite de altura si el contenido es dinámico */
+  /* max-height: none; -- Removido, redundante si no hay un límite previo */
 }
 
 .contenido.show {
@@ -133,14 +150,42 @@ button:active {
   animation: fadeIn 1s ease-in-out; /* Animación de aparición para el contenido */
 }
 
-/* iFrame para contenido incrustado (ej. YouTube) */
-iframe {
-  width: 100%;
-  height: 315px;
+/* Estilos para video incrustado */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
   margin-top: 15px;
   border-radius: 12px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: none;
 }
+
+/* Estilos para enlaces de descarga */
+.download-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: var(--highlight-pink);
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-link:hover {
+  background-color: #d889b7; /* Tono más oscuro de highlight-pink */
+  transform: translateY(-2px);
+}
+
 
 /* Animaciones globales */
 @keyframes fadeIn {
@@ -177,10 +222,19 @@ iframe {
   input,
   button {
     font-size: 16px; /* Tamaño de fuente más pequeño para inputs y botones */
+    padding: 10px;
   }
 
-  iframe {
-    height: 200px; /* Altura más compacta para iframes */
+  .video-container {
+    padding-bottom: 65%; /* Ajuste para móviles, a veces 4:3 se ve mejor */
+  }
+
+  .music-toggle {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
   }
 }
 
@@ -191,23 +245,52 @@ iframe {
   color: var(--progress-color);
 }
 
+.unlocked-codes-section {
+  margin-top: 20px;
+}
+
+.unlocked-codes-section button {
+  background-color: var(--button-bg-initial);
+  padding: 8px 15px;
+  font-size: 1rem;
+  border-radius: 20px;
+}
+
+.unlocked-codes-section button:hover {
+  background-color: var(--button-bg-hover);
+  transform: scale(1.02);
+}
+
 .lista-codigos {
   margin-top: 10px;
   list-style-type: none; /* Elimina los puntos de la lista */
   padding: 0;
   color: var(--text-dark);
-  font-size: 14px;
+  font-size: 15px;
+  text-align: center;
+  max-height: 200px; /* Limita la altura para scroll */
+  overflow-y: auto; /* Permite scroll */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .lista-codigos li {
   margin-bottom: 5px;
+  padding: 3px 0;
+  opacity: 0.8; /* Ligeramente transparente */
+}
+
+.lista-codigos li:last-child {
+  margin-bottom: 0;
 }
 
 /* Estilos del modal: Superposición y efecto de desenfoque dramático */
 .modal {
   display: none;
   position: fixed;
-  z-index: 2000; /* Alto z-index para asegurar que esté en la parte superior */
+  z-index: 1000; /* Z-index más razonable */
   padding-top: 60px;
   left: 0;
   top: 0;
@@ -223,14 +306,14 @@ iframe {
 .modal-content {
   display: block;
   margin: 50px auto; /* Centrado y con margen superior */
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 90%; /* Ajustado para mejor responsividad */
+  max-height: 85%; /* Ajustado para mejor responsividad */
   border: 2px solid var(--highlight-pink); /* Borde de acento */
   border-radius: 10px;
   box-shadow: 0 0 40px rgba(248, 200, 220, 0.6); /* Sombra que "brilla" */
   background-color: var(--container-bg-dark); /* Reutiliza el color del contenedor */
   padding: 20px; /* Padding interno */
-  overflow-y: auto; /* Permite scroll si el contenido es largo */
+  object-fit: contain; /* Asegura que la imagen se ajuste sin recortarse */
 }
 
 /* Botón de cerrar del modal: Posicionamiento y transiciones */
@@ -247,4 +330,53 @@ iframe {
 
 .close:hover {
   color: var(--highlight-pink); /* Cambio de color al pasar el mouse */
+}
+
+/* Clase para ocultar visualmente pero mantener disponible para lectores de pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Botón flotante de música */
+.music-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--button-bg-initial);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 500; /* Por encima del contenido, debajo del modal */
+}
+
+.music-toggle:hover {
+  background-color: var(--button-bg-hover);
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.music-toggle i {
+  pointer-events: none; /* Asegura que el clic sea en el botón, no en el ícono */
+}
+
+/* Estilo para el botón de música cuando está pausado */
+.music-toggle.paused {
+  background-color: var(--error-color);
 }
