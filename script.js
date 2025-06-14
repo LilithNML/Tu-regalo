@@ -414,24 +414,24 @@ tu hijo peludo, Samuel.`,
   "archivo": "assets/unlocked_content/images/te_amo_05.jpg.enc"
   },
   "amoreterno": {
-  "videoEmbed": "https://www.youtube.com/embed/BzLFsD0Wi6I"
+  videoEmbed: "https://www.youtube.com/embed/BzLFsD0Wi6I"
   },
   "nadanosvaaseparar": {
-  "videoEmbed": "https://www.youtube.com/embed/7V-yIwSnVyc"
+  videoEmbed: "https://www.youtube.com/embed/7V-yIwSnVyc"
   },
   "megustasmucho": {
   "texto": "Cada vez que escucho esta canción, no puedo evitar pensar en ti… me gustas muchísimo.",
-  "videoEmbed": "https://www.youtube.com/embed/miZbcXBk_xQ"
+  videoEmbed: "https://www.youtube.com/embed/miZbcXBk_xQ"
   },
   "esperaunpoco": {
   "texto": "Solo un poco más… y estaremos juntos como tanto soñamos.",
-  "videoEmbed": "https://www.youtube.com/embed/M_Dk9demut0"
+  videoEmbed: "https://www.youtube.com/embed/M_Dk9demut0"
   },
   "enamorada": {
-  "videoEmbed": "https://www.youtube.com/embed/tWsQvv5Mysc"
+  videoEmbed: "https://www.youtube.com/embed/tWsQvv5Mysc"
   },
   "elsolylaluna": {
-  "videoEmbed": "https://www.youtube.com/embed/Qw7G_ug_y7w"
+  videoEmbed: "https://www.youtube.com/embed/Qw7G_ug_y7w"
   },
   "primerhola": {
   archivo: "assets/unlocked_content/images/te_amo_06.jpg.enc"
@@ -446,7 +446,7 @@ tu hijo peludo, Samuel.`,
   videoEmbed: "https://www.youtube.com/embed/uDIM6RHhAz4"
   },
   "querido": {
-  li.textContent = `[${code}] desbloqueado`; : "https://www.youtube.com/embed/yngIRIDmMis"
+  videoEmbed: "https://www.youtube.com/embed/yngIRIDmMis"
   },
   "hatsunemiku": {
   imagen: "assets/unlocked_content/images/ramonxmiku.jpg"
