@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <audio controls src="https://www.w3schools.com/html/horse.mp3" style="width: 100%;">
           Tu navegador no soporta el elemento de audio.
         </audio>
-        <p>Aquí hay un <a href="#" onclick="alert('Este es un enlace de ejemplo para nuestros recuerdos.'); return false;">lugar especial</a> para nuestros recuerdos.</p>
+        <p>Aquí hay un <a href="https://en.m.wikipedia.org/wiki/Triangle">lugar especial</a> para nuestros recuerdos.</p>
       `
     }
   ];
