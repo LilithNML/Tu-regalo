@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
       content: `
         <p>Eres mi calma en el caos, mi <span class="highlight">risa</span> cuando lloro, mi hogar sin importar el lugar. Cada día a tu lado es un regalo.</p>
         <audio controls src="https://www.w3schools.com/html/horse.mp3" style="width: 100%;">Tu navegador no soporta el elemento de audio.</audio>
-        <p>Aquí hay un <a href="#" onclick="alert('Este es un enlace de ejemplo para nuestros recuerdos.'); return false;">lugar especial</a> para nuestros recuerdos.</p>
+        <p>Aquí hay un <a href="https://safebooru.org//images/269/52ea92987b638fff7233f59f60459731c808ca5c.png" onclick="alert('Este es un enlace de ejemplo para nuestros recuerdos.'); return false;">lugar especial</a> para nuestros recuerdos.</p>
       `
     }
   ];
