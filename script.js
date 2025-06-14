@@ -359,7 +359,7 @@ tu hijo peludo, Samuel.`,
   "brawl": {
     descarga: {
       url: "assets/unlocked_content/images/mi_diario.webp",
-      nombre: "Diario",
+      nombre: "Diario.webp",
       textoEnlace: "Descargar diario"
     }
   },
@@ -370,7 +370,7 @@ tu hijo peludo, Samuel.`,
   "nbujo85ft": {
     descarga: {
       url: "assets/unlocked_content/images/mi_mayor_sueno.png",
-      nombre: "Mi_mayor_sueno",
+      nombre: "Mi mayor sueño.png",
       textoEnlace: "Descargar acta"
     }
   },
@@ -387,7 +387,7 @@ tu hijo peludo, Samuel.`,
   "increible": {
     descarga: {
       url: "assets/unlocked_content/images/mapa_de_estrellas.jpg",
-      nombre: "Mapa_de_estrellas",
+      nombre: "Mapa de estrellas.jpg",
       textoEnlace: "Descargar mapa"
     }
   },
@@ -408,35 +408,35 @@ tu hijo peludo, Samuel.`,
   "colette": {
     descarga: {
       url: "assets/unlocked_content/images/te_amo_01.jpg.enc",
-      nombre: "te_amo_01",
+      nombre: "te_amo_er.jpg.enc",
       textoEnlace: "Descargar cosplay"
     }
   },
   "vegetto": {
     descarga: {
       url: "assets/unlocked_content/images/te_amo_02.jpg.enc",
-      nombre: "te_amo_02",
+      nombre: "te_amo_02.jpg.enc",
       textoEnlace: "Descargar cosplay"
     }
   },
   "ellenjoe": {
     descarga: {
       url: "assets/unlocked_content/images/te_amo_03.jpg.enc",
-      nombre: "te_amo_03",
+      nombre: "te_amo_03.jpg.enc",
       textoEnlace: "Descargar cosplay"
     }
   },
   "himikotoga": {
     descarga: {
       url: "assets/unlocked_content/images/te_amo_04.jpg.enc",
-      nombre: "te_amo_03",
+      nombre: "te_amo_04.jpg.enc",
       textoEnlace: "Descargar cosplay"
     }
   },
   "elmejorpadredelmundo": {
     descarga: {
       url: "assets/unlocked_content/images/te_amo_05.jpg.enc",
-      nombre: "te_amo_05",
+      nombre: "te_amo_05.jpg.enc",
       textoEnlace: "Descargar cosplay"
     }
   },
@@ -463,7 +463,7 @@ tu hijo peludo, Samuel.`,
   "primerhola": {
     descarga: {
       url: "assets/unlocked_content/images/te_amo_06.jpg.enc",
-      nombre: "te_amo_06",
+      nombre: "te_amo_06.jpg.enc",
       textoEnlace: "Descargar cosplay"
     }
   },
@@ -489,70 +489,70 @@ tu hijo peludo, Samuel.`,
   "suegra": {
     descarga: {
       url: "assets/unlocked_content/images/te_amo_07.jpg.enc",
-      nombre: "te_amo_07",
+      nombre: "te_amo_0a.jpg.enc",
       textoEnlace: "Descargar cosplay"
     }
   },
   "mami": {
     descarga: {
       url: "assets/unlocked_content/images/te_amo_08.jpg.enc",
-      nombre: "te_amo_08",
+      nombre: "te_amo_08.jpg.enc",
       textoEnlace: "Descargar cosplay"
     }
   },
   "suegrita": {
     descarga: {
       url: "assets/unlocked_content/images/te_amo_09.jpg.enc",
-      nombre: "te_amo_09",
+      nombre: "te_amo_09.jpg.enc",
       textoEnlace: "Descargar Cosplay"
     }
   },
   "sexo": {
     descarga: {
       url: "assets/unlocked_content/images/te_amo_10.jpg.enc",
-      nombre: "te_amo_06",
+      nombre: "te_amo_10.jpg.enc",
       textoEnlace: "Descargar cosplay"
     }
   },
   "ojosverdes": {
     descarga: {
       url: "assets/unlocked_content/images/te_amo_11.jpg.enc",
-      nombre: "te_amo_11",
+      nombre: "te_amo_11.jpg.enc",
       textoEnlace: "Descargar cosplay"
     }
   },
   "cielo": {
     descarga: {
       url: "assets/unlocked_content/images/te_amo_12.jpg.enc",
-      nombre: "te_amo_12",
+      nombre: "te_amo_12.jpg.enc",
       textoEnlace: "Descargar cosplay"
     }
   },
   "acostados": {
     descarga: {
       url: "assets/unlocked_content/images/te_amo_13.jpg.enc",
-      nombre: "te_amo_13",
+      nombre: "te_amo_13.jpg.enc",
       textoEnlace: "Descargar cosplay"
     }
   },
   "atulado": {
     descarga: {
       url: "assets/unlocked_content/images/te_amo_14.jpg.enc",
-      nombre: "te_amo_14",
+      nombre: "te_amo_14.jpg.enc",
       textoEnlace: "Descargar cosplay"
     }
   },
   "porquenopuedodejardepensarenti": {
     descarga: {
       url: "assets/unlocked_content/images/te_amo_15.jpg.enc",
-      nombre: "te_amo_15",
+      nombre: "te_amo_15.jpg.enc",
       textoEnlace: "Descargar cosplay"
     }
   },
   "teamedesdeelprimerdiaqueteconoci": {
     descarga: {
       url: "assets/unlocked_content/images/te_amo_16.jpg.enc",
-      nombre: "te_amo_16",
+      nombre: "te_amtest.jpg.enc",
       textoEnlace: "Descargar cosplay"
     }
   },
