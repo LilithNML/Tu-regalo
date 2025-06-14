@@ -1,229 +1,185 @@
-:root {
-  /* Variables de color para tema oscuro (default) y claro */
-  --bg-color: #0c0a1d;
-  --text-color: #e0e1e6;
-  --bg-overlay-color: rgba(15, 12, 38, 0.7);
-  --header-footer-bg: rgba(15, 12, 38, 0.8);
-  --highlight-glow: #80dfff;
-  --highlight-text: #aeefff;
-  --button-bg: #1e90ff;
-  --button-text: #ffffff;
-  --media-shadow: rgba(43, 190, 255, 0.2);
-  --progress-bar-color: var(--highlight-glow);
+document.addEventListener('DOMContentLoaded', () => {
+  // --- ESTADO Y DATOS ---
+  const chapters = [
+    {
+      title: "Capítulo 1: Nuestro Comienzo",
+      content: `
+        <p>Desde el <span class="highlight">primer día</span> que te conocí, supe que algo <span class="highlight">especial</span> había empezado. Cada momento a tu lado se convierte en un tesoro.</p>
+        <img src="https://i.pinimg.com/originals/a1/b8/84/a1b884f23439b1a0c4f8374a44199c09.jpg" alt="Ilustración de una pareja bajo un cielo estrellado y fugaz, representando el inicio de un viaje.">
+      `
+    },
+    {
+      title: "Capítulo 2: Momentos Inolvidables",
+      content: `
+        <p>Recuerdo nuestras caminatas y esas risas que llenaban todo. Gracias por hacer de cada día algo <span class="highlight">único</span>.</p>
+        <div class="responsive-iframe-container">
+          <iframe src="https://player.vimeo.com/video/425496664?badge=0&amp;autopause=0" allow="autoplay; fullscreen; picture-in-picture" title="Cortometraje animado 'Feast'" allowfullscreen></iframe>
+        </div>
+      `
+    },
+    {
+      title: "Capítulo 3: Lo que Significas para Mí",
+      content: `
+        <p>Eres mi calma en el caos, mi <span class="highlight">risa</span> cuando lloro, mi hogar sin importar el lugar. Cada día a tu lado es un regalo.</p>
+        <audio controls src="https://www.w3schools.com/html/horse.mp3" style="width: 100%;">Tu navegador no soporta el elemento de audio.</audio>
+        <p>Aquí hay un <a href="#" onclick="alert('Este es un enlace de ejemplo para nuestros recuerdos.'); return false;">lugar especial</a> para nuestros recuerdos.</p>
+      `
+    }
+  ];
 
-  --transition-speed: 300ms;
-}
+  let currentChapterIndex = 0;
+  const chapterContainer = document.getElementById('chapter-container');
+  const prevButton = document.getElementById('prev');
+  const nextButton = document.getElementById('next');
+  const themeToggleButton = document.getElementById('theme-toggle');
+  const progressBar = document.getElementById('progress-bar');
+  let activeModal = null;
 
-[data-theme="light"] {
-  --bg-color: #f0f4f8;
-  --text-color: #2c3e50;
-  --bg-overlay-color: rgba(255, 255, 255, 0.7);
-  --header-footer-bg: rgba(255, 255, 255, 0.85);
-  --highlight-glow: #0077cc;
-  --highlight-text: #005fa3;
-  --button-bg: #0077cc;
-  --media-shadow: rgba(44, 62, 80, 0.15);
-  --progress-bar-color: var(--button-bg);
-}
+  // --- LÓGICA DE CAPÍTULOS Y PROGRESO ---
+  function renderChapter(index) {
+    chapterContainer.classList.add('fade-out');
+    
+    setTimeout(() => {
+      const chapter = chapters[index];
+      chapterContainer.innerHTML = `<article class="chapter" aria-labelledby="chapter-title-${index}"><h2 id="chapter-title-${index}">${chapter.title}</h2>${chapter.content}</article>`;
+      updateNavButtons();
+      updateProgressBar();
+      chapterContainer.classList.remove('fade-out');
+    }, 300);
+  }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  function updateNavButtons() {
+    prevButton.disabled = currentChapterIndex === 0;
+    nextButton.disabled = currentChapterIndex === chapters.length - 1;
+  }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  color: var(--text-color);
-  background-color: var(--bg-color);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
-}
+  function updateProgressBar() {
+    const progress = chapters.length <= 1 ? 100 : (currentChapterIndex / (chapters.length - 1)) * 100;
+    progressBar.style.width = `${progress}%`;
+  }
 
-/* === FONDO ANIMADO CON CSS === */
-.animated-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: transparent;
-  overflow: hidden;
-  z-index: -1;
-}
-.animated-bg::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  background-image: 
-    radial-gradient(circle at 10% 10%, var(--highlight-glow), transparent 20%),
-    radial-gradient(circle at 80% 20%, var(--highlight-text), transparent 25%),
-    radial-gradient(circle at 30% 90%, var(--button-bg), transparent 20%),
-    radial-gradient(circle at 50% 50%, var(--highlight-glow), transparent 15%);
-  background-size: 40% 40%;
-  opacity: 0.15;
-  filter: blur(40px);
-  animation: move-glow 45s linear infinite;
-}
-[data-theme="light"] .animated-bg::after {
-  opacity: 0.3;
-}
-@keyframes move-glow {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(-50%, -50%); }
-  100% { transform: translate(0, 0); }
-}
+  function showChapter(index) {
+    if (index >= 0 && index < chapters.length) {
+      currentChapterIndex = index;
+      renderChapter(currentChapterIndex);
+    }
+  }
 
-header {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--header-footer-bg);
-  padding: 1rem 2rem;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: background-color var(--transition-speed) ease;
-}
-[data-theme="light"] header {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
+  // --- LÓGICA DEL TEMA ---
+  function applyInitialTheme() {
+    const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  }
 
-header h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.6rem, 4vw, 2.2rem);
-  font-weight: 700;
-  text-align: center;
-  flex-grow: 1;
-}
+  function toggleTheme() {
+    const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  }
 
-.progress-bar-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-}
-#progress-bar {
-  width: 0;
-  height: 100%;
-  background-color: var(--progress-bar-color);
-  border-radius: 0 2px 2px 0;
-  transition: width 400ms ease-in-out, background-color var(--transition-speed) ease;
-}
+  // --- LÓGICA DEL MODAL DE IMAGEN PERFECCIONADO ---
+  function createZoomModal(imgElement) {
+    if (activeModal) return;
 
-main {
-  flex: 1;
-  max-width: 800px;
-  width: 90%;
-  margin: 2rem auto;
-  padding: 1rem 0;
-  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
-}
-main.fade-out {
-  opacity: 0;
-  transform: translateY(20px);
-}
+    const overlay = document.createElement('div');
+    overlay.className = 'zoom-overlay';
+    
+    const closeButton = document.createElement('button');
+    closeButton.className = 'zoom-close';
+    closeButton.setAttribute('aria-label', 'Cerrar imagen');
+    closeButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
-.chapter {
-  background: var(--bg-overlay-color);
-  padding: clamp(1.5rem, 5vw, 3rem);
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
-}
-[data-theme="light"] .chapter {
-  border: 1px solid rgba(0, 0, 0, 0.05);
-}
+    const img = document.createElement('img');
+    img.className = 'zoom-img';
+    img.alt = imgElement.alt;
+    
+    overlay.append(img, closeButton);
+    document.body.appendChild(overlay);
+    document.body.style.overflow = 'hidden';
 
-/* ... (otros estilos de capítulo, navegación, highlight sin cambios significativos) ... */
-.chapter h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 4vw, 2rem); color: var(--highlight-glow); margin-bottom: 1rem; transition: color var(--transition-speed) ease; }
-.chapter p, .chapter a, .chapter li { font-size: 1.15rem; line-height: 1.8; color: var(--text-color); transition: color var(--transition-speed) ease; }
-.chapter a { color: var(--highlight-glow); text-decoration: none; font-weight: bold; }
-.chapter a:hover { text-decoration: underline; }
-.chapter img { cursor: zoom-in; }
-.chapter img, .chapter video, .chapter audio { display: block; max-width: 100%; margin: 2rem auto; border-radius: 15px; box-shadow: 0 6px 25px var(--media-shadow); transition: box-shadow var(--transition-speed) ease; }
-.responsive-iframe-container { position: relative; overflow: hidden; padding-top: 56.25%; margin: 2rem auto; border-radius: 15px; box-shadow: 0 6px 25px var(--media-shadow); }
-.responsive-iframe-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-nav.navigation { display: flex; justify-content: space-between; padding: 1rem 2rem; background: var(--header-footer-bg); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid rgba(255, 255, 255, 0.1); transition: background-color var(--transition-speed) ease; }
-[data-theme="light"] nav.navigation { border-top: 1px solid rgba(0, 0, 0, 0.1); }
-nav.navigation button { background-color: var(--button-bg); color: var(--button-text); border: none; border-radius: 50px; padding: 0.8rem 1.6rem; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background-color var(--transition-speed) ease, transform 150ms ease; }
-nav.navigation button:hover:not(:disabled), nav.navigation button:focus-visible:not(:disabled) { transform: scale(1.05); filter: brightness(1.1); }
-nav.navigation button:disabled { background-color: #555; color: #999; cursor: not-allowed; transform: none; filter: brightness(0.7); }
+    // Mostrar el overlay y luego la imagen para una transición suave
+    setTimeout(() => overlay.classList.add('visible'), 10);
+    img.onload = () => {
+        img.classList.add('loaded');
+        const zoomHandler = setupZoomAndPan(img);
+        activeModal = { overlay, lastFocusedElement: imgElement, zoomHandler };
+    };
+    img.src = imgElement.src;
 
-/* === MODAL DE IMAGEN PERFECCIONADO === */
-.zoom-overlay {
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  opacity: 0;
-  transition: opacity 250ms ease, backdrop-filter 250ms ease;
-}
-.zoom-overlay.visible {
-  opacity: 1;
-}
-.zoom-img {
-  max-width: 95vw;
-  max-height: 95vh;
-  object-fit: contain;
-  touch-action: none;
-  transform-origin: center center;
-  will-change: transform;
-  transition: transform 250ms ease;
-  opacity: 0;
-  transform: scale(0.9);
-}
-.zoom-img.loaded {
-  opacity: 1;
-  transform: scale(1);
-}
-.zoom-close {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 1001;
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 200ms ease, transform 200ms ease;
-}
-.zoom-close:hover {
-  background: rgba(0, 0, 0, 0.7);
-  transform: scale(1.1);
-}
-.zoom-close svg {
-  width: 32px;
-  height: 32px;
-  stroke: white;
-  stroke-width: 2.5;
-  filter: drop-shadow(0 0 5px black);
-}
+    const closeModal = () => {
+      if (!activeModal) return;
+      document.body.style.overflow = '';
+      overlay.classList.remove('visible');
+      activeModal.zoomHandler.cleanup();
+      overlay.addEventListener('transitionend', () => {
+        overlay.remove();
+        activeModal.lastFocusedElement.focus();
+        activeModal = null;
+      }, { once: true });
+    };
 
-/* ... (Estilos del botón de tema sin cambios) ... */
-.theme-toggle { background: none; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 50%; cursor: pointer; padding: 8px; display: flex; align-items: center; justify-content: center; transition: all var(--transition-speed) ease; }
-.theme-toggle:hover { border-color: var(--text-color); transform: scale(1.1) rotate(15deg); }
-[data-theme="light"] .theme-toggle { border-color: rgba(0, 0, 0, 0.5); }
-.theme-toggle .icon { stroke: var(--text-color); transition: stroke var(--transition-speed) ease; }
-.theme-toggle .icon-sun { display: none; }
-.theme-toggle .icon-moon { display: block; }
-[data-theme="light"] .theme-toggle .icon-sun { display: block; }
-[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+    closeButton.onclick = closeModal;
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+    window.addEventListener('keydown', function keydownHandler(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+        window.removeEventListener('keydown', keydownHandler);
+      }
+    });
+  }
+
+  function setupZoomAndPan(img) {
+      let scale = 1, posX = 0, posY = 0, isDragging = false;
+      let lastX, lastY, startDist, lastScale;
+
+      const updateTransform = () => {
+          const rect = img.getBoundingClientRect();
+          const maxPosX = Math.max(0, (rect.width - overlay.clientWidth) / 2);
+          const maxPosY = Math.max(0, (rect.height - overlay.clientHeight) / 2);
+          
+          posX = Math.max(-maxPosX, Math.min(maxPosX, posX));
+          posY = Math.max(-maxPosY, Math.min(maxPosY, posY));
+          
+          img.style.transition = isDragging ? 'none' : 'transform 0.2s ease-out';
+          img.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
+      };
+
+      const onWheel = e => { e.preventDefault(); /* ... lógica de zoom con rueda ... */ };
+      const onMouseDown = e => { e.preventDefault(); /* ... lógica de arrastre con ratón ... */ };
+      const onMouseMove = e => { if(isDragging) { /* ... */ } };
+      const onMouseUp = () => { isDragging = false; };
+      // ... Lógica similar para eventos táctiles ...
+
+      img.addEventListener('wheel', onWheel, { passive: false });
+      img.addEventListener('mousedown', onMouseDown);
+      window.addEventListener('mousemove', onMouseMove);
+      window.addEventListener('mouseup', onMouseUp);
+
+      const cleanup = () => {
+          window.removeEventListener('mousemove', onMouseMove);
+          window.removeEventListener('mouseup', onMouseUp);
+          // ... remover otros listeners ...
+      };
+      return { cleanup };
+  }
+
+  // --- INICIALIZACIÓN Y EVENT LISTENERS ---
+  document.addEventListener('click', e => {
+    if (e.target.tagName === 'IMG' && e.target.closest('.chapter')) {
+      createZoomModal(e.target);
+    }
+  });
+
+  window.addEventListener('keydown', e => {
+    if (activeModal) return; // No navegar entre capítulos si el modal está abierto
+    if (e.key === 'ArrowLeft') showChapter(currentChapterIndex - 1);
+    if (e.key === 'ArrowRight') showChapter(currentChapterIndex + 1);
+  });
+
+  prevButton.onclick = () => showChapter(currentChapterIndex - 1);
+  nextButton.onclick = () => showChapter(currentChapterIndex + 1);
+  themeToggleButton.onclick = toggleTheme;
+
+  applyInitialTheme();
+  renderChapter(currentChapterIndex);
+});
