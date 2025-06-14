@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Capítulo 1: Nuestro Comienzo",
       content: `
         <p>Desde el <span class="highlight">primer día</span> que te conocí, supe que algo <span class="highlight">especial</span> había empezado. Cada momento a tu lado se convierte en un tesoro.</p>
-        <img src="https://i.pinimg.com/originals/a1/b8/84/a1b884f23439b1a0c4f8374a44199c09.jpg" alt="Ilustración de una pareja bajo un cielo estrellado y fugaz, representando el inicio de un viaje.">
+        <img src="https://safebooru.org//images/269/52ea92987b638fff7233f59f60459731c808ca5c.png" alt="Ilustración de una pareja bajo un cielo estrellado y fugaz, representando el inicio de un viaje.">
       `
     },
     {
