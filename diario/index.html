@@ -1,222 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Un diario personal y interactivo lleno de recuerdos y momentos especiales.">
   <title>Diario para Mi Amor</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-overlay: rgba(0,0,0,0.7);
-      --primary: #fff;
-      --accent: #80dfff;
-      --loading: rgba(255,255,255,0.2);
-    }
-    *{ box-sizing:border-box; margin:0; padding:0;}
-    body {
-      font-family:'Open Sans',sans-serif;
-      color:var(--primary);
-      background:url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1600&q=80') center/cover fixed;
-      position:relative; min-height:100vh;
-      overflow-x:hidden;
-    }
-    canvas#particles{ position:fixed; inset:0; z-index:0; }
-    header {
-      position:fixed; top:0; left:0; right:0;
-      background:var(--bg-overlay);
-      text-align:center;
-      padding:1.5rem;
-      font-family:'Playfair Display',serif;
-      font-size:2.4rem;
-      z-index:10;
-    }
-    main {
-      padding-top:5rem;
-      padding-bottom:4rem;
-      max-width:900px;
-      margin:0 auto;
-      position:relative;
-      z-index:1;
-    }
-    .chapter {
-      background:var(--bg-overlay);
-      border-radius:16px;
-      padding:2rem;
-      margin-bottom:2rem;
-      opacity:0;
-      transform:translateY(20px);
-      transition:opacity .5s,transform .5s;
-    }
-    .chapter.visible { opacity:1; transform:translateY(0); }
-    .chapter h2 {
-      font-family:'Playfair Display',serif;
-      font-size:1.8rem;
-      color:var(--accent);
-      margin-bottom:1rem;
-    }
-    .chapter p,a { font-size:1.1rem; line-height:1.6;color:var(--primary);}
-    .chapter a:hover { text-decoration:underline;}
-    .chapter img, .chapter iframe, .chapter audio {
-      display:block;
-      width:100%;
-      margin:2rem auto;
-      border-radius:12px;
-      box-shadow:0 4px 12px var(--loading);
-      background:var(--loading);
-      position:relative;
-      cursor:zoom-in;
-      overflow:hidden;
-    }
-    .fluid-iframe{position:absolute;top:0;left:0;width:100%;height:100%;}
-    .navigation {
-      position:fixed;
-      bottom:0; left:0; right:0;
-      background:var(--bg-overlay);
-      display:flex;
-      justify-content:space-between;
-      padding:1rem 2rem;
-      z-index:10;
-    }
-    .navigation button {
-      background:var(--accent);
-      color:#000;
-      border:none;
-      padding:0.8rem 1.6rem;
-      border-radius:30px;
-      font-size:1rem;
-      cursor:pointer;
-      transition:transform .1s;
-    }
-    .navigation button:active { transform:scale(0.96);}
-    #menu-btn {
-      position:fixed;
-      top:1.6rem; left:1.6rem;
-      background:var(--accent);
-      border:none;
-      width:40px; height:40px;
-      border-radius:8px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      cursor:pointer;
-      z-index:11;
-      transition:transform .1s;
-    }
-    #menu-btn:active { transform:scale(0.95); }
-    #side-menu {
-      position:fixed;
-      top:0; left:-280px;
-      width:280px; height:100%;
-      background:var(--bg-overlay);
-      padding:2rem 1rem;
-      box-shadow:2px 0 8px var(--loading);
-      transition:left .3s;
-      z-index:11;
-    }
-    #side-menu.open { left:0; }
-    #side-menu h3 { margin-bottom:1rem; font-size:1.2rem; color:var(--accent); }
-    #side-menu ul { list-style:none; }
-    #side-menu li { margin:1rem 0; }
-    #side-menu li button {
-      width:100%; background:none; border:none;
-      color:var(--primary); font-size:1rem;
-      text-align:left; padding:0.5rem;
-      cursor:pointer;
-      border-radius:4px;
-      transition:background .2s;
-    }
-    #side-menu li button:hover { background:var(--loading); }
-    /* Zoom overlay */
-    .zoom-overlay {
-      position:fixed; inset:0;
-      background:rgba(0,0,0,0.95);
-      display:flex; align-items:center; justify-content:center;
-      z-index:20; overflow:hidden;
-    }
-    .zoom-img-container {
-      touch-action:none;
-      will-change:transform;
-    }
-    .zoom-img-container img {
-      max-width:none;
-      width:auto; height:auto;
-      max-height:100vh;
-    }
-    .zoom-close {
-      position:fixed; top:1.6rem; right:1.6rem;
-      width:36px;height:36px;
-      background:var(--accent);
-      border:none; border-radius:50%;
-      display:flex; align-items:center; justify-content:center;
-      cursor:pointer;
-      z-index:21;
-      transition:transform .1s;
-    }
-    .zoom-close:active { transform:scale(0.9); }
-    .zoom-close svg { fill:#000; }
-    /* Loader */
-    .loader {
-      position:absolute; inset:0;
-      display:flex; align-items:center; justify-content:center;
-    }
-    .loader svg {
-      width:40px;height:40px;
-      animation:rotate 1s linear infinite;
-    }
-    @keyframes rotate{to{transform:rotate(360deg);}}
-    /* Intro modal */
-    #intro-modal {
-      display:none;
-      position:fixed; inset:0;
-      background:rgba(0,0,0,0.9);
-      z-index:30;
-      align-items:center; justify-content:center;
-    }
-    .modal-content {
-      background:var(--bg-overlay);
-      padding:2rem; border-radius:16px;
-      text-align:center; max-width:90%;
-    }
-    .modal-content button {
-      margin-top:1.5rem;
-      padding:.8rem 1.6rem;
-      background:var(--accent);
-      border:none; border-radius:8px;
-      font-size:1rem; cursor:pointer;
-    }
-    @media(max-width:600px){
-      header{font-size:2rem;}
-      .navigation{padding:0.8rem;}
-      .navigation button{padding:0.6rem 1.2rem;}
-      #menu-btn{width:36px;height:36px;}
-      .zoom-close{width:32px;height:32px;}
-    }
-  </style>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <canvas id="particles"></canvas>
-  <button id="menu-btn" aria-label="Abrir menú">
-    <svg width="24" height="24" fill="white"><rect y="4" width="24" height="2"/><rect y="11" width="24" height="2"/><rect y="18" width="24" height="2"/></svg>
-  </button>
-  <div id="side-menu">
-    <h3>Índice de capítulos</h3>
-    <ul id="menu-list"></ul>
-  </div>
-  <header>Mi Diario para Ti 🌌</header>
-  <main id="chapter-container"></main>
-  <div class="navigation">
-    <button id="prev">← Anterior</button>
-    <button id="next">Siguiente →</button>
-  </div>
-  <div id="intro-modal"><div class="modal-content">
-    <h2>Bienvenid@</h2>
-    <p>Este diario es interactivo:<br>
-      Navega capítulos con botones o menú.<br>
-      Toca y haz zoom en las imágenes.<br>
-      Disfruta 😊
-    </p>
-    <button id="close-intro">Entendido</button>
-  </div></div>
-  <script src="script.js"></script>
+  <div class="animated-bg"></div>
+
+  <header>
+    <div class="progress-bar-container">
+      <div id="progress-bar"></div>
+    </div>
+    <h1>Mi Diario para Ti</h1>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+      <svg class="icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      <svg class="icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+    </button>
+  </header>
+
+  <main id="chapter-container" role="region" aria-live="polite" aria-atomic="true"></main>
+
+  <nav class="navigation">
+    <button id="prev" aria-label="Capítulo anterior">← Anterior</button>
+    <button id="next" aria-label="Capítulo siguiente">Siguiente →</button>
+  </nav>
+
 </body>
 </html>
