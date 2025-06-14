@@ -182,7 +182,7 @@ button:active {
 }
 
 .download-link:hover {
-  background-color: #d889b7; /* Tono más oscuro de highlight-pink */
+  background-color: #4A0072; /* Tono más oscuro de highlight-pink */
   transform: translateY(-2px);
 }
 
