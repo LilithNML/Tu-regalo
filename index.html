@@ -3,36 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Te Amo</title>
+  <title>Un Mensaje Especial Para Ti</title>
+  <meta name="description" content="Descubre mensajes secretos con códigos especiales."/>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" as="style" crossorigin>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-  </style>
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <div class="background-overlay"></div>
+  <div class="background-overlay" aria-hidden="true"></div>
 
-  <div class="container">
-    <img src="assets/images/decoracion.png" alt="Decoración romántica" class="header-img"/>
-    <h1>Descubre un Mensaje</h1>
-    <input type="text" id="codeInput" placeholder="Ingresa tu código..." />
-    <br/>
+  <div class="container" role="main">
+    <img src="assets/images/decoracion.png" alt="Corazón decorativo y flores románticas" class="header-img"/>
+    <h1>Descubre un Mensaje Secreto</h1>
+    <label for="codeInput" class="sr-only">Ingresa tu código</label>
+    <input type="text" id="codeInput" placeholder="Ingresa tu código..." aria-label="Campo para ingresar el código secreto" autocomplete="off"/>
     <button onclick="checkCode()">Desbloquear</button>
-    <div id="contenido" class="contenido"></div>
-    <p id="progreso" class="progreso"></p>
+    
+    <div id="contenido" class="contenido" aria-live="polite" aria-atomic="true"></div>
+    <p id="progreso" class="progreso" role="status" aria-live="polite"></p>
+
+    <div class="unlocked-codes-section">
+      <button id="toggleUnlockedCodes" aria-expanded="false" aria-controls="unlockedCodesList">Mostrar Códigos Desbloqueados</button>
+      <ul id="unlockedCodesList" class="lista-codigos" hidden></ul>
+    </div>
   </div>
 
   <audio id="correctSound" src="assets/audio/correct.mp3" preload="auto"></audio>
-  <audio id="incorrectSound" src="incorrect.mp3" preload="auto"></audio>
-  <audio id="bgMusic" src="assets/audio/musica-fondo.mp3" loop preload="auto"></audio>
-  <audio id="codeAudio"></audio>
+  <audio id="incorrectSound" src="assets/audio/incorrect.mp3" preload="auto"></audio> <audio id="bgMusic" src="assets/audio/musica-fondo.mp3" loop preload="auto"></audio>
+  <audio id="codeAudio" preload="auto"></audio>
+
+  <button id="musicToggle" class="music-toggle" aria-label="Controlar música de fondo">
+    <i class="fas fa-volume-up"></i>
+  </button>
+
+  <div id="imageModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+    <h2 id="modalTitle" class="sr-only">Imagen Desbloqueada</h2>
+    <span class="close" onclick="cerrarModal()" aria-label="Cerrar modal de imagen">×</span>
+    <img class="modal-content" id="modalImg" alt="Imagen de contenido desbloqueado" />
+  </div>
 
   <script src="script.js"></script>
-
-  <div id="imageModal" class="modal">
-    <span class="close" onclick="cerrarModal()">&times;</span>
-    <img class="modal-content" id="modalImg" />
-  </div>
 </body>
 </html>
