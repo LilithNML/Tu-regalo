@@ -1,0 +1,277 @@
+:root {
+  /* Variables de color para tema oscuro (default) y claro */
+  --bg-color: #0c0a1d;
+  --text-color: #ffffff;
+  --bg-overlay-color: rgba(0, 0, 0, 0.65);
+  --header-footer-bg: rgba(0, 0, 0, 0.75);
+  --highlight-glow: #80dfff;
+  --highlight-text: #aeefff;
+  --button-bg: #1e90ff;
+  --button-text: #ffffff;
+  --media-shadow: rgba(255, 255, 255, 0.25);
+
+  --transition-speed: 300ms;
+}
+
+/* Definición del tema claro usando un atributo de datos */
+[data-theme="light"] {
+  --bg-color: #f0f4f8;
+  --text-color: #2c3e50;
+  --bg-overlay-color: rgba(255, 255, 255, 0.8);
+  --header-footer-bg: rgba(255, 255, 255, 0.9);
+  --highlight-glow: #0077cc;
+  --highlight-text: #005fa3;
+  --button-bg: #0077cc;
+  --button-text: #ffffff;
+  --media-shadow: rgba(0, 0, 0, 0.15);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  background-image: url('https://time.com/wp-content/uploads/2017/10/229-westerlund-21.jpg?w=2000');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--header-footer-bg);
+  padding: 1.5rem 2rem;
+  transition: background-color var(--transition-speed) ease;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 5vw, 2.5rem); /* Tamaño de fuente fluido */
+  font-weight: 700;
+  text-align: center;
+  flex-grow: 1;
+}
+
+main {
+  flex: 1;
+  max-width: 900px;
+  width: 95%;
+  margin: 2rem auto;
+  padding: 1rem;
+  /* Transición para el cambio de capítulo */
+  transition: opacity var(--transition-speed) ease-in-out;
+}
+
+main.fade-out {
+  opacity: 0;
+}
+
+.chapter {
+  background: var(--bg-overlay-color);
+  padding: clamp(1.5rem, 5vw, 2.5rem); /* Padding fluido */
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Soporte para Safari */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color var(--transition-speed) ease;
+}
+
+.chapter h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: var(--highlight-glow);
+  margin-bottom: 1rem;
+  transition: color var(--transition-speed) ease;
+}
+
+.chapter p, .chapter a, .chapter li {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  transition: color var(--transition-speed) ease;
+}
+
+.chapter a {
+  color: var(--highlight-glow);
+  text-decoration: none;
+  font-weight: bold;
+}
+.chapter a:hover {
+  text-decoration: underline;
+}
+
+.chapter img {
+  cursor: zoom-in;
+}
+
+.chapter img,
+.chapter video,
+.chapter audio {
+  display: block;
+  max-width: 100%;
+  margin: 2rem auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px var(--media-shadow);
+  transition: box-shadow var(--transition-speed) ease;
+}
+
+/* Contenedor para iframes responsivos */
+.responsive-iframe-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* Proporción 16:9 */
+  margin: 2rem auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px var(--media-shadow);
+}
+.responsive-iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+nav.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: var(--header-footer-bg);
+  transition: background-color var(--transition-speed) ease;
+}
+
+nav.navigation button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease, transform 150ms ease;
+}
+
+nav.navigation button:hover, nav.navigation button:focus-visible {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+nav.navigation button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+  transform: none;
+  filter: none;
+}
+
+.highlight {
+  color: var(--highlight-text);
+  font-weight: bold;
+  position: relative;
+  transition: color var(--transition-speed) ease;
+}
+
+.highlight::before {
+  content: '';
+  position: absolute;
+  inset: -0.3em;
+  background: radial-gradient(circle, var(--highlight-glow) 0%, transparent 70%);
+  filter: blur(5px);
+  animation: twinkle 3s infinite ease-in-out;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.3;
+  transition: background var(--transition-speed) ease;
+}
+[data-theme="light"] .highlight::before {
+  opacity: 0.5;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Modal de Zoom en Imagen */
+.zoom-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeIn 200ms ease forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.zoom-img {
+  max-width: 95vw;
+  max-height: 95vh;
+  object-fit: contain;
+  touch-action: none; /* Previene acciones táctiles del navegador como scroll */
+  transform-origin: center center;
+  will-change: transform; /* Optimización de rendimiento */
+  opacity: 0;
+  transform: scale(0.95);
+  animation: zoomIn 200ms ease 100ms forwards;
+}
+@keyframes zoomIn {
+  to { opacity: 1; transform: scale(1); }
+}
+
+.zoom-close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 0.5rem;
+}
+.zoom-close svg {
+  width: 36px;
+  height: 36px;
+  stroke: white;
+  filter: drop-shadow(0 0 5px black);
+}
+
+
+/* Estilos para el botón de cambio de tema */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--text-color);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+}
+.theme-toggle svg {
+  stroke: var(--text-color);
+  transition: stroke var(--transition-speed) ease;
+}
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+
+[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+[data-theme="light"] .theme-toggle .icon-moon { display: none; }
