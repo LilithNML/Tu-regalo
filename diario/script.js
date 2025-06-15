@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Con todo mi amor,</p>
     <p>Tu <span class="highlight">Luna</span>.</p>
 </div>
-        <img src="" alt="">
+        <img src="diario/recursos/codificado_1.jpg" alt="Codificación 01">
       `
     },
     {
