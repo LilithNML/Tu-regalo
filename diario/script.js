@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Con todo mi amor,</p>
     <p>Tu <span class="highlight">Luna</span>.</p>
 </div>
-        <img src="images/codificado_1.webp" alt="Codificación 01">
+        <img src="images/codificado_1.webp" alt="Imagen a descifrar 1">
       `
     },
     {
