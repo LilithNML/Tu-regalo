@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Tu <span class="highlight">Luna</span>.</p>
 </div>
         <img src="images/codificado_1.webp" alt="Imagen a descifrar">
+        <a href="https://lilithnml.github.io/traductor/">Traductor</a>
       `
     },
     {
