@@ -382,7 +382,8 @@ tu hijo peludo, Samuel.`,
   link: "https://www.rosify.org/rose/o4ouarm87"
   },
   "roma": {
-  imagen: "assets/unlocked_content/images/qr_new.png"
+  imagen: "assets/unlocked_content/images/qr_new.png",
+    link: "https://hugs.company/hug/P2Zyb209TGlsaXRoJnRvPUhhemllbCZtc2d0PVRlK2FtbyZtc2djPUFtb3IrbSVDMyVBRG8lMkMrbm8rc2FiZXMrY3UlQzMlQTFudG8rYWdyYWRlemNvK3RlbmVydGUuK0ErdmVjZXMrbWUrcXVlZG8rbWlyJUMzJUExbmRvdGUrZW4rc2lsZW5jaW8reStzb2xvK3B1ZWRvK3BlbnNhcitlbitsbythZm9ydHVuYWRhK3F1ZStzb3krcG9yK3RlbmVyK2ErYWxndWllbit0YW4rbWFyYXZpbGxvc28rY29tbyt0JUMzJUJBLitFcmVzK21pK3BheiUyQyttaStyaXNhK2Zhdm9yaXRhJTJDK21pK2FicmF6byttJUMzJUExcytzZWd1cm8uK0dyYWNpYXMrcG9yK2V4aXN0aXIlMkMrcG9yK2N1aWRhcm1lJTJDK3BvcithbWFybWUrdGFuK2Jvbml0by4rTm8raW1wb3J0YStsbytxdWUrcGFzZSUyQytzaWVtcHJlK3ZveSthK2VsZWdpcnRlJTJDK3VuYSt5K21pbCt2ZWNlcy4rVGUrYW1vK2Nvbit0b2RvK21pK2NvcmF6JUMzJUIzbi4rJUYwJTlGJTkyJThDJUYwJTlGJTkyJUFCJUYwJTlGJTkyJTk2JmRhcms9eQ=="
   },
   "increible": {
     descarga: {
