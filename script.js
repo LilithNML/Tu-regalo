@@ -382,7 +382,7 @@ tu hijo peludo, Samuel.`,
   link: "https://www.rosify.org/rose/o4ouarm87"
   },
   "roma": {
-  imagen: "assets/unlocked_content/images/qr_code.png"
+  imagen: "assets/unlocked_content/images/qr_new.png"
   },
   "increible": {
     descarga: {
