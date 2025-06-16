@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Con todo mi amor,</p>
     <p>Tu <span class="highlight">Luna</span>.</p>
 </div>
-        <img src="images/codificado_1.webp" alt="Imagen a descifrar">
+        <img src="images/secreto_01.webp" alt="Imagen a descifrar">
         <a href="https://lilithnml.github.io/traductor/">Traductor</a>
       `
     },
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Siempre tuya,</p>
     <p>Tu Princesa.</p>
 </div>
-        <img src="images/codigo_01.jpg" alt="Imagen a descifrar 1">
+        <img src="images/secreto_02.webp" alt="Imagen a descifrar 1">
       `
     },
     {
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Con el corazón lleno de ti,</p>
     <p>Tu <span class="highlight">Lilith Noemi Mendoza Luna</span>.</p>
 </div>
-        <img src="images/codigo_02.jpg" alt="Imagen a descifrar 2">
+        <img src="images/secreto_03.webp" alt="Imagen a descifrar 2">
       `
     },
     {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Esperando el día,</p>
     <p>Tu <span class="highlight">Raiden</span>.</p>
 </div>
-        <img src="images/codigo_03.jpg" alt="Imagen a descifrar 3">
+        <img src="images/secreto_04.webp" alt="Imagen a descifrar 3">
       `
     },
     {
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Siempre tuya, y pensando en nuestro mañana,</p>
     <p>Tu Luna.</p>
 </div>
-        <img src="images/codigo_04.jpg" alt="Imagen a descifrar 4">
+        <img src="images/secreto_05.webp" alt="Imagen a descifrar 4">
       `
     },
     {
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Siempre tuya, en cada pensamiento,</p>
     <p>Tu Princesa.</p>
 </div>
-        <img src="images/codigo_05.jpg" alt="Imagen a descifrar 5">
+        <img src="images/secreto_06.webp" alt="Imagen a descifrar 5">
       `
     },
     {
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Siempre tuya, con el corazón en la mano,</p>
     <p>Tu Lilith Noemi Mendoza Luna.</p>
 </div>
-        <img src="images/codigo_06.jpg" alt="Imagen a descifrar 6">
+        <img src="images/secreto_07.webp" alt="Imagen a descifrar 6">
       `
     },
     {
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Con el corazón lleno de ti,</p>
     <p>Tu Princesa.</p>
 </div>
-        <img src="images/codigo_07.jpg" alt="Imagen a descifrar 7">
+        <img src="images/secreto_08.webp" alt="Imagen a descifrar 7">
       `
     },
     {
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Siempre tuya, y con el corazón en cada palabra,</p>
     <p>Tu Luna.</p>
 </div>
-        <img src="images/codigo_08.jpg" alt="Imagen a descifrar 8">
+        <img src="images/secreto_09.webp" alt="Imagen a descifrar 8">
       `
     },
     {
