@@ -255,8 +255,12 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Y sí, a veces, cuando algo no me parece, solo te pongo <span class="highlight">...</span>, y tú, con esa intuición tan tuya, sabes exactamente lo que quiero decir. Es una comunicación que va más allá de las palabras, una conexión de almas que solo nosotros entendemos. Pienso en todas las veces que te he dicho que me gustas mucho, que estoy completamente enamorada de ti. No hay duda en mi corazón, mi amor, que eres la persona con la que quiero pasar el resto de mi vida. Eres mi refugio, mi alegría, la persona que me hace sentir más viva que nunca. Cada día a tu lado, aunque sea a distancia, me hace sentir que soy la mujer mas feliz del mundo.</p>
     <p>Siempre tuya, y con el corazón en cada palabra,</p>
     <p>Tu Luna.</p>
+
+    <p>Gracias por leer todo lo que siento por ti. Te amo.</p>
+    <p>Código secreto: TEAMO3000000</p>
 </div>
         <img src="" alt="">
+        <a href="https://lilithnml.github.io/te_amo/">Página principal</a>
       `
     },
   ];
