@@ -1,0 +1,198 @@
+:root {
+    --primary-text-color: #202124;
+    --secondary-text-color: #5f6368;
+    --border-color: #dadce0;
+    --hover-background-color: #f8f9fa;
+    --copied-background-color: #e6ffe6; /* Un verde muy suave */
+    --box-shadow-color: rgba(60, 64, 67, 0.08);
+    --copy-message-bg: #323232;
+    --copy-message-text: #ffffff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    color: var(--primary-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px var(--box-shadow-color), 0 1px 2px rgba(60, 64, 67, 0.12);
+    padding: 20px;
+    max-width: 900px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-text-color);
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.table-container {
+    overflow-x: auto; /* Permite el scroll horizontal en tablas grandes si es necesario */
+}
+
+table {
+    width: 100%;
+    border-collapse: separate; /* Para border-spacing */
+    border-spacing: 0 8px; /* Espacio entre filas */
+    margin-top: -8px; /* Compensa el espacio superior */
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: none; /* Quitamos los bordes individuales de las celdas */
+    font-weight: 300;
+}
+
+th {
+    background-color: #ffffff;
+    color: var(--secondary-text-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    position: sticky; /* Encabezado pegajoso */
+    top: 0;
+    z-index: 1;
+}
+
+tbody tr {
+    background-color: #ffffff;
+    border-radius: 8px; /* Bordes suaves para cada fila */
+    transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+tbody tr:hover {
+    box-shadow: 0 2px 6px var(--box-shadow-color), 0 2px 4px rgba(60, 64, 67, 0.12);
+    background-color: var(--hover-background-color);
+}
+
+tbody tr.copied {
+    background-color: var(--copied-background-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.04), 0 1px 1px rgba(60, 64, 67, 0.06);
+    color: var(--secondary-text-color);
+}
+
+tbody tr.copied:hover {
+    background-color: var(--copied-background-color); /* Mantiene el color al hacer hover si ya está copiado */
+    box-shadow: 0 2px 6px var(--box-shadow-color), 0 2px 4px rgba(60, 64, 67, 0.12);
+}
+
+
+/* Bordes suaves y sombreado para las celdas individuales si se prefieren, aunque el efecto en la fila es más moderno */
+td {
+    border-bottom: 1px solid var(--border-color); /* Borde sutil entre filas dentro del cuerpo */
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+td:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+td:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Mensaje de Copiado */
+.copy-message {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--copy-message-bg);
+    color: var(--copy-message-text);
+    padding: 10px 20px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1000;
+    font-size: 0.9em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.copy-message.show {
+    opacity: 1;
+}
+
+/* Optimización móvil */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    table, tbody, tr, td {
+        display: block; /* Hace que cada celda sea un bloque */
+        width: 100%;
+    }
+
+    thead {
+        display: none; /* Oculta el encabezado original en pantallas pequeñas */
+    }
+
+    tbody tr {
+        margin-bottom: 15px;
+        box-shadow: 0 1px 3px var(--box-shadow-color), 0 1px 2px rgba(60, 64, 67, 0.12);
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%; /* Espacio para la etiqueta en pantallas pequeñas */
+        text-align: right; /* Alinea el contenido a la derecha */
+        font-size: 0.95em;
+    }
+
+    td:before {
+        content: attr(data-label); /* Usa el atributo data-label para mostrar la etiqueta */
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: 500;
+        color: var(--secondary-text-color);
+    }
+
+    td:first-child {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    td:last-child {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-bottom: none; /* Eliminar el último borde */
+    }
+
+    tbody tr.copied td:last-child {
+        border-bottom: none; /* Asegura que no haya borde inferior extra */
+    }
+}
