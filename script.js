@@ -560,6 +560,13 @@ tu hijo peludo, Samuel.`,
   "h+l": {
   videoEmbed: "https://www.youtube.com/embed/zotf4Ubka4Q"
   },
+  "samuelchimuelo": {
+    descarga: {
+      url: "assets/unlocked_content/images/te_amo_17.jpg.enc",
+      nombre: "te_amo_17.jpg.enc",
+      textoEnlace: "Descargar cosplay"
+    }
+  },
   
 };
 
