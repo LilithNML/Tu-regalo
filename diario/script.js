@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Tu Princesa.</p>
 </div>
         <img src="images/secreto_02.webp" alt="Imagen a descifrar 1">
+        <a href="https://lilithnml.github.io/traductor/">Traductor</a>
       `
     },
     {
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Tu <span class="highlight">Lilith Noemi Mendoza Luna</span>.</p>
 </div>
         <img src="images/secreto_03.webp" alt="Imagen a descifrar 2">
+        <a href="https://lilithnml.github.io/traductor/">Traductor</a>
       `
     },
     {
@@ -54,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Tu <span class="highlight">Raiden</span>.</p>
 </div>
         <img src="images/secreto_04.webp" alt="Imagen a descifrar 3">
+        <a href="https://lilithnml.github.io/traductor/">Traductor</a>
       `
     },
     {
@@ -67,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Tu Luna.</p>
 </div>
         <img src="images/secreto_05.webp" alt="Imagen a descifrar 4">
+        <a href="https://lilithnml.github.io/traductor/">Traductor</a>
       `
     },
     {
@@ -80,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Tu Princesa.</p>
 </div>
         <img src="images/secreto_06.webp" alt="Imagen a descifrar 5">
+        <a href="https://lilithnml.github.io/traductor/">Traductor</a>
       `
     },
     {
@@ -93,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Tu Lilith Noemi Mendoza Luna.</p>
 </div>
         <img src="images/secreto_07.webp" alt="Imagen a descifrar 6">
+        <a href="https://lilithnml.github.io/traductor/">Traductor</a>
       `
     },
     {
@@ -106,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Tu Princesa.</p>
 </div>
         <img src="images/secreto_08.webp" alt="Imagen a descifrar 7">
+        <a href="https://lilithnml.github.io/traductor/">Traductor</a>
       `
     },
     {
@@ -119,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Tu Luna.</p>
 </div>
         <img src="images/secreto_09.webp" alt="Imagen a descifrar 8">
+        <a href="https://lilithnml.github.io/traductor/">Traductor</a>
       `
     },
     {
