@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contraseñas</title>
+    <title>Archivos y Contraseñas</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -47,13 +47,15 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            table-layout: fixed; /* Crucial para el control del ancho de las columnas */
         }
 
         th, td {
             padding: 12px 15px;
             text-align: left;
             border-bottom: 1px solid var(--google-border-color);
-            word-wrap: break-word; /* Ensures long passwords wrap */
+            word-wrap: break-word; /* Asegura que las palabras largas se rompan */
+            overflow-wrap: break-word; /* Soporte más amplio para romper palabras */
         }
 
         th {
@@ -68,17 +70,25 @@
             color: #202124;
         }
 
+        /* Definir anchos relativos de las columnas */
+        th:nth-child(1),
+        td:nth-child(1) {
+            width: 30%; /* La columna "Archivo" ocupa el 30% */
+        }
+
+        th:nth-child(2),
         td:nth-child(2) {
+            width: 70%; /* La columna "Contraseña" ocupa el 70% */
             cursor: pointer;
             position: relative;
-            user-select: none; /* Prevent text selection on tap */
+            user-select: none; /* Evita la selección de texto al tocar */
         }
 
         td:nth-child(2):active {
-            background-color: rgba(66, 133, 244, 0.1); /* Subtle tap feedback */
+            background-color: rgba(66, 133, 244, 0.1); /* Feedback sutil al tocar */
         }
 
-        /* Toast message for copy confirmation */
+        /* Mensaje "Toast" para confirmación de copiado */
         .toast {
             visibility: hidden;
             min-width: 250px;
@@ -102,7 +112,7 @@
             opacity: 1;
         }
 
-        /* Responsive adjustments */
+        /* Ajustes responsivos */
         @media (max-width: 600px) {
             body {
                 padding: 10px;
@@ -119,6 +129,17 @@
 
             th {
                 font-size: 1em;
+            }
+
+            /* En pantallas más pequeñas, ajustar los anchos de columna */
+            th:nth-child(1),
+            td:nth-child(1) {
+                width: 35%; /* Dar un poco más de espacio a la contraseña en móviles */
+            }
+
+            th:nth-child(2),
+            td:nth-child(2) {
+                width: 65%;
             }
         }
 
@@ -231,7 +252,7 @@
                 cell.addEventListener('click', () => {
                     const textToCopy = cell.textContent;
 
-                    // Use the modern Clipboard API
+                    // Usa la API moderna del portapapeles si está disponible
                     if (navigator.clipboard && navigator.clipboard.writeText) {
                         navigator.clipboard.writeText(textToCopy)
                             .then(() => {
@@ -239,11 +260,11 @@
                             })
                             .catch(err => {
                                 console.error('Error al copiar el texto:', err);
-                                // Fallback for older browsers or if Clipboard API fails
+                                // Fallback para navegadores antiguos o si la API falla
                                 fallbackCopyTextToClipboard(textToCopy);
                             });
                     } else {
-                        // Fallback for older browsers
+                        // Fallback para navegadores antiguos
                         fallbackCopyTextToClipboard(textToCopy);
                     }
                 });
@@ -252,7 +273,7 @@
             function fallbackCopyTextToClipboard(text) {
                 const textArea = document.createElement("textarea");
                 textArea.value = text;
-                // Avoid scrolling to bottom
+                // Evitar que la página se desplace al final
                 textArea.style.top = "0";
                 textArea.style.left = "0";
                 textArea.style.position = "fixed";
@@ -268,7 +289,7 @@
                         console.error('Fallback: Error al copiar el texto.');
                     }
                 } catch (err) {
-                    console.error('Fallback: Oops, unable to copy', err);
+                    console.error('Fallback: Oops, no se pudo copiar', err);
                 }
 
                 document.body.removeChild(textArea);
@@ -279,7 +300,7 @@
                 clearTimeout(toastTimeout);
                 toastTimeout = setTimeout(() => {
                     toastMessage.classList.remove('show');
-                }, 2000); // Hide after 2 seconds
+                }, 2000); // Ocultar después de 2 segundos
             }
         });
     </script>
