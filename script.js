@@ -408,7 +408,7 @@ tu hijo peludo, Samuel.`,
   "colette": {
     descarga: {
       url: "assets/unlocked_content/images/te_amo_01.jpg.enc",
-      nombre: "te_amo_er.jpg.enc",
+      nombre: "te_amo_01.jpg.enc",
       textoEnlace: "Descargar cosplay"
     }
   },
@@ -489,7 +489,7 @@ tu hijo peludo, Samuel.`,
   "suegra": {
     descarga: {
       url: "assets/unlocked_content/images/te_amo_07.jpg.enc",
-      nombre: "te_amo_0a.jpg.enc",
+      nombre: "te_amo_07.jpg.enc",
       textoEnlace: "Descargar cosplay"
     }
   },
@@ -552,7 +552,7 @@ tu hijo peludo, Samuel.`,
   "teamedesdeelprimerdiaqueteconoci": {
     descarga: {
       url: "assets/unlocked_content/images/te_amo_16.jpg.enc",
-      nombre: "te_amtest.jpg.enc",
+      nombre: "te_amo_16.jpg.enc",
       textoEnlace: "Descargar cosplay"
     }
   },
