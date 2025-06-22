@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regalos del Corazón</title>
+    <title>Regalos</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap');
 
@@ -606,7 +606,8 @@
     
     <button class="settings-btn" onclick="openSettings()">
         <svg viewBox="0 0 24 24">
-            <path d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.22,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.22,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.68 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z"/>
+            <path d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.22,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.22,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 
+            10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.68 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z"/>
         </svg>
     </button>
 
@@ -638,8 +639,7 @@
                 <button class="close" onclick="closeGiftModal()">×</button>
             </div>
             <div class="modal-body" id="giftContent">
-                <!-- Contenido del regalo se carga aquí -->
-            </div>
+                </div>
         </div>
     </div>
 
@@ -653,8 +653,7 @@
                 <div class="settings-section">
                     <h3>Temas de Color</h3>
                     <div class="theme-grid" id="themeGrid">
-                        <!-- Temas se cargan dinámicamente -->
-                    </div>
+                        </div>
                 </div>
 
                 <div class="settings-section">
@@ -688,8 +687,7 @@
                 <div class="settings-section">
                     <h3>Códigos Desbloqueados</h3>
                     <div class="unlocked-codes" id="unlockedCodesList">
-                        <!-- Lista de códigos desbloqueados -->
-                    </div>
+                        </div>
                 </div>
 
                 <div class="settings-section">
@@ -725,83 +723,83 @@
         const themes = {
             'rosado-tierno': {
                 name: 'Rosado Tierno',
-                colors: ['#F48FB1', '#F06292', '#FFF0F5', '#2D2D2D']
+                colors: ['#F48FB1', '#F06292', '#FFF0F5', '#2D2D2D', '#E91E63']
             },
             'cielo-pastel': {
                 name: 'Cielo Pastel',
-                colors: ['#81D4FA', '#4FC3F7', '#E3F2FD', '#1C1C1C']
+                colors: ['#81D4FA', '#4FC3F7', '#E3F2FD', '#1C1C1C', '#03A9F4']
             },
             'lavanda-romantica': {
                 name: 'Lavanda Romántica',
-                colors: ['#CE93D8', '#BA68C8', '#F3E5F5', '#2E2E2E']
+                colors: ['#CE93D8', '#BA68C8', '#F3E5F5', '#2E2E2E', '#9C27B0']
             },
             'miel-dorada': {
                 name: 'Miel Dorada',
-                colors: ['#FBC02D', '#FDD835', '#FFF8E1', '#3E3E3E']
+                colors: ['#FBC02D', '#FDD835', '#FFF8E1', '#3E3E3E', '#FFC107']
             },
             'bosque-encantado': {
                 name: 'Bosque Encantado',
-                colors: ['#81C784', '#66BB6A', '#E8F5E9', '#263238']
+                colors: ['#81C784', '#66BB6A', '#E8F5E9', '#263238', '#4CAF50']
             },
             'atardecer-calido': {
                 name: 'Atardecer Cálido',
-                colors: ['#FF8A65', '#FF7043', '#FFF3E0', '#3B3B3B']
+                colors: ['#FF8A65', '#FF7043', '#FFF3E0', '#3B3B3B', '#FF5722']
             },
             'galaxia-violeta': {
                 name: 'Galaxia Violeta',
-                colors: ['#7E57C2', '#9575CD', '#1E1B3A', '#ECECEC']
+                colors: ['#7E57C2', '#9575CD', '#1E1B3A', '#ECECEC', '#673AB7']
             },
             'rojo-cereza': {
                 name: 'Rojo Cereza',
-                colors: ['#E53935', '#D32F2F', '#FFEBEE', '#2E2E2E']
+                colors: ['#E53935', '#D32F2F', '#FFEBEE', '#2E2E2E', '#F44336']
             },
             'coral-suave': {
                 name: 'Coral Suave',
-                colors: ['#FFAB91', '#FF8A65', '#FFF3E0', '#2C2C2C']
+                colors: ['#FFAB91', '#FF8A65', '#FFF3E0', '#2C2C2C', '#FF7043']
             },
             'aqua-marina': {
                 name: 'Aqua Marina',
-                colors: ['#4DB6AC', '#26A69A', '#E0F2F1', '#1E1E1E']
+                colors: ['#4DB6AC', '#26A69A', '#E0F2F1', '#1E1E1E', '#009688']
             },
             'gris-elegante': {
                 name: 'Gris Elegante',
-                colors: ['#90A4AE', '#B0BEC5', '#ECEFF1', '#212121']
+                colors: ['#90A4AE', '#B0BEC5', '#ECEFF1', '#212121', '#78909C']
             },
             'rosa-vintage': {
                 name: 'Rosa Vintage',
-                colors: ['#F48FB1', '#F06292', '#FDEEF4', '#3A3A3A']
+                colors: ['#F48FB1', '#F06292', '#FDEEF4', '#3A3A3A', '#E91E63']
             },
             'azul-noche': {
                 name: 'Azul Noche',
-                colors: ['#3949AB', '#5C6BC0', '#121212', '#EEEEEE']
+                colors: ['#3949AB', '#5C6BC0', '#121212', '#EEEEEE', '#3F51B5']
             },
             'perla-oro': {
                 name: 'Perla y Oro',
-                colors: ['#F3E5AB', '#E6C87E', '#FFFDF5', '#343434']
+                colors: ['#F3E5AB', '#E6C87E', '#FFFDF5', '#343434', '#FFEB3B']
             },
             'morado-oscuro': {
                 name: 'Morado Oscuro',
-                colors: ['#512DA8', '#673AB7', '#311B92', '#F5F5F5']
+                colors: ['#512DA8', '#673AB7', '#311B92', '#F5F5F5', '#673AB7']
             },
             'nube-algodon': {
                 name: 'Nube de Algodón',
-                colors: ['#FFCDD2', '#F8BBD0', '#FFF5F7', '#292929']
+                colors: ['#FFCDD2', '#F8BBD0', '#FFF5F7', '#292929', '#E91E63']
             },
             'sandia-fresca': {
                 name: 'Sandía Fresca',
-                colors: ['#FF5252', '#FF8A80', '#FFEDEE', '#2A2A2A']
+                colors: ['#FF5252', '#FF8A80', '#FFEDEE', '#2A2A2A', '#F44336']
             },
             'te-verde': {
                 name: 'Té Verde',
-                colors: ['#AED581', '#9CCC65', '#F1F8E9', '#263238']
+                colors: ['#AED581', '#9CCC65', '#F1F8E9', '#263238', '#8BC34A']
             },
             'cobre-romantico': {
                 name: 'Cobre Romántico',
-                colors: ['#B85C38', '#D67D3E', '#FFF3E0', '#3E2723']
+                colors: ['#B85C38', '#D67D3E', '#FFF3E0', '#3E2723', '#BF360C']
             },
             'lila-cielo': {
                 name: 'Lila Cielo',
-                colors: ['#B39DDB', '#9575CD', '#F3E5F5', '#1A1A1A']
+                colors: ['#B39DDB', '#9575CD', '#F3E5F5', '#1A1A1A', '#7E57C2']
             }
         };
 
@@ -919,17 +917,28 @@
             initializeToggles();
             updateGiftCounter();
             updateUnlockedCodesList();
-            
+            applyConfig(); // Aplicar la configuración al inicio
+
             // Event listeners
             document.getElementById('codeInput').addEventListener('keypress', function(e) {
                 if (e.key === 'Enter') {
                     unlockGift();
                 }
             });
-
             document.getElementById('senderName').addEventListener('input', function(e) {
                 config.senderName = e.target.value || 'Mi amor';
                 saveConfig();
+                // Actualizar el contenido de los regalos con el nuevo nombre del remitente si ya fueron desbloqueados
+                for (const code of config.unlockedCodes) {
+                    if (gifts[code].type === 'text') {
+                        // Re-renderizar el contenido del regalo si es texto y está visible
+                        const giftContentElement = document.getElementById('giftContent');
+                        if (giftContentElement && giftContentElement.dataset.giftCode === code) {
+                            giftContentElement.innerHTML = generateGiftContent(gifts[code]);
+                            initializeGiftInteractions();
+                        }
+                    }
+                }
             });
 
             // Cerrar modales al hacer clic fuera
@@ -944,7 +953,7 @@
         function unlockGift() {
             const code = document.getElementById('codeInput').value.trim().toLowerCase();
             const errorMessage = document.getElementById('errorMessage');
-            
+
             if (!code) {
                 showError('Por favor ingresa un código');
                 return;
@@ -957,11 +966,9 @@
                     updateGiftCounter();
                     updateUnlockedCodesList();
                 }
-                
-                showGift(gifts[code]);
+                showGift(gifts[code], code); // Pasar el código para saber qué regalo se está mostrando
                 document.getElementById('codeInput').value = '';
                 hideError();
-                
                 if (config.soundEffects) {
                     playSuccessSound();
                 }
@@ -971,16 +978,15 @@
             }
         }
 
-        function showGift(gift) {
+        function showGift(gift, code) { // Añadir 'code' como parámetro
             const modal = document.getElementById('giftModal');
             const title = document.getElementById('giftTitle');
             const content = document.getElementById('giftContent');
-            
             title.textContent = gift.title;
+            content.dataset.giftCode = code; // Guardar el código en el dataset
             content.innerHTML = '<div class="loading"><div class="loading-spinner"></div><div class="loading-text">Desempaquetando el amor...</div></div>';
-            
             modal.style.display = 'block';
-            
+
             setTimeout(() => {
                 content.innerHTML = generateGiftContent(gift);
                 initializeGiftInteractions();
@@ -988,53 +994,23 @@
         }
 
         function generateGiftContent(gift) {
+            // Reemplazar ${config.senderName} en el contenido de texto antes de devolverlo
+            let contentText = gift.content;
+            if (gift.type === 'text') {
+                contentText = contentText.replace(/\${config.senderName}/g, config.senderName);
+            }
+
             switch (gift.type) {
                 case 'text':
-                    return `<div class="gift-content">
-                        <div class="gift-text typewriter">${gift.content.replace(/\n/g, '<br>')}</div>
-                    </div>`;
-                
+                    return `<div class="gift-content"> <div class="gift-text typewriter">${contentText.replace(/\n/g, '<br>')}</div> </div>`;
                 case 'image':
-                    return `<div class="gift-content">
-                        <img src="${gift.content}" alt="${gift.title}" class="gift-image" onclick="zoomImage(this)">
-                    </div>`;
-                
+                    return `<div class="gift-content"> <img src="${gift.content}" alt="${gift.title}" class="gift-image" onclick="zoomImage(this)"> </div>`;
                 case 'audio':
-                    return `<div class="gift-content">
-                        <div class="audio-player">
-                            <div class="audio-controls">
-                                <button class="play-btn" onclick="toggleAudio(this)">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
-                                    </svg>
-                                </button>
-                                <div class="audio-progress" onclick="setAudioProgress(event, this)">
-                                    <div class="audio-progress-bar"></div>
-                                </div>
-                                <span class="audio-time">0:00 / 0:00</span>
-                            </div>
-                            <audio src="${gift.content}" preload="metadata"></audio>
-                        </div>
-                    </div>`;
-                
+                    return `<div class="gift-content"> <div class="audio-player"> <div class="audio-controls"> <button class="play-btn" onclick="toggleAudio(this)"> <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"> <path d="M8,5.14V19.14L19,12.14L8,5.14Z" /> </svg> </button> <div class="audio-progress" onclick="setAudioProgress(event, this)"> <div class="audio-progress-bar"></div> </div> <span class="audio-time">0:00 / 0:00</span> </div> <audio src="${gift.content}" preload="metadata"></audio> </div> </div>`;
                 case 'video':
-                    return `<div class="gift-content">
-                        <div class="video-container">
-                            <video controls>
-                                <source src="${gift.content}" type="video/mp4">
-                                Tu navegador no soporta videos HTML5.
-                            </video>
-                        </div>
-                    </div>`;
-                
+                    return `<div class="gift-content"> <div class="video-container"> <video controls> <source src="${gift.content}" type="video/mp4"> Tu navegador no soporta videos HTML5. </video> </div> </div>`;
                 case 'download':
-                    return `<div class="gift-content">
-                        <p>Un regalo especial te espera para descargar:</p>
-                        <a href="${gift.content}" download="${gift.filename}" class="download-link">
-                            Descargar ${gift.title}
-                        </a>
-                    </div>`;
-                
+                    return `<div class="gift-content"> <p>Un regalo especial te espera para descargar:</p> <a href="${gift.content}" download="${gift.filename}" class="download-link"> Descargar ${gift.title} </a> </div>`;
                 default:
                     return '<div class="gift-content"><p>Tipo de regalo no reconocido</p></div>';
             }
@@ -1047,7 +1023,6 @@
                 const text = element.textContent;
                 element.textContent = '';
                 element.style.width = '0';
-                
                 setTimeout(() => {
                     element.style.width = '100%';
                     let i = 0;
@@ -1061,7 +1036,33 @@
                     }, 50);
                 }, 500);
             });
+
+            // Re-bind audio player events if any
+            const audioPlayers = document.querySelectorAll('.audio-player');
+            audioPlayers.forEach(player => {
+                const audio = player.querySelector('audio');
+                const playBtn = player.querySelector('.play-btn');
+                const progressBar = player.querySelector('.audio-progress-bar');
+                const timeSpan = player.querySelector('.audio-time');
+
+                if (audio && playBtn && progressBar && timeSpan) {
+                    audio.addEventListener('timeupdate', () => {
+                        const progress = (audio.currentTime / audio.duration) * 100;
+                        progressBar.style.width = `${progress}%`;
+                        timeSpan.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+                    });
+
+                    audio.addEventListener('ended', () => {
+                        playBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"> <path d="M14,19.14H18V5.14H14M6,19.14H10V5.14H6V19.14Z" /> </svg>'; // Pause icon
+                    });
+
+                    audio.addEventListener('loadedmetadata', () => {
+                        timeSpan.textContent = `0:00 / ${formatTime(audio.duration)}`;
+                    });
+                }
+            });
         }
+
 
         function showError(message) {
             const errorElement = document.getElementById('errorMessage');
@@ -1091,312 +1092,204 @@
             if (video) video.pause();
         }
 
+        // Gestión de modales
         function openSettings() {
             document.getElementById('settingsModal').style.display = 'block';
+            // Asegurarse de que los estados de los toggles se reflejen al abrir la configuración
+            updateToggleStates();
+            // Asegurarse de que el tema activo se refleje
+            updateThemeGridSelection();
         }
 
         function closeSettings() {
             document.getElementById('settingsModal').style.display = 'none';
         }
 
-        function initializeThemes() {
-            const themeGrid = document.getElementById('themeGrid');
-            
-            Object.entries(themes).forEach(([key, theme]) => {
-                const themeOption = document.createElement('div');
-                themeOption.className = 'theme-option';
-                themeOption.dataset.theme = key;
-                
-                if (key === config.currentTheme) {
-                    themeOption.classList.add('active');
-                }
-                
-                themeOption.innerHTML = `
-                    <div class="theme-preview">
-                        <div style="background-color: ${theme.colors[0]}"></div>
-                        <div style="background-color: ${theme.colors[1]}"></div>
-                        <div style="background-color: ${theme.colors[2]}"></div>
-                        <div style="background-color: ${theme.colors[3]}"></div>
-                    </div>
-                    <div>${theme.name}</div>
-                `;
-                
-                themeOption.addEventListener('click', () => applyTheme(key));
-                themeGrid.appendChild(themeOption);
-            });
-        }
-
-        function applyTheme(themeKey) {
-            const theme = themes[themeKey];
-            if (!theme) return;
-            
-            config.currentTheme = themeKey;
-            saveConfig();
-            
-            // Actualizar variables CSS
-            document.documentElement.style.setProperty('--primary-color', theme.colors[0]);
-            document.documentElement.style.setProperty('--secondary-color', theme.colors[1]);
-            document.documentElement.style.setProperty('--background-color', theme.colors[2]);
-            document.documentElement.style.setProperty('--text-color', theme.colors[3]);
-            document.documentElement.style.setProperty('--accent-color', theme.colors[0]);
-            document.documentElement.style.setProperty('--shadow-color', theme.colors[0] + '30');
-            
-            // Actualizar selección visual
-            document.querySelectorAll('.theme-option').forEach(option => {
-                option.classList.remove('active');
-            });
-            document.querySelector(`[data-theme="${themeKey}"]`).classList.add('active');
-            
-            // Actualizar partículas si están activas
-            if (config.particles) {
-                updateParticleColors();
-            }
-        }
-
-        function initializeToggles() {
-            const toggles = {
-                'animationsToggle': () => {
-                    config.animations = !config.animations;
-                    document.body.style.animationPlayState = config.animations ? 'running' : 'paused';
-                },
-                'particlesToggle': () => {
-                    config.particles = !config.particles;
-                    toggleParticles();
-                },
-                'musicToggle': () => {
-                    config.music = !config.music;
-                    toggleBackgroundMusic();
-                },
-                'soundEffectsToggle': () => {
-                    config.soundEffects = !config.soundEffects;
-                },
-                'intimateModeToggle': () => {
-                    config.intimateMode = !config.intimateMode;
-                    toggleIntimateMode();
-                }
-            };
-            
-            Object.entries(toggles).forEach(([id, callback]) => {
-                const toggle = document.getElementById(id);
-                toggle.addEventListener('click', () => {
-                    toggle.classList.toggle('active');
-                    callback();
-                    saveConfig();
-                });
-                
-                // Establecer estado inicial
-                const configKey = id.replace('Toggle', '').replace(/([A-Z])/g, letter => letter.toLowerCase());
-                if (config[configKey] || config[configKey.replace(/([A-Z])/g, '_$1').toLowerCase()]) {
-                    toggle.classList.add('active');
-                }
-            });
-        }
-
-        function initializeParticles() {
-            if (!config.particles) return;
-            
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = window.innerWidth < 768 ? 30 : 50;
-            
-            for (let i = 0; i < particleCount; i++) {
-                createParticle(particlesContainer);
-            }
-        }
-
-        function createParticle(container) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            
-            const size = Math.random() * 6 + 2;
-            const startX = Math.random() * window.innerWidth;
-            const animationDuration = Math.random() * 3 + 3;
-            const animationDelay = Math.random() * 2;
-            
-            particle.style.width = size + 'px';
-            particle.style.height = size + 'px';
-            particle.style.left = startX + 'px';
-            particle.style.animationDuration = animationDuration + 's';
-            particle.style.animationDelay = animationDelay + 's';
-            
-            container.appendChild(particle);
-            
-            // Remover partícula después de la animación
-            setTimeout(() => {
-                if (particle.parentNode) {
-                    particle.parentNode.removeChild(particle);
-                    if (config.particles) {
-                        createParticle(container);
-                    }
-                }
-            }, (animationDuration + animationDelay) * 1000);
-        }
-
-        function toggleParticles() {
-            const particlesContainer = document.getElementById('particles');
-            if (config.particles) {
-                initializeParticles();
-            } else {
-                particlesContainer.innerHTML = '';
-            }
-        }
-
-        function updateParticleColors() {
-            // Las partículas ya usan colores semi-transparentes que se adaptan
-        }
-
-        function toggleBackgroundMusic() {
-            const music = document.getElementById('backgroundMusic');
-            if (config.music) {
-                music.play().catch(e => console.log('No se pudo reproducir la música automáticamente'));
-            } else {
-                music.pause();
-            }
-        }
-
-        function toggleIntimateMode() {
-            if (config.intimateMode) {
-                document.body.style.filter = 'brightness(0.7)';
-                document.body.style.transition = 'filter 0.5s ease';
-                if (config.music) {
-                    document.getElementById('backgroundMusic').volume = 0.3;
-                }
-            } else {
-                document.body.style.filter = 'brightness(1)';
-                if (config.music) {
-                    document.getElementById('backgroundMusic').volume = 1;
-                }
-            }
-        }
-
+        // Contador de regalos
         function updateGiftCounter() {
-            const counter = document.getElementById('giftCounter');
             const unlockedCount = config.unlockedCodes.length;
-            counter.textContent = `Has desbloqueado ${unlockedCount} de ${config.totalGifts} regalos`;
+            document.getElementById('giftCounter').textContent = `Has desbloqueado ${unlockedCount} de ${config.totalGifts} regalos`;
         }
 
+        // Lista de códigos desbloqueados
         function updateUnlockedCodesList() {
             const list = document.getElementById('unlockedCodesList');
+            list.innerHTML = ''; // Limpiar lista
             if (config.unlockedCodes.length === 0) {
-                list.innerHTML = '<p style="text-align: center; color: #999;">Aún no has desbloqueado ningún regalo</p>';
-            } else {
-                list.innerHTML = config.unlockedCodes.map(code => 
-                    `<span class="unlocked-code">${code}</span>`
-                ).join('');
+                list.innerHTML = '<p style="text-align: center; color: var(--text-color);">Aún no has desbloqueado ningún regalo. ¡Inténtalo!</p>';
+                return;
             }
+            config.unlockedCodes.forEach(code => {
+                const span = document.createElement('span');
+                span.classList.add('unlocked-code');
+                span.textContent = gifts[code] ? gifts[code].title : code; // Mostrar el título si existe, sino el código
+                list.appendChild(span);
+            });
         }
 
-        function resetProgress() {
-            if (confirm('¿Estás seguro de que quieres reiniciar todo el progreso? Esta acción no se puede deshacer.')) {
-                config.unlockedCodes = [];
-                config.currentTheme = 'rosado-tierno';
-                config.senderName = 'Mi amor';
-                config.animations = true;
-                config.particles = true;
-                config.music = false;
-                config.soundEffects = true;
-                config.intimateMode = false;
-                
-                saveConfig();
-                location.reload();
+        // Funciones de audio y video
+        let audioContext;
+        let oscillator;
+        let gainNode;
+
+        function playSuccessSound() {
+            if (!audioContext) {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
             }
+
+            if (oscillator) {
+                oscillator.stop(); // Stop any previous sound
+            }
+
+            oscillator = audioContext.createOscillator();
+            gainNode = audioContext.createGain();
+
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+
+            oscillator.type = 'triangle'; // Un sonido más suave
+            oscillator.frequency.setValueAtTime(523.25, audioContext.currentTime); // C5
+            oscillator.frequency.setValueAtTime(659.25, audioContext.currentTime + 0.1); // E5
+            oscillator.frequency.setValueAtTime(783.99, audioContext.currentTime + 0.2); // G5
+            
+            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+            
+            oscillator.start();
+            oscillator.stop(audioContext.currentTime + 0.5);
         }
 
-        // Funciones de audio/video
         function toggleAudio(button) {
             const audio = button.closest('.audio-player').querySelector('audio');
-            const svg = button.querySelector('svg path');
-            
             if (audio.paused) {
                 audio.play();
-                svg.setAttribute('d', 'M14,19H18V5H14M6,19H10V5H6V19Z'); // Pausa
+                button.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"> <path d="M14,19.14H18V5.14H14M6,19.14H10V5.14H6V19.14Z" /> </svg>'; // Pause icon
             } else {
                 audio.pause();
-                svg.setAttribute('d', 'M8,5.14V19.14L19,12.14L8,5.14Z'); // Play
+                button.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"> <path d="M8,5.14V19.14L19,12.14L8,5.14Z" /> </svg>'; // Play icon
             }
-            
-            audio.addEventListener('timeupdate', () => updateAudioProgress(audio));
-            audio.addEventListener('loadedmetadata', () => updateAudioTime(audio));
-        }
-
-        function updateAudioProgress(audio) {
-            const progressBar = audio.closest('.audio-player').querySelector('.audio-progress-bar');
-            const progress = (audio.currentTime / audio.duration) * 100;
-            progressBar.style.width = progress + '%';
-            updateAudioTime(audio);
-        }
-
-        function updateAudioTime(audio) {
-            const timeDisplay = audio.closest('.audio-player').querySelector('.audio-time');
-            const current = formatTime(audio.currentTime);
-            const duration = formatTime(audio.duration);
-            timeDisplay.textContent = `${current} / ${duration}`;
         }
 
         function setAudioProgress(event, progressContainer) {
             const audio = progressContainer.closest('.audio-player').querySelector('audio');
             const rect = progressContainer.getBoundingClientRect();
-            const percent = (event.clientX - rect.left) / rect.width;
-            audio.currentTime = percent * audio.duration;
+            const x = event.clientX - rect.left;
+            const width = rect.width;
+            const percentage = x / width;
+            audio.currentTime = audio.duration * percentage;
         }
 
         function formatTime(seconds) {
-            if (isNaN(seconds)) return '0:00';
-            const mins = Math.floor(seconds / 60);
-            const secs = Math.floor(seconds % 60);
-            return `${mins}:${secs.toString().padStart(2, '0')}`;
+            const min = Math.floor(seconds / 60);
+            const sec = Math.floor(seconds % 60);
+            return `${min}:${sec < 10 ? '0' : ''}${sec}`;
         }
 
+        // Zoom de imagen
         function zoomImage(img) {
-            // Implementar zoom de imagen
-            const overlay = document.createElement('div');
-            overlay.style.cssText = `
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.9);
-                z-index: 3000;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: zoom-out;
-            `;
-            
-            const zoomedImg = img.cloneNode();
-            zoomedImg.style.cssText = `
-                max-width: 90%;
-                max-height: 90%;
-                object-fit: contain;
-                border-radius: 10px;
-            `;
-            
-            overlay.appendChild(zoomedImg);
-            document.body.appendChild(overlay);
-            
-            overlay.addEventListener('click', () => {
-                document.body.removeChild(overlay);
-            });
+            // Implementación de zoom (opcional, si el usuario la solicita)
+            // Por ahora, solo simula el efecto hover con CSS
         }
 
-        function playSuccessSound() {
-            // Crear un sonido de éxito simple
-            const context = new (window.AudioContext || window.webkitAudioContext)();
-            const oscillator = context.createOscillator();
-            const gainNode = context.createGain();
-            
-            oscillator.connect(gainNode);
-            gainNode.connect(context.destination);
-            
-            oscillator.frequency.setValueAtTime(523.25, context.currentTime); // C5
-            oscillator.frequency.setValueAtTime(659.25, context.currentTime + 0.1); // E5
-            oscillator.frequency.setValueAtTime(783.99, context.currentTime + 0.2); // G5
-            
-            gainNode.gain.setValueAtTime(0.3, context.currentTime);
-            gainNode.gain.exponentialRampToValueAtTime(0.01, context.currentTime + 0.5);
-            
-            oscillator.start();
-            oscillator.stop(context.currentTime + 0.5);
+        // Partículas de fondo
+        function initializeParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!config.particles) {
+                particlesContainer.style.display = 'none';
+                return;
+            }
+            particlesContainer.style.display = 'block';
+            for (let i = 0; i < 30; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.width = Math.random() * 5 + 5 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = Math.random() * 5 + 5 + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        function toggleParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (config.particles) {
+                particlesContainer.style.display = 'block';
+                // Remove existing particles and re-initialize to ensure proper rendering on toggle
+                particlesContainer.innerHTML = ''; 
+                initializeParticles();
+            } else {
+                particlesContainer.style.display = 'none';
+            }
+        }
+
+        // Temas de color
+        function initializeThemes() {
+            const themeGrid = document.getElementById('themeGrid');
+            themeGrid.innerHTML = ''; // Limpiar cualquier contenido previo
+
+            for (const key in themes) {
+                if (themes.hasOwnProperty(key)) {
+                    const theme = themes[key];
+                    const themeOption = document.createElement('div');
+                    themeOption.classList.add('theme-option');
+                    themeOption.dataset.themeKey = key;
+                    themeOption.onclick = () => selectTheme(key);
+
+                    const themePreview = document.createElement('div');
+                    themePreview.classList.add('theme-preview');
+
+                    // Asignar colores a las previsualizaciones
+                    const colors = theme.colors;
+                    for (let i = 0; i < 4; i++) { // Using 4 colors for preview (primary, secondary, background, accent)
+                        const colorDiv = document.createElement('div');
+                        colorDiv.style.backgroundColor = colors[i];
+                        themePreview.appendChild(colorDiv);
+                    }
+                    
+                    const themeName = document.createElement('span');
+                    themeName.textContent = theme.name;
+
+                    themeOption.appendChild(themePreview);
+                    themeOption.appendChild(themeName);
+                    themeGrid.appendChild(themeOption);
+                }
+            }
+            updateThemeGridSelection(); // Asegurarse de que el tema activo esté seleccionado al inicializar
+        }
+
+        function selectTheme(themeKey) {
+            config.currentTheme = themeKey;
+            saveConfig();
+            applyTheme(themeKey);
+            updateThemeGridSelection();
+        }
+
+        function applyTheme(themeKey) {
+            const selectedTheme = themes[themeKey];
+            if (!selectedTheme) {
+                console.error('Tema no encontrado:', themeKey);
+                return;
+            }
+            const root = document.documentElement;
+            root.style.setProperty('--primary-color', selectedTheme.colors[0]);
+            root.style.setProperty('--secondary-color', selectedTheme.colors[1]);
+            root.style.setProperty('--background-color', selectedTheme.colors[2]);
+            root.style.setProperty('--text-color', selectedTheme.colors[3]);
+            root.style.setProperty('--accent-color', selectedTheme.colors[4] || selectedTheme.colors[0]); // Fallback to primary if accent not defined
+            root.style.setProperty('--theme-name', `"${selectedTheme.name}"`);
+        }
+
+        function updateThemeGridSelection() {
+            const themeOptions = document.querySelectorAll('.theme-option');
+            themeOptions.forEach(option => {
+                if (option.dataset.themeKey === config.currentTheme) {
+                    option.classList.add('active');
+                } else {
+                    option.classList.remove('active');
+                }
+            });
         }
 
         // Gestión de configuración
@@ -1414,16 +1307,117 @@
                 // Cargar de memoria si existe
                 if (window.savedConfig) {
                     const saved = JSON.parse(window.savedConfig);
-                    Object.assign(config, saved);
+                    // Sobreescribir solo las propiedades existentes para evitar errores con nuevas propiedades
+                    Object.keys(saved).forEach(key => {
+                        if (config.hasOwnProperty(key)) {
+                            config[key] = saved[key];
+                        }
+                    });
                 }
             } catch (e) {
                 console.log('No se pudo cargar la configuración');
             }
             
-            // Aplicar configuración cargada
+            // Aplicar configuración cargada (esto se moverá a applyConfig())
+            // applyTheme(config.currentTheme);
+            // document.getElementById('senderName').value = config.senderName;
+        }
+
+        function applyConfig() {
+            // Aplicar tema
             applyTheme(config.currentTheme);
+            
+            // Aplicar nombre del remitente
             document.getElementById('senderName').value = config.senderName;
+
+            // Aplicar estado de los toggles
+            updateToggleStates();
+
+            // Aplicar animaciones (ej. deshabilitar/habilitar animaciones CSS si aplica)
+            // Esto podría ser más complejo dependiendo de las animaciones.
+            // Para simplificar, podemos añadir/quitar una clase al body o elementos principales
+            if (config.animations) {
+                document.body.classList.remove('no-animations');
+            } else {
+                document.body.classList.add('no-animations');
+            }
+
+            // Aplicar partículas de fondo
+            toggleParticles(); // Esta función ya controla la visibilidad y re-creación
+
+            // Aplicar música de fondo
+            const bgMusic = document.getElementById('backgroundMusic');
+            if (config.music) {
+                bgMusic.play().catch(e => console.log("Error al reproducir música:", e));
+            } else {
+                bgMusic.pause();
+                bgMusic.currentTime = 0; // Resetear la música al pausar
+            }
+
+            // Los efectos de sonido se manejan directamente en playSuccessSound()
+            // El modo íntimo no tiene una implementación directa aquí, pero se podría añadir lógica
+        }
+
+        function initializeToggles() {
+            const toggles = [
+                { id: 'animationsToggle', prop: 'animations' },
+                { id: 'particlesToggle', prop: 'particles' },
+                { id: 'musicToggle', prop: 'music' },
+                { id: 'soundEffectsToggle', prop: 'soundEffects' },
+                { id: 'intimateModeToggle', prop: 'intimateMode' }
+            ];
+
+            toggles.forEach(toggleInfo => {
+                const element = document.getElementById(toggleInfo.id);
+                if (element) {
+                    element.addEventListener('click', () => {
+                        config[toggleInfo.prop] = !config[toggleInfo.prop]; // Invertir el estado
+                        saveConfig();
+                        applyConfig(); // Aplicar todos los cambios de configuración
+                    });
+                }
+            });
+            updateToggleStates(); // Asegurarse de que los estados iniciales se muestren correctamente
+        }
+
+        function updateToggleStates() {
+            const toggles = [
+                { id: 'animationsToggle', prop: 'animations' },
+                { id: 'particlesToggle', prop: 'particles' },
+                { id: 'musicToggle', prop: 'music' },
+                { id: 'soundEffectsToggle', prop: 'soundEffects' },
+                { id: 'intimateModeToggle', prop: 'intimateMode' }
+            ];
+
+            toggles.forEach(toggleInfo => {
+                const element = document.getElementById(toggleInfo.id);
+                if (element) {
+                    if (config[toggleInfo.prop]) {
+                        element.classList.add('active');
+                    } else {
+                        element.classList.remove('active');
+                    }
+                }
+            });
+        }
+
+        function resetProgress() {
+            if (confirm('¿Estás seguro de que quieres reiniciar todo el progreso y la configuración? Esto no se puede deshacer.')) {
+                config.unlockedCodes = [];
+                config.animations = true;
+                config.particles = true;
+                config.music = false;
+                config.soundEffects = true;
+                config.intimateMode = false;
+                config.senderName = 'Mi amor';
+                config.currentTheme = 'rosado-tierno';
+                saveConfig();
+                applyConfig();
+                updateGiftCounter();
+                updateUnlockedCodesList();
+                alert('¡Progreso y configuración reiniciados!');
+            }
         }
     </script>
 </body>
-      </html>
+</html>
