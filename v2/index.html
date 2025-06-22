@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regalos del Corazón</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+        :root {
+            --primary-color: #F48FB1;
+            --secondary-color: #F06292;
+            --background-color: #FFF0F5;
+            --text-color: #2D2D2D;
+            --accent-color: #E91E63;
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --shadow-color: rgba(244, 143, 177, 0.3);
+            --theme-name: "Rosado Tierno";
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            min-height: 100vh;
+            color: var(--text-color);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+            50% { transform: translateY(-100px) rotate(180deg); opacity: 1; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+        }
+
+        .gift-counter {
+            background: var(--card-bg);
+            padding: 15px 25px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 20px 0;
+            box-shadow: 0 8px 32px var(--shadow-color);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .main-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px var(--shadow-color);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 1s ease-out;
+            margin-bottom: 30px;
+        }
+
+        .code-input-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .code-input-container h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .input-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .code-input {
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.8);
+            color: var(--text-color);
+            min-width: 200px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .code-input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 20px rgba(233, 30, 99, 0.3);
+            transform: scale(1.02);
+        }
+
+        .unlock-btn {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            min-width: 150px;
+        }
+
+        .unlock-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(233, 30, 99, 0.4);
+        }
+
+        .unlock-btn:active {
+            transform: translateY(0);
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 1rem;
+            margin-top: 15px;
+            animation: shake 0.5s ease-in-out;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .error-message.show {
+            opacity: 1;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        .settings-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--card-bg);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 8px 32px var(--shadow-color);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .settings-btn:hover {
+            transform: rotate(90deg);
+        }
+
+        .settings-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--text-color);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: var(--card-bg);
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            animation: modalSlideIn 0.5s ease-out;
+            position: relative;
+        }
+
+        @keyframes modalSlideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-header {
+            padding: 30px 30px 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .modal-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin: 0;
+            color: var(--text-color);
+        }
+
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: none;
+            font-size: 2rem;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            color: var(--text-color);
+        }
+
+        .close:hover {
+            background: rgba(0, 0, 0, 0.1);
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 30px;
+        }
+
+        .settings-section {
+            margin-bottom: 40px;
+        }
+
+        .settings-section h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .theme-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .theme-option {
+            padding: 15px;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .theme-option:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .theme-option.active {
+            border-color: var(--accent-color);
+            background: rgba(233, 30, 99, 0.1);
+        }
+
+        .theme-preview {
+            width: 100%;
+            height: 40px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+        }
+
+        .theme-preview div {
+            flex: 1;
+            height: 100%;
+        }
+
+        .theme-preview div:first-child { border-radius: 8px 0 0 8px; }
+        .theme-preview div:last-child { border-radius: 0 8px 8px 0; }
+
+        .setting-control {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px 0;
+        }
+
+        .toggle {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background: #ccc;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .toggle::before {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: white;
+            top: 2px;
+            left: 2px;
+            transition: transform 0.3s ease;
+        }
+
+        .toggle.active {
+            background: var(--accent-color);
+        }
+
+        .toggle.active::before {
+            transform: translateX(30px);
+        }
+
+        .gift-content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gift-text {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-color);
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .typewriter {
+            overflow: hidden;
+            border-right: 2px solid var(--accent-color);
+            white-space: nowrap;
+            margin: 0 auto;
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: var(--accent-color); }
+        }
+
+        .gift-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            cursor: zoom-in;
+            transition: transform 0.3s ease;
+        }
+
+        .gift-image:hover {
+            transform: scale(1.02);
+        }
+
+        .audio-player {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 32px var(--shadow-color);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 20px 0;
+        }
+
+        .audio-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .play-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .play-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .audio-progress {
+            flex: 1;
+            height: 8px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .audio-progress-bar {
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 4px;
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .download-link {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+        }
+
+        .download-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(233, 30, 99, 0.4);
+        }
+
+        .loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(233, 30, 99, 0.1);
+            border-left: 4px solid var(--accent-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .unlocked-codes {
+            max-height: 200px;
+            overflow-y: auto;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .unlocked-code {
+            padding: 8px 12px;
+            margin: 5px 0;
+            background: rgba(233, 30, 99, 0.1);
+            border-radius: 20px;
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+
+        .sender-name-input {
+            width: 100%;
+            padding: 10px 15px;
+            border: 2px solid var(--primary-color);
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.8);
+            color: var(--text-color);
+            font-size: 1rem;
+        }
+
+        .sender-name-input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 10px rgba(233, 30, 99, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .main-card {
+                padding: 25px;
+            }
+
+            .input-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .code-input, .unlock-btn {
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <button class="settings-btn" onclick="openSettings()">
+        <svg viewBox="0 0 24 24">
+            <path d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.22,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.22,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.68 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z"/>
+        </svg>
+    </button>
+
+    <div class="container">
+        <div class="header">
+            <h1>Regalos del Corazón</h1>
+            <p>Cada código es una sorpresa esperándote</p>
+            <div class="gift-counter" id="giftCounter">
+                Has desbloqueado 0 de 20 regalos
+            </div>
+        </div>
+
+        <div class="main-card">
+            <div class="code-input-container">
+                <h2>Ingresa tu código secreto</h2>
+                <div class="input-group">
+                    <input type="text" class="code-input" id="codeInput" placeholder="Escribe aquí tu código..." autocomplete="off">
+                    <button class="unlock-btn" onclick="unlockGift()">Desbloquear</button>
+                </div>
+                <div class="error-message" id="errorMessage"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="giftModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="giftTitle">Regalo Desbloqueado</h2>
+                <button class="close" onclick="closeGiftModal()">×</button>
+            </div>
+            <div class="modal-body" id="giftContent">
+                <!-- Contenido del regalo se carga aquí -->
+            </div>
+        </div>
+    </div>
+
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Configuración</h2>
+                <button class="close" onclick="closeSettings()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="settings-section">
+                    <h3>Temas de Color</h3>
+                    <div class="theme-grid" id="themeGrid">
+                        <!-- Temas se cargan dinámicamente -->
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3>Personalización</h3>
+                    <div class="setting-control">
+                        <span>Nombre del remitente:</span>
+                        <input type="text" class="sender-name-input" id="senderName" placeholder="Mi amor" value="Mi amor">
+                    </div>
+                    <div class="setting-control">
+                        <span>Animaciones</span>
+                        <div class="toggle" id="animationsToggle"></div>
+                    </div>
+                    <div class="setting-control">
+                        <span>Partículas de fondo</span>
+                        <div class="toggle active" id="particlesToggle"></div>
+                    </div>
+                    <div class="setting-control">
+                        <span>Música de fondo</span>
+                        <div class="toggle" id="musicToggle"></div>
+                    </div>
+                    <div class="setting-control">
+                        <span>Efectos de sonido</span>
+                        <div class="toggle active" id="soundEffectsToggle"></div>
+                    </div>
+                    <div class="setting-control">
+                        <span>Modo íntimo</span>
+                        <div class="toggle" id="intimateModeToggle"></div>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3>Códigos Desbloqueados</h3>
+                    <div class="unlocked-codes" id="unlockedCodesList">
+                        <!-- Lista de códigos desbloqueados -->
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <div class="setting-control">
+                        <button class="unlock-btn" onclick="resetProgress()" style="background: #e74c3c;">
+                            Reiniciar todo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" loop style="display: none;">
+        <source src="assets/playlist/background1.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Configuración global
+        const config = {
+            animations: true,
+            particles: true,
+            music: false,
+            soundEffects: true,
+            intimateMode: false,
+            senderName: 'Mi amor',
+            currentTheme: 'rosado-tierno',
+            unlockedCodes: [],
+            totalGifts: 20
+        };
+
+        // Temas de color
+        const themes = {
+            'rosado-tierno': {
+                name: 'Rosado Tierno',
+                colors: ['#F48FB1', '#F06292', '#FFF0F5', '#2D2D2D']
+            },
+            'cielo-pastel': {
+                name: 'Cielo Pastel',
+                colors: ['#81D4FA', '#4FC3F7', '#E3F2FD', '#1C1C1C']
+            },
+            'lavanda-romantica': {
+                name: 'Lavanda Romántica',
+                colors: ['#CE93D8', '#BA68C8', '#F3E5F5', '#2E2E2E']
+            },
+            'miel-dorada': {
+                name: 'Miel Dorada',
+                colors: ['#FBC02D', '#FDD835', '#FFF8E1', '#3E3E3E']
+            },
+            'bosque-encantado': {
+                name: 'Bosque Encantado',
+                colors: ['#81C784', '#66BB6A', '#E8F5E9', '#263238']
+            },
+            'atardecer-calido': {
+                name: 'Atardecer Cálido',
+                colors: ['#FF8A65', '#FF7043', '#FFF3E0', '#3B3B3B']
+            },
+            'galaxia-violeta': {
+                name: 'Galaxia Violeta',
+                colors: ['#7E57C2', '#9575CD', '#1E1B3A', '#ECECEC']
+            },
+            'rojo-cereza': {
+                name: 'Rojo Cereza',
+                colors: ['#E53935', '#D32F2F', '#FFEBEE', '#2E2E2E']
+            },
+            'coral-suave': {
+                name: 'Coral Suave',
+                colors: ['#FFAB91', '#FF8A65', '#FFF3E0', '#2C2C2C']
+            },
+            'aqua-marina': {
+                name: 'Aqua Marina',
+                colors: ['#4DB6AC', '#26A69A', '#E0F2F1', '#1E1E1E']
+            },
+            'gris-elegante': {
+                name: 'Gris Elegante',
+                colors: ['#90A4AE', '#B0BEC5', '#ECEFF1', '#212121']
+            },
+            'rosa-vintage': {
+                name: 'Rosa Vintage',
+                colors: ['#F48FB1', '#F06292', '#FDEEF4', '#3A3A3A']
+            },
+            'azul-noche': {
+                name: 'Azul Noche',
+                colors: ['#3949AB', '#5C6BC0', '#121212', '#EEEEEE']
+            },
+            'perla-oro': {
+                name: 'Perla y Oro',
+                colors: ['#F3E5AB', '#E6C87E', '#FFFDF5', '#343434']
+            },
+            'morado-oscuro': {
+                name: 'Morado Oscuro',
+                colors: ['#512DA8', '#673AB7', '#311B92', '#F5F5F5']
+            },
+            'nube-algodon': {
+                name: 'Nube de Algodón',
+                colors: ['#FFCDD2', '#F8BBD0', '#FFF5F7', '#292929']
+            },
+            'sandia-fresca': {
+                name: 'Sandía Fresca',
+                colors: ['#FF5252', '#FF8A80', '#FFEDEE', '#2A2A2A']
+            },
+            'te-verde': {
+                name: 'Té Verde',
+                colors: ['#AED581', '#9CCC65', '#F1F8E9', '#263238']
+            },
+            'cobre-romantico': {
+                name: 'Cobre Romántico',
+                colors: ['#B85C38', '#D67D3E', '#FFF3E0', '#3E2723']
+            },
+            'lila-cielo': {
+                name: 'Lila Cielo',
+                colors: ['#B39DDB', '#9575CD', '#F3E5F5', '#1A1A1A']
+            }
+        };
+
+        // Base de datos de regalos
+        const gifts = {
+            'amor123': {
+                type: 'text',
+                title: 'Carta de Amor',
+                content: `Querido ${config.senderName},\n\nCada día que pasa contigo es una nueva página en el libro más hermoso que he leído jamás. Tu sonrisa ilumina mis mañanas y tus abrazos son el refugio perfecto para mis noches.\n\nEres la melodía que hace que mi corazón dance, la luz que guía mis pasos y la razón por la que cada día tiene sentido. Gracias por ser mi compañero en esta hermosa aventura que llamamos vida.\n\nCon todo mi amor,\nTu persona especial`
+            },
+            'memoria01': {
+                type: 'image',
+                title: 'Nuestro Primer Encuentro',
+                content: 'assets/images/first_meeting.jpg'
+            },
+            'cancion99': {
+                type: 'audio',
+                title: 'Nuestra Canción',
+                content: 'assets/audio/our_song.mp3'
+            },
+            'video777': {
+                type: 'video',
+                title: 'Momentos Especiales',
+                content: 'assets/videos/special_moments.mp4'
+            },
+            'regalo_pdf': {
+                type: 'download',
+                title: 'Album de Recuerdos',
+                content: 'assets/downloads/memory_album.pdf',
+                filename: 'Nuestros_Recuerdos.pdf'
+            },
+            'sorpresa1': {
+                type: 'text',
+                title: 'Razones por las que te amo',
+                content: `Mi querido ${config.senderName},\n\nHe estado pensando en todas las razones por las que te amo, y me di cuenta de que necesitaría una eternidad para enumerarlas todas. Pero aquí van algunas:\n\n• Tu risa que puede iluminar el día más gris\n• La forma en que me miras como si fuera lo más importante del mundo\n• Tu paciencia cuando soy difícil\n• Cómo haces que hasta las cosas simples se sientan mágicas\n• Tu abrazo que es mi lugar favorito en el mundo\n\nEres mi todo, mi siempre y mi para siempre.`
+            },
+            'dulce_momento': {
+                type: 'image',
+                title: 'Dulces Momentos',
+                content: 'assets/images/sweet_moment.jpg'
+            },
+            'playlist_amor': {
+                type: 'audio',
+                title: 'Playlist del Corazón',
+                content: 'assets/audio/love_playlist.mp3'
+            },
+            'aventuras': {
+                type: 'video',
+                title: 'Nuestras Aventuras',
+                content: 'assets/videos/adventures.mp4'
+            },
+            'futuro_juntos': {
+                type: 'text',
+                title: 'Nuestro Futuro',
+                content: `Amor mío,\n\nCuando pienso en el futuro, te veo en cada imagen. Veo despertar cada mañana a tu lado, compartir cafés tibios y conversaciones que duran horas. Veo viajes a lugares que aún no conocemos, risas que aún no hemos compartido y momentos que aún no hemos vivido.\n\nVeo una vida llena de amor, comprensión y crecimiento mutuo. Veo desafíos que enfrentaremos juntos y triunfos que celebraremos como equipo.\n\nNo importa lo que depare el futuro, sé que quiero vivirlo contigo.\n\nCon amor infinito`
+            },
+            'sorpresa2': {
+                type: 'image',
+                title: 'Sorpresa Visual',
+                content: 'assets/images/surprise.jpg'
+            },
+            'melodia_corazon': {
+                type: 'audio',
+                title: 'Melodía del Corazón',
+                content: 'assets/audio/heart_melody.mp3'
+            },
+            'mensaje_video': {
+                type: 'video',
+                title: 'Mensaje Especial',
+                content: 'assets/videos/special_message.mp4'
+            },
+            'promesas': {
+                type: 'text',
+                title: 'Mis Promesas',
+                content: `${config.senderName},\n\nHoy quiero hacerte promesas que nacen del corazón:\n\nPrometo amarte en los días soleados y también en las tormentas.\nPrometo escucharte cuando necesites ser escuchado y abrazarte cuando las palabras no sean suficientes.\nPrometo crecer contigo, aprender contigo y construir sueños contigo.\nPrometo valorar cada momento que compartimos y crear nuevos recuerdos cada día.\nPrometo ser tu apoyo, tu cómplice y tu refugio.\n\nEstas no son promesas vacías, son el compromiso de mi alma contigo.`
+            },
+            'recuerdo_especial': {
+                type: 'image',
+                title: 'Recuerdo Especial',
+                content: 'assets/images/special_memory.jpg'
+            },
+            'serenata': {
+                type: 'audio',
+                title: 'Serenata Personal',
+                content: 'assets/audio/serenade.mp3'
+            },
+            'declaracion': {
+                type: 'video',
+                title: 'Declaración de Amor',
+                content: 'assets/videos/love_declaration.mp4'
+            },
+            'carta_final': {
+                type: 'text',
+                title: 'Hasta el Infinito',
+                content: `Mi amor eterno,\n\nSi alguien me preguntara cuánto te amo, le diría que imaginen el número más grande que puedan pensar, y que eso sería solo el comienzo.\n\nAmar es mirarte dormir y sentir que el mundo está en paz. Amar es despertar y que lo primero que quiera ver sean tus ojos. Amar es saber que, sin importar qué tan difícil sea el día, siempre tengo un hogar en tus brazos.\n\nGracias por amarme como soy, por aceptar mis locuras y por hacer que cada día sea una nueva oportunidad para ser feliz.\n\nTe amo hasta el infinito y más allá.`
+            },
+            'tesoro_final': {
+                type: 'download',
+                title: 'Nuestro Tesoro',
+                content: 'assets/downloads/our_treasure.pdf',
+                filename: 'Nuestro_Tesoro_del_Amor.pdf'
+            },
+            'celebracion': {
+                type: 'video',
+                title: 'Celebración del Amor',
+                content: 'assets/videos/love_celebration.mp4'
+            }
+        };
+
+        // Inicialización
+        document.addEventListener('DOMContentLoaded', function() {
+            loadConfig();
+            initializeParticles();
+            initializeThemes();
+            initializeToggles();
+            updateGiftCounter();
+            updateUnlockedCodesList();
+            
+            // Event listeners
+            document.getElementById('codeInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    unlockGift();
+                }
+            });
+
+            document.getElementById('senderName').addEventListener('input', function(e) {
+                config.senderName = e.target.value || 'Mi amor';
+                saveConfig();
+            });
+
+            // Cerrar modales al hacer clic fuera
+            window.addEventListener('click', function(e) {
+                if (e.target.classList.contains('modal')) {
+                    e.target.style.display = 'none';
+                }
+            });
+        });
+
+        // Funciones principales
+        function unlockGift() {
+            const code = document.getElementById('codeInput').value.trim().toLowerCase();
+            const errorMessage = document.getElementById('errorMessage');
+            
+            if (!code) {
+                showError('Por favor ingresa un código');
+                return;
+            }
+
+            if (gifts[code]) {
+                if (!config.unlockedCodes.includes(code)) {
+                    config.unlockedCodes.push(code);
+                    saveConfig();
+                    updateGiftCounter();
+                    updateUnlockedCodesList();
+                }
+                
+                showGift(gifts[code]);
+                document.getElementById('codeInput').value = '';
+                hideError();
+                
+                if (config.soundEffects) {
+                    playSuccessSound();
+                }
+            } else {
+                showError('Tal vez te equivocaste, amor. Inténtalo de nuevo');
+                shakeInput();
+            }
+        }
+
+        function showGift(gift) {
+            const modal = document.getElementById('giftModal');
+            const title = document.getElementById('giftTitle');
+            const content = document.getElementById('giftContent');
+            
+            title.textContent = gift.title;
+            content.innerHTML = '<div class="loading"><div class="loading-spinner"></div><div class="loading-text">Desempaquetando el amor...</div></div>';
+            
+            modal.style.display = 'block';
+            
+            setTimeout(() => {
+                content.innerHTML = generateGiftContent(gift);
+                initializeGiftInteractions();
+            }, 1500);
+        }
+
+        function generateGiftContent(gift) {
+            switch (gift.type) {
+                case 'text':
+                    return `<div class="gift-content">
+                        <div class="gift-text typewriter">${gift.content.replace(/\n/g, '<br>')}</div>
+                    </div>`;
+                
+                case 'image':
+                    return `<div class="gift-content">
+                        <img src="${gift.content}" alt="${gift.title}" class="gift-image" onclick="zoomImage(this)">
+                    </div>`;
+                
+                case 'audio':
+                    return `<div class="gift-content">
+                        <div class="audio-player">
+                            <div class="audio-controls">
+                                <button class="play-btn" onclick="toggleAudio(this)">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                                    </svg>
+                                </button>
+                                <div class="audio-progress" onclick="setAudioProgress(event, this)">
+                                    <div class="audio-progress-bar"></div>
+                                </div>
+                                <span class="audio-time">0:00 / 0:00</span>
+                            </div>
+                            <audio src="${gift.content}" preload="metadata"></audio>
+                        </div>
+                    </div>`;
+                
+                case 'video':
+                    return `<div class="gift-content">
+                        <div class="video-container">
+                            <video controls>
+                                <source src="${gift.content}" type="video/mp4">
+                                Tu navegador no soporta videos HTML5.
+                            </video>
+                        </div>
+                    </div>`;
+                
+                case 'download':
+                    return `<div class="gift-content">
+                        <p>Un regalo especial te espera para descargar:</p>
+                        <a href="${gift.content}" download="${gift.filename}" class="download-link">
+                            Descargar ${gift.title}
+                        </a>
+                    </div>`;
+                
+                default:
+                    return '<div class="gift-content"><p>Tipo de regalo no reconocido</p></div>';
+            }
+        }
+
+        function initializeGiftInteractions() {
+            // Inicializar efectos de texto typewriter
+            const typewriters = document.querySelectorAll('.typewriter');
+            typewriters.forEach(element => {
+                const text = element.textContent;
+                element.textContent = '';
+                element.style.width = '0';
+                
+                setTimeout(() => {
+                    element.style.width = '100%';
+                    let i = 0;
+                    const timer = setInterval(() => {
+                        element.textContent = text.slice(0, i + 1);
+                        i++;
+                        if (i >= text.length) {
+                            clearInterval(timer);
+                            element.style.borderRight = 'none';
+                        }
+                    }, 50);
+                }, 500);
+            });
+        }
+
+        function showError(message) {
+            const errorElement = document.getElementById('errorMessage');
+            errorElement.textContent = message;
+            errorElement.classList.add('show');
+        }
+
+        function hideError() {
+            const errorElement = document.getElementById('errorMessage');
+            errorElement.classList.remove('show');
+        }
+
+        function shakeInput() {
+            const input = document.getElementById('codeInput');
+            input.style.animation = 'shake 0.5s ease-in-out';
+            setTimeout(() => {
+                input.style.animation = '';
+            }, 500);
+        }
+
+        function closeGiftModal() {
+            document.getElementById('giftModal').style.display = 'none';
+            // Pausar audio/video si está reproduciéndose
+            const audio = document.querySelector('#giftModal audio');
+            const video = document.querySelector('#giftModal video');
+            if (audio) audio.pause();
+            if (video) video.pause();
+        }
+
+        function openSettings() {
+            document.getElementById('settingsModal').style.display = 'block';
+        }
+
+        function closeSettings() {
+            document.getElementById('settingsModal').style.display = 'none';
+        }
+
+        function initializeThemes() {
+            const themeGrid = document.getElementById('themeGrid');
+            
+            Object.entries(themes).forEach(([key, theme]) => {
+                const themeOption = document.createElement('div');
+                themeOption.className = 'theme-option';
+                themeOption.dataset.theme = key;
+                
+                if (key === config.currentTheme) {
+                    themeOption.classList.add('active');
+                }
+                
+                themeOption.innerHTML = `
+                    <div class="theme-preview">
+                        <div style="background-color: ${theme.colors[0]}"></div>
+                        <div style="background-color: ${theme.colors[1]}"></div>
+                        <div style="background-color: ${theme.colors[2]}"></div>
+                        <div style="background-color: ${theme.colors[3]}"></div>
+                    </div>
+                    <div>${theme.name}</div>
+                `;
+                
+                themeOption.addEventListener('click', () => applyTheme(key));
+                themeGrid.appendChild(themeOption);
+            });
+        }
+
+        function applyTheme(themeKey) {
+            const theme = themes[themeKey];
+            if (!theme) return;
+            
+            config.currentTheme = themeKey;
+            saveConfig();
+            
+            // Actualizar variables CSS
+            document.documentElement.style.setProperty('--primary-color', theme.colors[0]);
+            document.documentElement.style.setProperty('--secondary-color', theme.colors[1]);
+            document.documentElement.style.setProperty('--background-color', theme.colors[2]);
+            document.documentElement.style.setProperty('--text-color', theme.colors[3]);
+            document.documentElement.style.setProperty('--accent-color', theme.colors[0]);
+            document.documentElement.style.setProperty('--shadow-color', theme.colors[0] + '30');
+            
+            // Actualizar selección visual
+            document.querySelectorAll('.theme-option').forEach(option => {
+                option.classList.remove('active');
+            });
+            document.querySelector(`[data-theme="${themeKey}"]`).classList.add('active');
+            
+            // Actualizar partículas si están activas
+            if (config.particles) {
+                updateParticleColors();
+            }
+        }
+
+        function initializeToggles() {
+            const toggles = {
+                'animationsToggle': () => {
+                    config.animations = !config.animations;
+                    document.body.style.animationPlayState = config.animations ? 'running' : 'paused';
+                },
+                'particlesToggle': () => {
+                    config.particles = !config.particles;
+                    toggleParticles();
+                },
+                'musicToggle': () => {
+                    config.music = !config.music;
+                    toggleBackgroundMusic();
+                },
+                'soundEffectsToggle': () => {
+                    config.soundEffects = !config.soundEffects;
+                },
+                'intimateModeToggle': () => {
+                    config.intimateMode = !config.intimateMode;
+                    toggleIntimateMode();
+                }
+            };
+            
+            Object.entries(toggles).forEach(([id, callback]) => {
+                const toggle = document.getElementById(id);
+                toggle.addEventListener('click', () => {
+                    toggle.classList.toggle('active');
+                    callback();
+                    saveConfig();
+                });
+                
+                // Establecer estado inicial
+                const configKey = id.replace('Toggle', '').replace(/([A-Z])/g, letter => letter.toLowerCase());
+                if (config[configKey] || config[configKey.replace(/([A-Z])/g, '_$1').toLowerCase()]) {
+                    toggle.classList.add('active');
+                }
+            });
+        }
+
+        function initializeParticles() {
+            if (!config.particles) return;
+            
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = window.innerWidth < 768 ? 30 : 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                createParticle(particlesContainer);
+            }
+        }
+
+        function createParticle(container) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            
+            const size = Math.random() * 6 + 2;
+            const startX = Math.random() * window.innerWidth;
+            const animationDuration = Math.random() * 3 + 3;
+            const animationDelay = Math.random() * 2;
+            
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            particle.style.left = startX + 'px';
+            particle.style.animationDuration = animationDuration + 's';
+            particle.style.animationDelay = animationDelay + 's';
+            
+            container.appendChild(particle);
+            
+            // Remover partícula después de la animación
+            setTimeout(() => {
+                if (particle.parentNode) {
+                    particle.parentNode.removeChild(particle);
+                    if (config.particles) {
+                        createParticle(container);
+                    }
+                }
+            }, (animationDuration + animationDelay) * 1000);
+        }
+
+        function toggleParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (config.particles) {
+                initializeParticles();
+            } else {
+                particlesContainer.innerHTML = '';
+            }
+        }
+
+        function updateParticleColors() {
+            // Las partículas ya usan colores semi-transparentes que se adaptan
+        }
+
+        function toggleBackgroundMusic() {
+            const music = document.getElementById('backgroundMusic');
+            if (config.music) {
+                music.play().catch(e => console.log('No se pudo reproducir la música automáticamente'));
+            } else {
+                music.pause();
+            }
+        }
+
+        function toggleIntimateMode() {
+            if (config.intimateMode) {
+                document.body.style.filter = 'brightness(0.7)';
+                document.body.style.transition = 'filter 0.5s ease';
+                if (config.music) {
+                    document.getElementById('backgroundMusic').volume = 0.3;
+                }
+            } else {
+                document.body.style.filter = 'brightness(1)';
+                if (config.music) {
+                    document.getElementById('backgroundMusic').volume = 1;
+                }
+            }
+        }
+
+        function updateGiftCounter() {
+            const counter = document.getElementById('giftCounter');
+            const unlockedCount = config.unlockedCodes.length;
+            counter.textContent = `Has desbloqueado ${unlockedCount} de ${config.totalGifts} regalos`;
+        }
+
+        function updateUnlockedCodesList() {
+            const list = document.getElementById('unlockedCodesList');
+            if (config.unlockedCodes.length === 0) {
+                list.innerHTML = '<p style="text-align: center; color: #999;">Aún no has desbloqueado ningún regalo</p>';
+            } else {
+                list.innerHTML = config.unlockedCodes.map(code => 
+                    `<span class="unlocked-code">${code}</span>`
+                ).join('');
+            }
+        }
+
+        function resetProgress() {
+            if (confirm('¿Estás seguro de que quieres reiniciar todo el progreso? Esta acción no se puede deshacer.')) {
+                config.unlockedCodes = [];
+                config.currentTheme = 'rosado-tierno';
+                config.senderName = 'Mi amor';
+                config.animations = true;
+                config.particles = true;
+                config.music = false;
+                config.soundEffects = true;
+                config.intimateMode = false;
+                
+                saveConfig();
+                location.reload();
+            }
+        }
+
+        // Funciones de audio/video
+        function toggleAudio(button) {
+            const audio = button.closest('.audio-player').querySelector('audio');
+            const svg = button.querySelector('svg path');
+            
+            if (audio.paused) {
+                audio.play();
+                svg.setAttribute('d', 'M14,19H18V5H14M6,19H10V5H6V19Z'); // Pausa
+            } else {
+                audio.pause();
+                svg.setAttribute('d', 'M8,5.14V19.14L19,12.14L8,5.14Z'); // Play
+            }
+            
+            audio.addEventListener('timeupdate', () => updateAudioProgress(audio));
+            audio.addEventListener('loadedmetadata', () => updateAudioTime(audio));
+        }
+
+        function updateAudioProgress(audio) {
+            const progressBar = audio.closest('.audio-player').querySelector('.audio-progress-bar');
+            const progress = (audio.currentTime / audio.duration) * 100;
+            progressBar.style.width = progress + '%';
+            updateAudioTime(audio);
+        }
+
+        function updateAudioTime(audio) {
+            const timeDisplay = audio.closest('.audio-player').querySelector('.audio-time');
+            const current = formatTime(audio.currentTime);
+            const duration = formatTime(audio.duration);
+            timeDisplay.textContent = `${current} / ${duration}`;
+        }
+
+        function setAudioProgress(event, progressContainer) {
+            const audio = progressContainer.closest('.audio-player').querySelector('audio');
+            const rect = progressContainer.getBoundingClientRect();
+            const percent = (event.clientX - rect.left) / rect.width;
+            audio.currentTime = percent * audio.duration;
+        }
+
+        function formatTime(seconds) {
+            if (isNaN(seconds)) return '0:00';
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        function zoomImage(img) {
+            // Implementar zoom de imagen
+            const overlay = document.createElement('div');
+            overlay.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.9);
+                z-index: 3000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: zoom-out;
+            `;
+            
+            const zoomedImg = img.cloneNode();
+            zoomedImg.style.cssText = `
+                max-width: 90%;
+                max-height: 90%;
+                object-fit: contain;
+                border-radius: 10px;
+            `;
+            
+            overlay.appendChild(zoomedImg);
+            document.body.appendChild(overlay);
+            
+            overlay.addEventListener('click', () => {
+                document.body.removeChild(overlay);
+            });
+        }
+
+        function playSuccessSound() {
+            // Crear un sonido de éxito simple
+            const context = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator = context.createOscillator();
+            const gainNode = context.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(context.destination);
+            
+            oscillator.frequency.setValueAtTime(523.25, context.currentTime); // C5
+            oscillator.frequency.setValueAtTime(659.25, context.currentTime + 0.1); // E5
+            oscillator.frequency.setValueAtTime(783.99, context.currentTime + 0.2); // G5
+            
+            gainNode.gain.setValueAtTime(0.3, context.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, context.currentTime + 0.5);
+            
+            oscillator.start();
+            oscillator.stop(context.currentTime + 0.5);
+        }
+
+        // Gestión de configuración
+        function saveConfig() {
+            try {
+                // En lugar de localStorage, mantener en memoria durante la sesión
+                window.savedConfig = JSON.stringify(config);
+            } catch (e) {
+                console.log('No se pudo guardar la configuración');
+            }
+        }
+
+        function loadConfig() {
+            try {
+                // Cargar de memoria si existe
+                if (window.savedConfig) {
+                    const saved = JSON.parse(window.savedConfig);
+                    Object.assign(config, saved);
+                }
+            } catch (e) {
+                console.log('No se pudo cargar la configuración');
+            }
+            
+            // Aplicar configuración cargada
+            applyTheme(config.currentTheme);
+            document.getElementById('senderName').value = config.senderName;
+        }
+    </script>
+</body>
+      </html>
