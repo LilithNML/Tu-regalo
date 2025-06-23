@@ -1,0 +1,710 @@
+:root {
+  /* Base variables (actual theme colors are set dynamically) */
+  --bg: #f9f6f8;
+  --bg-alt: #fff;
+  --accent: #e57373;
+  --accent2: #f7cac9;
+  --text: #2d2d2d;
+  --text-light: #656565;
+  --modal-bg: rgba(255,255,255,0.96);
+  --modal-blur-color: rgba(120,112,140,0.28); /* Color para el blur del modal */
+  --shadow: 0 8px 32px rgba(0,0,0,0.12);
+  --border-radius: 22px;
+  --settings-bg: rgba(255,255,255,0.98);
+  --settings-blur-color: rgba(120,112,140,0.12); /* Color para el blur del settings */
+  --input-bg: #fff;
+  --input-border: #e5e5e5;
+  --input-focus: var(--accent);
+  --progress-bg: #f2e7ea;
+  --progress-fg: var(--accent);
+  --gallery-bg: #f9f6f8;
+  --gallery-item: #fff;
+  --gallery-border: #e2d5d8;
+  --btn-bg: var(--accent);
+  --btn-text: #fff;
+  --btn-hover: #d94f4f;
+  --switch-bg: #d7d7d7;
+  --switch-slider: var(--accent);
+  --svg: var(--accent);
+  --footer-bg: transparent;
+  
+  /* Transiciones optimizadas */
+  --theme-transition: background 0.6s cubic-bezier(.8,.2,.2,1), color 0.4s;
+  --transform-transition: transform 0.2s cubic-bezier(.7,.2,.2,1);
+  --opacity-transition: opacity 0.4s cubic-bezier(.6,.05,.25,1);
+}
+
+/* --- Definiciones de temas --- */
+[data-theme="rosado"] {
+  --bg: #f9f6f8; --accent: #e57373; --accent2: #f7cac9; --modal-bg: #fff5f7;
+}
+[data-theme="celeste"] {
+  --bg: #f7fafd; --accent: #64b5f6; --accent2: #aee1fa; --modal-bg: #f2faff;
+}
+[data-theme="dorado"] {
+  --bg: #fffdf6; --accent: #ffc107; --accent2: #ffe082; --modal-bg: #fffbe5;
+}
+/* Mejoras de contraste en el tema noche */
+[data-theme="noche"] {
+  --bg: #191c29;
+  --accent: #9a8cff; /* Azul púrpura más brillante para contraste */
+  --accent2: #524f7e; /* Complementario oscuro */
+  --modal-bg: #2b2e40; /* Fondo de modal más claro que el bg principal */
+  --text: #e0e0e0; /* Texto claro */
+  --text-light: #b0b0b0; /* Texto secundario claro */
+  --gallery-bg: #242738;
+  --gallery-item: #32354a; /* Ítems de galería más claros */
+  --settings-bg: #2b2e40;
+  --input-bg: #2a2c3f;
+  --input-border: #4a4d6b; /* Borde más visible */
+  --progress-bg: #2a2a3a;
+  --btn-text: #fff; /* Asegurar texto de botón blanco */
+  --switch-bg: #555; /* Switch en modo noche */
+  --switch-slider: var(--accent);
+}
+[data-theme="galaxia"] {
+  --bg: #2a233b; --accent: #b085f5; --accent2: #e1bee7; --modal-bg: #312c43;
+  --text: #f2e9ff; --gallery-bg: #2d2546; --gallery-item: #312c43;
+}
+[data-theme="lavanda"] {
+  --bg: #f6f5fb; --accent: #b39ddb; --accent2: #e1bee7; --modal-bg: #f7f4ff;
+}
+[data-theme="bosque"] {
+  --bg: #edf7ef; --accent: #388e3c; --accent2: #a5d6a7; --modal-bg: #f2fff7;
+}
+[data-theme="sepia"] {
+  --bg: #f8f3ed; --accent: #b3702b; --accent2: #ecdbc1; --modal-bg: #f5eee7;
+}
+[data-theme="cereza"] {
+  --bg: #fff0f3; --accent: #d72660; --accent2: #f98ca4; --modal-bg: #fff4f7;
+}
+[data-theme="atardecer"] {
+  --bg: #ffe8e3; --accent: #ff884d; --accent2: #ffd6ad; --modal-bg: #fff6ee;
+}
+[data-theme="crema"] {
+  --bg: #fdf6f0; --accent: #e9c46a; --accent2: #ffe1a8; --modal-bg: #fff8e2;
+}
+[data-theme="gris"] {
+  --bg: #f5f6fa; --accent: #a2a2a2; --accent2: #dddddd; --modal-bg: #f8f8f8;
+}
+
+/* Modo oscuro general para sobrescribir si el tema no tiene uno específico
+   Estas variables se aplican sobre cualquier tema cuando data-mode="dark"
+   y están pensadas para garantizar un contraste mínimo.
+*/
+[data-mode="dark"] {
+  --bg: #1e202a; /* Fondo más oscuro */
+  --bg-alt: #2a2d3c; /* Fondo alternativo más claro para elementos como el formulario */
+  --text: #e0e0e0; /* Texto claro principal */
+  --text-light: #b0b0b0; /* Texto secundario claro */
+  --input-bg: #2a2d3c;
+  --input-border: #4a4d6b;
+  --modal-bg: #2a2d3c;
+  --settings-bg: #2a2d3c;
+  --modal-blur-color: rgba(30, 32, 42, 0.6); /* Color de blur más oscuro */
+  --shadow: 0 8px 32px rgba(0,0,0,0.4); /* Sombra más pronunciada en oscuro */
+  --progress-bg: #3c3f56; /* Fondo de progreso más oscuro */
+  --gallery-bg: #3c3f56;
+  --gallery-item: #2a2d3c;
+  --gallery-border: #4a4d6b;
+  --switch-bg: #555;
+  --switch-slider: var(--accent); /* El slider del switch mantiene el color de acento del tema */
+}
+
+
+/* --- Estilos base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden; /* Evitar scroll horizontal indeseado */
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Open Sans', Arial, sans-serif;
+  transition: var(--theme-transition);
+  display: flex;
+  flex-direction: column; /* Para asegurar que el footer se mantenga abajo */
+}
+
+#background-effect {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 60% 40%, var(--accent2) 10%, transparent 60%),
+              radial-gradient(ellipse at 20% 80%, var(--accent) 8%, transparent 70%);
+  animation: bg-float 16s ease-in-out infinite alternate;
+  will-change: filter, opacity;
+}
+
+@keyframes bg-float {
+  0% { filter: blur(0px); opacity: 0.55; }
+  100% { filter: blur(5px); opacity: 0.75; }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 2rem 1rem 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.romantic-title {
+  font-family: 'Playfair Display', 'Dancing Script', cursive, serif;
+  font-size: 2.3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--accent);
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.03); /* Sutil sombra de texto */
+}
+
+#settings-gear {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--accent);
+  padding: 8px; /* Aumentar el área de clic sin alterar tamaño visual */
+  border-radius: 50%;
+  transition: transform .2s, opacity .2s;
+}
+#settings-gear:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+#settings-gear:active {
+  transform: scale(1.13) rotate(22deg);
+  opacity: 0.7;
+  transition-duration: 0.1s;
+}
+#settings-gear svg {
+  display: block;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 2;
+  /* max-width: 500px;  Opcional: limitar el ancho máximo para centrar el contenido principal */
+  /* width: 100%; */
+  /* margin: 0 auto; */
+}
+
+#code-form {
+  background: var(--bg-alt);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 2.4rem 2rem 2rem 2rem;
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 390px; /* Mantener el ancho original para el formulario */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+  position: relative;
+}
+
+.input-label {
+  font-family: 'Dancing Script', 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 0.7rem;
+  text-align: left;
+}
+
+.input-row {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan en pantallas pequeñas */
+}
+
+#code-input {
+  flex: 1; /* Ocupa el espacio disponible */
+  min-width: 150px; /* Mínimo para que no se haga muy pequeño */
+  border: 1.5px solid var(--input-border);
+  border-radius: 14px;
+  background: var(--input-bg);
+  font-size: 1.08rem;
+  padding: 0.7em 1em;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+#code-input:focus {
+  border-color: var(--input-focus);
+  box-shadow: 0 0 0 3px var(--accent2);
+}
+
+#unlock-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 14px;
+  padding: 0.7em 1.1em;
+  font-weight: 600;
+  font-size: 1.05rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: background .2s, transform .1s, opacity .2s;
+  white-space: nowrap;
+}
+#unlock-btn svg {
+  fill: var(--btn-text);
+}
+#unlock-btn:hover {
+  background: var(--btn-hover);
+  opacity: 0.9;
+}
+#unlock-btn:active {
+  transform: scale(0.98);
+  opacity: 0.8;
+}
+
+#error-message {
+  min-height: 2em;
+  color: var(--accent);
+  font-size: 1.08em;
+  text-align: center;
+  transition: opacity .4s, transform .4s;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+}
+#error-message.show {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+#progress-counter {
+  margin: 2.2em 0 0.5em 0;
+  font-size: 1.13em;
+  background: var(--progress-bg);
+  color: var(--accent);
+  border-radius: 16px;
+  padding: 0.8em 2em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* --- Modales generales --- */
+.modal-overlay {
+  position: fixed;
+  z-index: 1001;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Usar variables para el color de blur según el tipo de modal */
+  background: var(--modal-blur-color);
+  backdrop-filter: blur(7px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--opacity-transition);
+}
+.modal-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-overlay:not(.hidden) {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-content, .settings-content {
+  z-index: 2;
+  min-width: 330px;
+  max-width: 90vw;
+  max-height: 90vh; /* Permite desplazamiento si el contenido es largo */
+  border-radius: var(--border-radius);
+  background: var(--modal-bg); /* Usa modal-bg directamente */
+  box-shadow: 0 10px 40px rgba(0,0,0,0.19), 0 1.2px 8px var(--accent2);
+  animation: modal-in .6s cubic-bezier(.6,.05,.25,1);
+  position: relative;
+  padding: 2.2em 1.7em 1.5em 1.7em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  outline: none;
+  overflow-y: auto; /* Permite desplazamiento si el contenido es largo */
+  -webkit-overflow-scrolling: touch;
+}
+
+@keyframes modal-in {
+  from {transform: scale(0.89) translateY(70px); opacity: 0;}
+  to {transform: scale(1) translateY(0); opacity: 1;}
+}
+
+/* Eliminar el uso de .modal-blur y .settings-blur como divs separados */
+/* .modal-blur, .settings-blur { display: none; } */
+
+
+.close-modal, .close-settings {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+  z-index: 3;
+  color: var(--accent);
+  opacity: .85;
+  transition: opacity .18s, transform .18s;
+  padding: 8px; /* Aumentar el área de clic */
+  border-radius: 50%;
+}
+.close-modal:hover, .close-settings:hover {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+.close-modal:active, .close-settings:active {
+  opacity: 0.65;
+  transform: rotate(180deg);
+  transition-duration: 0.1s;
+}
+.close-modal svg, .close-settings svg {
+  display: block;
+}
+
+#gift-container {
+  margin-top: 0.7em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2em;
+  min-height: 120px;
+}
+
+.gift-modal-title {
+  font-family: 'Playfair Display', 'Dancing Script', serif;
+  font-size: 1.35rem;
+  color: var(--accent);
+  margin-bottom: 0.6em;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.gift-text {
+  font-family: 'Playfair Display', 'Dancing Script', serif;
+  font-size: 1.23rem;
+  color: var(--text);
+  text-align: center;
+  max-width: 420px;
+  min-height: 2em;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  background: transparent;
+  animation: fade-in 1.2s cubic-bezier(.25,.8,.25,1);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.gift-text.typewriter {
+  border-right: 2px solid var(--accent);
+  animation: none;
+  min-height: 2.8em;
+  overflow: hidden;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(30px) scale(.94);}
+  to { opacity: 1; transform: none;}
+}
+
+.gift-image {
+  max-width: 100%; /* Ajuste para evitar desbordamiento */
+  height: auto;
+  max-height: 50vh;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.15);
+  cursor: zoom-in;
+  transition: transform .27s cubic-bezier(.7,.2,.2,1), box-shadow .27s;
+  background: var(--accent2);
+  object-fit: contain;
+  animation: fade-in 0.85s;
+}
+.gift-image:active {
+  transform: scale(1.05);
+}
+
+.gift-video, .gift-audio {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 14px;
+  margin: 0 auto;
+  background: var(--accent2);
+  box-shadow: 0 2px 18px rgba(0,0,0,0.10);
+  animation: fade-in 0.9s;
+}
+
+.gift-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  font-weight: 600;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 14px;
+  padding: 0.85em 1.5em;
+  margin: 1em 0 0 0;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .2s, transform .1s;
+  box-shadow: 0 1.5px 8px rgba(0,0,0,0.08);
+}
+.gift-download:hover {
+  background: var(--btn-hover);
+}
+.gift-download:active {
+  transform: scale(0.98);
+}
+.gift-download svg {
+  fill: var(--btn-text);
+}
+
+/* --- Panel de Configuración --- */
+#settings-panel .settings-content {
+  min-width: 320px;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: var(--settings-bg); /* Usa settings-bg directamente */
+  box-shadow: 0 8px 40px rgba(0,0,0,0.13), 0 1.2px 8px var(--accent2);
+  padding: 2.3em 1.4em 1.4em 1.4em;
+  gap: 0.8em;
+  overflow-y: auto;
+}
+#settings-panel h2 {
+  font-size: 1.3em;
+  font-family: 'Playfair Display', serif;
+  color: var(--accent);
+  margin: 0 0 0.6em 0;
+  text-align: center;
+}
+#settings-panel section {
+  margin: 1.3em 0;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid var(--input-border);
+}
+#settings-panel section:last-of-type {
+  border-bottom: none;
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(38px, 1fr));
+  gap: 0.7em;
+  margin: 0.5em 0 1em 0;
+  justify-content: center;
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.theme-swatch {
+  width: 38px; height: 38px;
+  border-radius: 13px;
+  border: 2.5px solid var(--input-border);
+  cursor: pointer;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+  transition: border .2s, transform .21s, box-shadow .2s;
+  position: relative;
+  flex-shrink: 0;
+}
+.theme-swatch.selected {
+  border: 3.5px solid var(--accent);
+  transform: scale(1.17);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15), 0 0 0 3px var(--accent2);
+}
+.theme-swatch:hover {
+  transform: scale(1.05);
+  box-shadow: 0 1px 8px rgba(0,0,0,0.12);
+}
+.theme-swatch .theme-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.82em;
+  color: var(--text-light);
+  background: var(--modal-bg); /* Usar el background del modal para el tooltip */
+  padding: 0.3em 0.6em;
+  border-radius: 7px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .22s;
+  z-index: 10;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+.theme-swatch:hover .theme-label {
+  opacity: 1;
+  transform: translate(-50%, -150%);
+}
+
+.switch {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 28px;
+  margin: 0.5em auto;
+}
+.switch input { opacity: 0; width: 0; height: 0;}
+.slider {
+  position: absolute; cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--switch-bg);
+  border-radius: 28px;
+  transition: background .2s;
+}
+.slider:before {
+  position: absolute; content: "";
+  height: 22px; width: 22px;
+  left: 3px; bottom: 3px;
+  background: var(--switch-slider);
+  border-radius: 50%;
+  transition: transform .24s cubic-bezier(.4,.0,.2,1), background .2s;
+}
+input:checked + .slider { background: var(--accent2);}
+input:checked + .slider:before { transform: translateX(22px); background: var(--accent);}
+
+.unlocked-list {
+  list-style-type: none;
+  margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: 0.4em;
+  max-height: 150px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+.unlocked-list li {
+  background: var(--gallery-item);
+  border: 1.5px solid var(--gallery-border);
+  border-radius: 10px;
+  padding: 0.6em 1.1em;
+  color: var(--accent);
+  font-family: 'Dancing Script', cursive, serif;
+  font-size: 1em;
+  margin-bottom: 0.2em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  animation: fade-in 0.9s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+#no-gifts-message {
+  font-size: 0.95em;
+  color: var(--text-light);
+  text-align: center;
+  margin-top: 0.8em;
+}
+#no-gifts-message.hidden {
+  display: none;
+}
+
+.reset-btn {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 12px;
+  padding: 0.75em 1.4em;
+  font-weight: 600;
+  font-size: 1.06em;
+  cursor: pointer;
+  margin-top: 1em;
+  transition: background .22s, transform .1s;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reset-btn:hover { background: var(--btn-hover);}
+.reset-btn:active { transform: scale(0.98); }
+
+footer {
+  margin-top: auto;
+  padding: 1.3em 0;
+  text-align: center;
+  color: var(--accent);
+  font-family: 'Dancing Script', 'Playfair Display', serif;
+  font-size: 1.15em;
+  background: var(--footer-bg);
+  z-index: 2;
+  flex-shrink: 0;
+}
+.footer-romantic svg { vertical-align: -4px; fill: var(--accent); }
+
+/* --- Media Queries para responsividad --- */
+@media (max-width: 600px) {
+  header { padding: 2rem 1rem 1rem 1rem;} /* Un poco menos padding */
+  .romantic-title { font-size: 1.8rem;}
+  #code-form { padding: 1.8em 1.2em;}
+  .modal-content, .settings-content {
+    width: 95vw;
+    padding: 1.5em 1em;
+  }
+  .gift-text { font-size: 1.1rem; }
+  .input-row { 
+    flex-direction: column; /* Apilar input y botón */
+    gap: 0.5rem;
+  }
+  #unlock-btn { width: 100%; } /* Botón ocupa todo el ancho */
+}
+@media (max-width: 350px) {
+  .romantic-title { font-size: 1.5rem;}
+  #progress-counter { font-size: 1em; padding: 0.7em 1.5em; }
+  #code-form { padding: 1.2em 0.8em;} /* Más pequeño para pantallas muy chicas */
+}
+
+/* --- Scrollbar personalizado --- */
+::-webkit-scrollbar { width: 7px; background: var(--bg);}
+::-webkit-scrollbar-thumb { background: var(--accent2); border-radius: 8px;}
+::-webkit-scrollbar-track { background: var(--bg-alt);}
+
+/* Estilos para accesibilidad de focus */
+*:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 5px;
+}
+button:focus-visible, input:focus-visible, .theme-swatch:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Clases de utilidad */
+.sr-only { /* Screen Reader Only - para contenido solo de accesibilidad */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
