@@ -851,3 +851,59 @@ document.addEventListener('keydown', function(event) {
     }
   }
 });
+
+// Código para el menú desplegable
+const menuButton = document.getElementById('menuButton');
+const dropdownMenu = document.getElementById('dropdownMenu');
+
+if (menuButton && dropdownMenu) {
+  menuButton.addEventListener('click', () => {
+    const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', !isExpanded);
+    dropdownMenu.classList.toggle('show');
+    dropdownMenu.setAttribute('aria-hidden', isExpanded);
+
+    // Enfocar el primer elemento del menú cuando se abre para accesibilidad
+    if (!isExpanded) {
+      dropdownMenu.querySelector('a')?.focus();
+    }
+  });
+
+  // Cerrar el menú si se hace clic fuera de él
+  document.addEventListener('click', (event) => {
+    if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+      if (dropdownMenu.classList.contains('show')) {
+        dropdownMenu.classList.remove('show');
+        menuButton.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+      }
+    }
+  });
+
+  // Manejo de teclado para accesibilidad del menú
+  dropdownMenu.addEventListener('keydown', function(event) {
+    const focusableElements = this.querySelectorAll('a');
+    const firstFocusableElement = focusableElements[0];
+    const lastFocusableElement = focusableElements[focusableElements.length - 1];
+
+    if (event.key === 'Escape') {
+      dropdownMenu.classList.remove('show');
+      menuButton.setAttribute('aria-expanded', 'false');
+      dropdownMenu.setAttribute('aria-hidden', 'true');
+      menuButton.focus(); // Devolver el foco al botón del menú
+      event.preventDefault();
+    } else if (event.key === 'Tab') {
+      if (event.shiftKey) { // Shift + Tab
+        if (document.activeElement === firstFocusableElement) {
+          lastFocusableElement.focus();
+          event.preventDefault();
+        }
+      } else { // Tab
+        if (document.activeElement === lastFocusableElement) {
+          firstFocusableElement.focus();
+          event.preventDefault();
+        }
+      }
+    }
+  });
+}
