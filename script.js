@@ -567,6 +567,9 @@ tu hijo peludo, Samuel.`,
       textoEnlace: "Descargar cosplay"
     }
   },
+  "petitbisou": {
+  imagen: "assets/unlocked_content/images/cartita_25_jun.webp"
+  },
   
 };
 
