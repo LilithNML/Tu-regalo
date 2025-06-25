@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "enamorada", "el sol y la luna", "primer hola", "louie", "round", "...", "querido", "hatsune miku", ":)",
         "cuarto creciente", "gibosa menguante", "luna llena", "suegra", "mami", "suegrita", "sexo", "ojos verdes",
         "cielo", "acostados", "a tu lado", "por que no puedo dejar de pensar en ti", "te ame desde el primer dia que te conoci", "ha+ln", "teamo0315",
-        "petitbisou",
+        "Petit bisou",
     ];
 
     const tableBody = document.querySelector('#phrasesTable tbody');
