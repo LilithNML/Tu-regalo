@@ -570,6 +570,13 @@ tu hijo peludo, Samuel.`,
   "petitbisou": {
   imagen: "assets/unlocked_content/images/cartita_25_jun.webp"
   },
+  "sofiacasarezmendoza": {
+    descarga: {
+      url: "assets/unlocked_content/images/soy_tuya.jpg.enc",
+      nombre: "soy_tuya.jpg.enc",
+      textoEnlace: "Descargar fotito"
+    }
+  },
   
 };
 
