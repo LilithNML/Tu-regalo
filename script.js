@@ -577,6 +577,9 @@ tu hijo peludo, Samuel.`,
       textoEnlace: "Descargar fotito"
     }
   },
+  "star": {
+  imagen: "assets/unlocked_content/images/cupon_jugar.webp"
+  },
   
 };
 
