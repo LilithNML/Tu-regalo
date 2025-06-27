@@ -2,18 +2,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const phrases = [
         "9 de noviembre", "Luna", "Sofia", "Princesa", "Haziel Alan Casarez Osuna", "Alan", "Lilith Noemi Mendoza Luna",
         "Genshin", "Raiden", "Chester", "Mi niña hermosa", "Mi niño hermoso", "Yekaterina", "Samuel", "Fortnite", "dbl",
-        "Hijas", "3 de enero", "15 de abril", "Primer novio", "kiss me", "sonora", "ciudad obregon", "Mariachi",
+        "Hijas", "3 de enero", "15 de abril", "Primer novio", "kiss me", "Sonora", "Ciudad Obregon", "Mariachi",
         "Steven universe", "Adriana", "Carmen", "Johanna", "Furina", "Huevito", "Soy tuya", "Te extraño", "Taza de cafe",
         "Te pertenezco", "Me encantas", "Nunca cambies", "Isla corazón", "Cofre lujoso", "Primer te amo", "Cosita hermosa",
         "Alguien como tu", "Tsukasa", "Paimon", "Sobame", "UwU", "Abrazame", "Protogemas", "Gachapon", "Brawl",
         "Minecraft", "mbr7tr5i", "nbujo85ft", "5.1", "nvtnuh67", "omaet", "roma", "Increible", "Orgullosa", "Genial",
-        "soy la mujer mas feliz del mundo", "gracias", "eres el mejor", "mi niño consentido", "cartas", "peluche",
-        "miku nakano", "gatito", "my way of life", "enana", "colette", "vegetto", "ellenjoe", "himikotoga",
-        "el mejor padre del mundo", "amor eterno", "nada nos va a separar", "me gustas mucho", "espera un poco",
-        "enamorada", "el sol y la luna", "primer hola", "louie", "round", "...", "querido", "hatsune miku", ":)",
-        "cuarto creciente", "gibosa menguante", "luna llena", "suegra", "mami", "suegrita", "sexo", "ojos verdes",
-        "cielo", "acostados", "a tu lado", "por que no puedo dejar de pensar en ti", "te ame desde el primer dia que te conoci", "ha+ln", "teamo0315",
-        "Petit bisou", "Sofia Casarez Mendoza",
+        "Soy la mujer mas feliz del mundo", "Gracias", "Eres el mejor", "Mi niño consentido", "Cartas", "Peluche",
+        "Miku Nakano", "Gatito", "My way of life", "Enana", "Colette", "Vegetto", "Ellen Joe", "Himiko Toga",
+        "El mejor padre del mundo", "Amor eterno", "Nada nos va a separar", "Me gustas mucho", "Espera un poco",
+        "Enamorada", "El Sol y la Luna", "Primer hola", "Louie", "Round", "...", "Querido", "Hatsune Miku", ":)",
+        "Cuarto creciente", "Gibosa menguante", "Luna llena", "Suegra", "Mami", "Suegrita", "Sexo", "Ojos verdes",
+        "Cielo", "Acostados", "A tu lado", "Por que no puedo dejar de pensar en ti", "Te ame desde el primer dia que te conoci", "ha+ln", "teamo0315",
+        "Petit bisou", "Sofia Casarez Mendoza", "Star",
     ];
 
     const tableBody = document.querySelector('#phrasesTable tbody');
